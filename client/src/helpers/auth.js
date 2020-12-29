@@ -17,6 +17,9 @@ export const isAuthenticated = () => {
         return false;
     }
 };
+export const setOffre = (offre) =>{
+    setLocalStorage('processValues', offre);
+}
 
 export const logout = (next) => {
     deleteCookie('token');

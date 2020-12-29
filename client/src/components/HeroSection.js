@@ -52,15 +52,15 @@ const redirected= ()=>{
                 </p>
                 <div className="input-areas">
                 <input type="text" className="input-domaine" placeholder="Coisissez un nom de domaine" />
-                  {isAuthenticated() ?(
+                  {isAuthenticated() && isAuthenticated().role=== 0 ?(
                 <Link to='/process'>
-                  <Button buttonSize='btn--wide'  buttonColor='orange'>
+                  <Button buttonSize='btn--wide' onClick={redirected} buttonColor='orange'>
                   Démarer
                   </Button>
                 </Link>
                 ):(
                   <Link to='/signin'>
-                  <Button buttonSize='btn--wide' onClick={redirected}  buttonColor='orange'>
+                  <Button buttonSize='btn--wide' onClick={redirected} buttonColor='orange'>
                   Démarer
                   </Button>
                 </Link>

@@ -7,6 +7,7 @@ import { multiStepContext } from "../StepContext";
 import "./GlobalProcess.css";
 import Navbar from "./pages/Navbar/Navbar";
 import Footer from "./pages/Footer/Footer";
+import Fourthstep from "./Fourthstep";
 function GlobalProcess() {
   const { currentStep, finalData } = useContext(multiStepContext);
 
@@ -19,6 +20,9 @@ function GlobalProcess() {
 
       case 3:
         return <Thirdstep />;
+
+      case 4:
+        return  <Fourthstep />
     }
   }
   return (
@@ -32,6 +36,9 @@ function GlobalProcess() {
               activeStep={currentStep - 1}
               orientation="horizontal"
             >
+              <Step>
+                <StepLabel></StepLabel>
+              </Step>
               <Step>
                 <StepLabel></StepLabel>
               </Step>

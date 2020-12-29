@@ -13,6 +13,13 @@
 .service__title{
     color: #fff;
 }
+.img_temp{
+    padding: 15px;
+}
+.title_temp{
+padding-left: 34%;
+color:#FF9C1E ;
+}
 
 @media screen and (max-width: 960px){
     .paragraphe{

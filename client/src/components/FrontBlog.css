@@ -9,12 +9,7 @@ a{
   width: 100%;
   transition: all .5s;
 }
-.blog__section{
-  padding: 70px 0;
-  
-  background: #07516E;
-  text-align: center;
-}
+
 .container__blog{
   max-width: 1200px;
   width: 100%;

@@ -7,14 +7,15 @@ import Pricing from './Pricing';
 import FrontBlog from './FrontBlog'
 import Footer from './pages/Footer/Footer';
 const UserDashboard = () => {
-    return <div>
+    return( <div>
     <Navbar />
     <HeroSection />
     <FrontServices />
+    
     <Pricing />
-    <FrontBlog />
+  
     <Footer /> 
-    </div>;
+    </div>)
 };
 
 export default UserDashboard;

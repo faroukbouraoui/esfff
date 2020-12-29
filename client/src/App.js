@@ -78,7 +78,7 @@ function App() {
 		  component={AdminDashboard}
 	  />
 	  <StepContext>
-      <Route exact path="/process" ><GlobalProcess /></Route>
+      <Route  path="/process" ><GlobalProcess /></Route>
       </StepContext>
 			
 				</Switch>

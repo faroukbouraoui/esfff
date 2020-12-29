@@ -1,5 +1,5 @@
-import React from 'react'
-import "./FrontBlog.css"
+/*import React from 'react'
+
 function Blog() {
   return (
     <>
@@ -61,3 +61,4 @@ function Blog() {
 
 export default Blog
 
+*/

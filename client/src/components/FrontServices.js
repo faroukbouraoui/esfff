@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
 import './FrontServices.css'
-
-export default class Responsive extends Component {
-  render() {
+import { getTemplates } from "../redux/actions/templateActions";
+import { useDispatch, useSelector } from "react-redux";
+import { getServices } from "../redux/actions/serviceActions";
+const FrontServices = ()=> {
+  
     var settings = {
       dots: true,
       infinite: false,
@@ -42,90 +44,55 @@ export default class Responsive extends Component {
         }
       ]
     };
+    const dispatch = useDispatch ();
+    const {services} =useSelector(state => state.services)
+    const {templates} =useSelector(state => state.templates)
+useEffect(() => {
+dispatch(getServices());
+dispatch(getTemplates());
+  
+}, [dispatch])
+  
+
     return (
       <div className="service">
       <div className="container">
         <h2> texte </h2>
         <Slider {...settings}>
+        {templates.map((temp)=>(
           <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>1</h3>
+          <img
+          src={`/uploads/${temp.fileName}`} 
+          className="img_temp"
+          alt="img1"
+        />
+            <h3 className="title_temp">{temp.title}</h3>
           </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>2</h3>
-          </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>3</h3>
-          </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>4</h3>
-          </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>5</h3>
-          </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>6</h3>
-          </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>7</h3>
-          </div>
-          <div>
-          <img src="/img/template.png" alt="1" />
-            <h3>8</h3>
-          </div>
+          ))}
         </Slider>
         </div>
 <div className="container">
         <h2>texte 2</h2>
         <p>pargraphe 2</p>
 <div className="row">
+{services.map((serv)=>(
    <div className="col-sm-3">  
+   
   <div className="media">
-    <img className="mr-3" src="/img/shop.png" alt="Generic placeholder image" />
+    <img className="mr-3" src={`/uploads/${serv.fileName}`}  alt="Generic placeholder image" />
     <div className="media-body">
-      <h5 className="mt-1 service__title">Media heading</h5>
-      <p className="paragraphe"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+      <h5 className="mt-1 service__title">{serv.serviceName}</h5>
+      <p className="paragraphe"> {serv.serviceDesc}</p>
     </div>
   </div>
+ 
   </div>
-  <div className="col-sm-3">  
-  <div className="media">
-    <img className="mr-3" src="/img/shop.png" alt="Generic placeholder image" />
-    <div className="media-body">
-      <h5 className="mt-0 service__title">Media heading</h5>
-      <p className="paragraphe"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    </div>
+  ))}
   </div>
-  </div>
-  <div className="col-sm-3">  
-  <div className="media">
-    <img className="mr-3" src="/img/shop.png" alt="Generic placeholder image" />
-    <div className="media-body">
-      <h5 className="mt-0 service__title">Media heading</h5>
-      <p className="paragraphe"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    </div>
-  </div>
-  </div>
-  <div className="col-sm-3">  
-  <div className="media">
-    <img className="mr-3" src="/img/shop.png" alt="Generic placeholder image" />
-    <div className="media-body">
-      <h5 className="mt-0 service__title">Media heading</h5>
-      <p className="paragraphe"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    </div>
-  </div>
-  </div>
-</div>
 </div>
 </div>
 
 
     );
   }
-}
+export default FrontServices

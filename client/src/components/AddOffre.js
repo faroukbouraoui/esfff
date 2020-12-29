@@ -7,7 +7,7 @@ import { showLoading } from '../helpers/loading';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearMessages } from '../redux/actions/messageActions';
 import { createOffre } from '../redux/actions/offreActions';
-
+import Select from 'react-select';
 import Menu from './Menu'
 import { getServices } from '../redux/actions/serviceActions';
 
@@ -22,16 +22,23 @@ import { getServices } from '../redux/actions/serviceActions';
   const dispatch = useDispatch();
   const [clientSideError, setClientSideError] = useState('');
   
+const optionss = (services.map((serv) =>{
+ return ({label:serv.serviceName, value:serv._id})
+}))
 
+
+ 
+    
+ 
   const [offreData, setOffreData] = useState({
 		offreImage: null,
 		name: '',
     description: '',
     price:'',
-		servicesOffre: '',
+		servicesOffre: {},
 		
   });
-  
+
   const {
 		offreImage,
 		name,
@@ -48,11 +55,19 @@ import { getServices } from '../redux/actions/serviceActions';
   };
   
   const handleOffreChange = evt => {
+    
 		setOffreData({
 			...offreData,
 			[evt.target.name]: evt.target.value,
-		});
+    });
+    
   };
+ const handleChange=(selectedOption) =>{
+   console.log(selectedOption)
+    setOffreData({...offreData, servicesOffre: selectedOption });
+}
+ 
+  
   
   const handleOffreImage = evt => {
 		console.log(evt.target.files[0]);
@@ -79,7 +94,7 @@ import { getServices } from '../redux/actions/serviceActions';
 			
 		) {
 			setClientSideError('Please enter all fields');
-		} else if (isEmpty(servicesOffre)) {
+		} else if (isEmpty({servicesOffre})) {
 			setClientSideError('Please select a services');
 		} else {
 			let formData = new FormData();
@@ -97,7 +112,7 @@ import { getServices } from '../redux/actions/serviceActions';
 				name: '',
         description: '',
         price:'',
-				servicesOffre: '',
+				servicesOffre: {},
 		
 			});
 		}
@@ -148,13 +163,13 @@ import { getServices } from '../redux/actions/serviceActions';
           <div className="form-group row">
             <label className="col-12 col-form-label" >Offre name <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
             <div className="col-12">
-              <input name='name' value={name} onChange={handleOffreChange} type="text" className="form-control" placeholder="placeholder" />
+              <input name='name' value={name} onChange={handleOffreChange} type="text" className="form-control" placeholder="name" />
             </div>
           </div>
           <div className="form-group row">
             <label className="col-12 col-form-label">offre description <i className="tip tippy bg-success" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is textarea." /></label>
             <div className="col-12">
-              <textarea value={description} name='description' onChange={handleOffreChange} className="form-control" rows={5} defaultValue={""} />
+              <textarea value={description} name='description' onChange={handleOffreChange} className="form-control" style={{backgroundColor:"#fff"}} rows={5}  placeholder="description" />
             </div>
           </div>
           <div className="form-group row">
@@ -167,24 +182,17 @@ import { getServices } from '../redux/actions/serviceActions';
         <label className="col-12 col-form-label">Services<i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
         <div className="col-12">
        
-        <select
-        className='custom-select mr-sm-2'
+        <Select
+        
+        isMulti
         name='servicesOffre'
-        onChange={handleOffreChange}
-      >
-        <option value=''>
-          Choose one...
-        </option>
-        {services &&
-          services.map(c => (
-            <option
-              key={c._id}
-              value={c._id}
-            >
-              {c.serviceName}
-            </option>
-          ))}
-      </select>
+       
+        onChange={handleChange}
+        options={optionss}
+        className="basic-multi-select"
+        classNamePrefix="select"
+        
+      />
       
         </div>
       </div>
@@ -205,6 +213,5 @@ import { getServices } from '../redux/actions/serviceActions';
   </div>
   </div></div>
         )
-    }
-    
+        }
 export default AddOffre

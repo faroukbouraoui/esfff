@@ -33,9 +33,9 @@ const AdminCategory = () => {
   {categories &&
     categories.map((c)=>(    
   <div class="card" style={{width: "50%","marginTop":"3%"}} >
-  <img class="card-img-top" src={`/uploads/${c.fileName}`} alt="Card image cap" />
+  <img class="card-img-top" src={`/uploads/${c.fileName}`} alt="Card image cap" style={{width:"100px",marginLeft:"37%",paddingTop:"11px"}}/>
   <div class="card-body">
-    <h5 class="card-title">{c.title}</h5>
+    <h5 class="card-title">{c.category}</h5>
     <p class="card-text">{c.description}</p>
     <hr />
     <button className="btn btn-warning btn-pill btn-sm"><Link to="/"/*{"/updateservice/"+service._id}*/>Update</Link></button>

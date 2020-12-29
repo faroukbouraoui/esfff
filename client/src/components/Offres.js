@@ -47,7 +47,13 @@ const Offres = ()=>  {
           
             <div className="pricing-title">
             
-              <i className="icon-screen-desktop" />
+              <div className="icon_pricing">
+              <img
+              src={`/uploads/${offre.fileName}`} 
+              className="iconimg_back"
+              alt="icon-pricing"
+            />
+              </div>
               <h2>{offre.name}</h2>
               <small>{offre.description}</small>
             </div>
