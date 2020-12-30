@@ -4,7 +4,7 @@ const templateSchema = new mongoose.Schema(
     {
         fileName: {
             type: String,
-            required: true,
+            
         },
         title:{
             type:String,

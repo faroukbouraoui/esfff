@@ -7,8 +7,9 @@ exports.create = async (req, res) => {
     rne,
     telephone,
     adresse,
-    offer,
+    offre,
     template,
+    services
   } = req.body.userData;
 
   try {
@@ -20,7 +21,8 @@ exports.create = async (req, res) => {
     lead.rne = rne;
     lead.numtel = telephone;
     lead.adresse = adresse;
-    lead.refOffre = offer;
+    lead.refService= services;
+    lead.refOffre = offre;
     lead.refTemplate = template;
     lead.refuser = req.body.userid;
     console.log(lead);

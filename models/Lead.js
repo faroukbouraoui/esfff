@@ -33,9 +33,11 @@ const leadSchema = new mongoose.Schema({
     type: ObjectId,
     ref: "User",
   },
-  refService: {
+  refService: [{
     type: String,
-  },
+  }]
+    
+ 
 });
 
 module.exports = mongoose.model("Lead", leadSchema);
