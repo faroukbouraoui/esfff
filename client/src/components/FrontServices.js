@@ -57,7 +57,9 @@ dispatch(getTemplates());
     return (
       <div className="service">
       <div className="container">
-        <h2> texte </h2>
+        <h2 style={{color:"#fff"}}> Lancez votre boutique en ligne en quelques clics  </h2>
+        <p style={{color:"#FF9C1E"}}>Configurez simplement votre e-commerce et profitez de nos outils et nos services qui vous aideront à trouver de nouveaux clients, à augmenter vos ventes et à gérer vos opérations. </p>
+       
         <Slider {...settings}>
         {templates.map((temp)=>(
           <div>
@@ -72,11 +74,11 @@ dispatch(getTemplates());
         </Slider>
         </div>
 <div className="container">
-        <h2>texte 2</h2>
-        <p>pargraphe 2</p>
+        <h2 style={{color:"#fff"}}>Développez votre présence en ligne et gagnez en parts de marché</h2>
+
 <div className="row">
 {services.map((serv)=>(
-   <div className="col-sm-3">  
+   <div className="col-sm-4">  
    
   <div className="media">
     <img className="mr-3" src={`/uploads/${serv.fileName}`}  alt="Generic placeholder image" />

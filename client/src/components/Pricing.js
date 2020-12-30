@@ -36,8 +36,8 @@ function Pricing() {
                 <div className='icon'>
                 <img
                 src={`/uploads/${offre.fileName}`} 
-                  className="iconimg_back"
-                  alt="icon-pricing"
+                  className=""
+                  alt=""
                 />
                 <h2>{offre.name}<br/> {offre.price} <sup>dt</sup><span>/mois</span> </h2>
                

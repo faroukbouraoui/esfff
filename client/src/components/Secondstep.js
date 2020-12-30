@@ -22,9 +22,9 @@ export default function Secondstep () {
   }, [dispatch])
 
 
-  const validerstepTwo = (offre) => {
+  const validerstepTwo = (name) => {
     
-    setUserData({ ...userData, offre: offre });
+    setUserData({ ...userData, offre: name });
     setLocalStorage("processValues", userData);
     setStep(3);
   };
@@ -55,7 +55,7 @@ export default function Secondstep () {
             ))}
             </ul>
             <Button buttonSize='btn--wide' buttonColor='primary'
-            onClick={() => validerstepTwo(offre)}
+            onClick={() => validerstepTwo(offre.name)}
             >
               Choose Plan
             </Button>

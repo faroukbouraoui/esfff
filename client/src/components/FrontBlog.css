@@ -5,10 +5,10 @@ a{
   color: #fff;
 
 }
-.blog__img{
+/*.blog__img{
   width: 100%;
   transition: all .5s;
-}
+}*/
 
 .container__blog{
   max-width: 1200px;

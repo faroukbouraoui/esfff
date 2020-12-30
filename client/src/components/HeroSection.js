@@ -39,7 +39,7 @@ const redirected= ()=>{
               <div className='home__hero-text-wrapper'>
                 <div className='top-line'>{topLine}</div>
                 <h1 className={lightText ? 'heading' : 'heading '}>
-                Créez votre business grâce à <span className="hero-span">eStores Factory</span>
+                Démarez votre commerce en ligne <br/> avec  <span className="hero-span">eStores Factory</span>
                 </h1>
                 <p
                   className={
@@ -48,7 +48,7 @@ const redirected= ()=>{
                       : 'home__hero-subtitle '
                   }
                 >
-                Une plateforme de location de boutiques A chaque besoin sa solution.
+              Un centre de services mutualisés et une plateforme unifiée de création et de gestion de votre <span className="hero-span">Ecommerce.</span>
                 </p>
                 <div className="input-areas">
                 <input type="text" className="input-domaine" placeholder="Coisissez un nom de domaine" />

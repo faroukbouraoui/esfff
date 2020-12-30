@@ -21,8 +21,7 @@ function GlobalProcess() {
       case 3:
         return <Thirdstep />;
 
-      case 4:
-        return  <Fourthstep />
+     
     }
   }
   return (
@@ -37,17 +36,15 @@ function GlobalProcess() {
               orientation="horizontal"
             >
               <Step>
-                <StepLabel></StepLabel>
+                <StepLabel>form</StepLabel>
               </Step>
               <Step>
-                <StepLabel></StepLabel>
+                <StepLabel>pricing</StepLabel>
               </Step>
               <Step>
-                <StepLabel></StepLabel>
+                <StepLabel>templates</StepLabel>
               </Step>
-              <Step>
-                <StepLabel></StepLabel>
-              </Step>
+             
             </Stepper>
           </div>
           {showStep(currentStep)}

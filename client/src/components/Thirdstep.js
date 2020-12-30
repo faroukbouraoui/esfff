@@ -7,7 +7,8 @@ import { Button } from "./Button";
 import { useDispatch, useSelector } from "react-redux";
 import { getTemplates } from "../redux/actions/templateActions";
 import { Fragment } from "react";
-import './FrontBlog.css'
+import './thirdstep.css'
+import Axios from "axios";
 
 
 export default function Thirdstep() {
@@ -26,8 +27,25 @@ export default function Thirdstep() {
   }, [dispatch])
 
   /*const validerstepTow = async (response) => {
+    setLocalStorage("processValues", userData);
+    const user = await localStorage.getItem("user");
+    const userObj = JSON.parse(user);
+    const userid = userObj._id;
+    console.log(userid);
+    //setUserData({ ...userData, userid: userid });
+    const obj = { userData, userid };
+    console.log(userData);
+    try {
+      response = await axios.post("/leads", obj);
+    } catch (err) {
+      console.log("lead api error: ", err);
+    }
+  };*/
 
+  
+  const validerstepthree = async (response) => {
 
+      
     setLocalStorage("processValues", userData);
 
     const user = await localStorage.getItem("user");
@@ -40,61 +58,53 @@ export default function Thirdstep() {
 
     console.log(userData);
     try {
-      response = await axios.post("/leads", obj);
+      response = await Axios.post("/leads", obj);
     } catch (err) {
       console.log("lead api error: ", err);
     }
-  };*/
-
-  
-  const validerstepThree = (title) => {
-    
-    setUserData({ ...userData, temp: title });
-
-    setLocalStorage("processValues", userData);
-    setStep(4);
   };
 
   return (
+    <div>
+    {templates.map((temp)=>(
+    <label>
+    <input type="radio" name={temp.title} value="small"  />
+    <img src={`/uploads/${temp.fileName}`} />
+  </label>
+    ))}
+  </div>
+  );
+}
+/*
+ <div>
     <div className="container">
-    <div className="blog__section">
-    {templates.map((template)=>(
-  <div className="container__blog" key={template._id}>
-  
     
-    <div className="blog__main">
-    
+    <div className="row">
+    {templates.map((temp)=>(
+      <div className="col-md-3 colonne">
      
-      <div className="singleBlog">
-      
-        
-      <img
-      src={`/uploads/${template.fileName}`} 
-        className="iconimg_back"
-        alt="icon-pricing"
-      />
-        <div className="blogContent">
-
-          <h3></h3>
-          
-          
-          <Button className='btn'
-          onClick={()=>validerstepThree(template.title)}
-          >
-            Choose Plan
-          </Button>
-         
-        </div>
-        
+      <div className="custom-control custom-radio">
+          <input type="radio" name={temp.title} className="custom-control-input"   id={temp._id} value={userData['template']} onClick={(e)=>setUserData({...userData, "template" : e.target.name })} />
+            
+          <label className="label_third" htmlFor={temp._id} >
+          <img
+          src={`/uploads/${temp.fileName}`} 
+            
+            
+          />
+          </label>
+    
        
       </div>
       
-      
+      </div>))}
       </div>
-      
+     
       </div>
-      ))}
+      <div className="boutton">
+      <Button className="btn" onClick={()=>validerstepthree()}>
+      submit
+      </Button>
       </div>
       </div>
-  );
-}
+*/

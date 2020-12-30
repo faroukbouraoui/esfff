@@ -1,9 +1,11 @@
 .pricing__section {
-    padding: 100px 0 160px;
+  padding-left: 15px;
+  padding-top: 43px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: #F4FAFF;
+    padding-bottom: 43px;
   }
   
   .pricing__container-card {
