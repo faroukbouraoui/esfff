@@ -29,13 +29,19 @@ function Pricing() {
         <div className='pricing__wrapper'>
           <h1 className='pricing__heading'>L'offre qui convient a vos besoins !</h1>
           <p className="pricing__description">Une plateforme unifiée, dotée de toutes les fonctionnalités e-commerce et de point de vente qu'il vous faut pour créer, gérer et développer votre activité.</p>
+          <div className="row">
           <div className='pricing__container'>
+          
+         
+          {offres.map((offre)=>(
+            <div className="col-3">
+          
             <div  className='pricing__container-card'>
-                {offres.map((offre)=>(
+                
               <div className='pricing__container-cardInfo'>
                 <div className='icon'>
                 <img
-                src={`/uploads/${offre.fileName}`} 
+                src={`/uploads/${offre.filename}`} 
                   className=""
                   alt=""
                 />
@@ -51,21 +57,26 @@ function Pricing() {
                 </ul>
                 {isAuthenticated() && isAuthenticated().role=== 0 ?(
                   <Link to='/process'>
-                    <Button buttonSize='btn--wide'  buttonColor='primary'>
+                    <button className="pricing__btn">
                     Choose Plan
-                    </Button>
+                    </button>
                   </Link>
                   ):(
                     <Link to='/signin'>
-                    <Button buttonSize='btn--wide'   buttonColor='primary'>
+                    <button className="pricing__btn">
                     Choose Plan
-                    </Button>
+                    </button>
                   </Link>
                   )}
               </div>
-              ))}
+              
             </div>
-           
+          
+            </div>
+            ))}
+            
+            </div>
+            
           </div>
         </div>
       </div>

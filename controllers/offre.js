@@ -2,28 +2,31 @@ const Offre = require('../models/Offres');
 
 
 exports.create = async (req, res) => {
-	const  {filename}  = req.file;
+/*	const  {filename}  = req.file;*/
 	const {
 		name,
 		description,
         price,
 		servicesOffre,
-		template,
+	
 		
 	} = req.body;
+	
+	console.log(servicesOffre)
+	
 
 	try {
 		let offre = new Offre();
-        offre.fileName= filename;
+      /*  offre.fileName= filename;*/
         offre.name= name;
         offre.description= description;
         offre.price= price;
 		offre.servicesOffre= servicesOffre;
-		offre.template = template;
+		
 		
 
 		await offre.save();
-
+			
 		res.json({
 			successMessage: `${name} was created`,
 			offre,

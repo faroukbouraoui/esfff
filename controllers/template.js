@@ -2,7 +2,7 @@ const Template = require('../models/Template');
 
 exports.create = async (req, res) => {
     const {filename} = req.file;
-	const { title } = req.body;
+	const { title,link } = req.body;
 
 	try {
 		const templateExist = await Template.findOne({ title });
@@ -14,7 +14,8 @@ exports.create = async (req, res) => {
 
 		let newTemplate = new Template();
 		newTemplate.fileName = filename;
-        newTemplate.title = title;
+		newTemplate.title = title;
+		newTemplate.link= link;
 
 		newTemplate = await newTemplate.save();
 

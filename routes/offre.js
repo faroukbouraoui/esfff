@@ -7,7 +7,7 @@ const offreController = require('../controllers/offre');
 
 
 
-router.post('/',authenticatateJWT,upload.single('offreImage'),
+router.post('/'/*,authenticatateJWT*/,/*upload.single('offreImage'),*/
 	
 	
 offreController.create

@@ -14,7 +14,7 @@ function GlobalProcess() {
   function showStep(step) {
     switch (step) {
       case 1:
-        return <Firststep />;
+        return <Firststep  />;
       case 2:
         return <Secondstep />;
 

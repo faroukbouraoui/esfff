@@ -12,12 +12,14 @@ const leadSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  rne: {
-    type: Number,
-  },
+
   numtel: {
     type: Number,
     required: true,
+  },
+  email:{
+    type:String,
+    required:true
   },
 
   adresse: {
@@ -33,9 +35,7 @@ const leadSchema = new mongoose.Schema({
     type: ObjectId,
     ref: "User",
   },
-  refService: [{
-    type: String,
-  }]
+  
     
  
 });

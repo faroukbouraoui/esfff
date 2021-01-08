@@ -7,7 +7,9 @@ import Slider from "react-slick";
 import './FrontServices.css'
 import { getTemplates } from "../redux/actions/templateActions";
 import { useDispatch, useSelector } from "react-redux";
-import { getServices } from "../redux/actions/serviceActions";
+import { getCategories } from "../redux/actions/categoryActions";
+import { Link } from "react-router-dom";
+
 const FrontServices = ()=> {
   
     var settings = {
@@ -45,10 +47,10 @@ const FrontServices = ()=> {
       ]
     };
     const dispatch = useDispatch ();
-    const {services} =useSelector(state => state.services)
+    const {categories} =useSelector(state => state.categories)
     const {templates} =useSelector(state => state.templates)
 useEffect(() => {
-dispatch(getServices());
+dispatch(getCategories());
 dispatch(getTemplates());
   
 }, [dispatch])
@@ -63,28 +65,33 @@ dispatch(getTemplates());
         <Slider {...settings}>
         {templates.map((temp)=>(
           <div>
+          <a href={temp.link}>
           <img
           src={`/uploads/${temp.fileName}`} 
           className="img_temp"
           alt="img1"
         />
+        </a>
             <h3 className="title_temp">{temp.title}</h3>
           </div>
           ))}
         </Slider>
         </div>
+       
+        
+        
 <div className="container">
-        <h2 style={{color:"#fff"}}>Développez votre présence en ligne et gagnez en parts de marché</h2>
+        <h2 style={{color:"#fff",marginTop:'50px',marginBottom:'24px'}}>Développez votre présence en ligne et gagnez en parts de marché</h2>
 
 <div className="row">
-{services.map((serv)=>(
-   <div className="col-sm-4">  
+{categories.map((cat)=>(
+   <div className="col-md-4">  
    
   <div className="media">
-    <img className="mr-3" src={`/uploads/${serv.fileName}`}  alt="Generic placeholder image" />
+    <img className="mr-3" src={`/uploads/${cat.fileName}`}  alt="Generic placeholder image" />
     <div className="media-body">
-      <h5 className="mt-1 service__title">{serv.serviceName}</h5>
-      <p className="paragraphe"> {serv.serviceDesc}</p>
+      <h5 className="mt-1 service__title">{cat.category}</h5>
+      <p className="paragraphe" id="p1"> {cat.description}</p>
     </div>
   </div>
  

@@ -27,6 +27,7 @@ import AddCategory from './components/AddCategory';
 import Home from './components/pages/HomePage/Home';
 import GlobalProcess from './components/GlobalProcess';
 import StepContext from './StepContext'
+import Leads from './components/Leads';
 
 
 
@@ -58,19 +59,20 @@ function App() {
 					<Route exact path='/signin' component={Signin} />
 					
 					
-          <Route  path="/services" component={Services} />
-          <Route  path="/post-service" component={Addservice} />  
-          <Route path="/updateservice/:id" component={UpdateService} />
-          <Route path="/offres" component={Offres} />
-          <Route path="/add-offre" component={AddOffre}/>
-          <Route path='/blogs' component={Blogs} />
-          <Route path='/add-blog' component={AddBlog}  />
-          <Route path='/update-blog/:id' component={UpdateBlog} />
-		  <Route path='/contact' component={Contact} />
-		  <Route path="/Add-template" component={AddTemplate} />
-		  <Route path="/templates" component={templates} />
-		  <Route path ="/categories" component={AdminCategory} />
-		  <Route path="/add-category" component={AddCategory} />
+          <AdminRoute  path="/services" component={Services} />
+          <AdminRoute  path="/post-service" component={Addservice} />  
+          <AdminRoute path="/updateservice/:id" component={UpdateService} />
+		  <AdminRoute path="/offres" component={Offres} />
+		  <AdminRoute path="/leads" component={Leads} />
+          <AdminRoute path="/add-offre" component={AddOffre}/>
+          <AdminRoute path='/blogs' component={Blogs} />
+          <AdminRoute path='/add-blog' component={AddBlog}  />
+          <AdminRoute path='/update-blog/:id' component={UpdateBlog} />
+		  <AdminRoute path='/contact' component={Contact} />
+		  <AdminRoute path="/Add-template" component={AddTemplate} />
+		  <AdminRoute path="/templates" component={templates} />
+		  <AdminRoute path ="/categories" component={AdminCategory} />
+		  <AdminRoute path="/add-category" component={AddCategory} />
 	<Route exact path='/' component={UserDashboard} />
 	  <AdminRoute
 		  exact

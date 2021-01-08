@@ -24,6 +24,7 @@ export const setOffre = (offre) =>{
 export const logout = (next) => {
     deleteCookie('token');
     deleteLocalStorage('user');
+    deleteLocalStorage('redirected')
 
     next();
 };

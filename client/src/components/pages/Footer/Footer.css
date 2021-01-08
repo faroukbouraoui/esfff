@@ -24,7 +24,7 @@
   .hero-image {
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/coverfooter.png"); 
-    height: 262px;
+    height: 336px;
     width: 104%;
     background-position: center;
     background-repeat: no-repeat;

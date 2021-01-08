@@ -17,9 +17,10 @@ function HeroSection({
   imgStart
 }) {
 
-const redirected= ()=>{
+ const redirected= ()=>{
   localStorage.setItem('redirected','/process')
 }
+
 
 
   return (

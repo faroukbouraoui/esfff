@@ -1,10 +1,10 @@
 const mongoose = require ('mongoose')
-const { ObjectId } = mongoose.Schema;
+
 const offersSchema = new mongoose.Schema({
     
     fileName: {
         type: 'String',
-        required: true,
+        required: false,
     },
     
     name:{
@@ -21,19 +21,23 @@ const offersSchema = new mongoose.Schema({
     },
 
     
-    servicesOffre:[
-        {
-            type: ObjectId,
+    servicesOffre:
+       
+      [  
+            {
+            type: mongoose.Schema.Types.ObjectId,
             ref: "Service",
-            required: true
+            required:true
         }
-
     ],
+    
+
+    
     template:[
         {
-            type: ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "Template",
-            required: true,
+            
         }
     ]
 

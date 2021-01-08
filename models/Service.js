@@ -6,13 +6,13 @@ const ServiceSchema = new mongoose.Schema(
 		
 		fileName: {
 			type: 'String',
-			required: true,
+			required: false,
 		},
 		serviceName: {
 			type: 'String',
-			required: true,
+			required: false,
 			trim: true,
-			maxlength: 60,
+			
 		},
 		serviceDesc: {
 			type: 'String',

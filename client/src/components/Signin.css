@@ -3,3 +3,12 @@
     width: 152%;
      padding: 10px;
 }
+.background__signin{
+    background-image: url("/img/D1YI9gbuPc.jpg");
+    height: 100%;
+
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

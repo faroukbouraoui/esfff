@@ -15,6 +15,29 @@
     height: 500px;
     text-decoration: none;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  .pricing__container-card .pricing__container-cardInfo{
+    padding-right: 10px;
+    flex-grow: 1;
+    width: 33%;
+    position:relative;
+  }
+  .pricing__btn{
+    position:absolute;
+bottom:34px;
+margin-left: -25%;
+
+color: #fff;
+    background-color: #07516e;
+    width: 140px;
+    height: 35px;
+    border-radius: 28px;
+  }
+  .pricing__btn:hover{
+    color: #FF9C1E;
   }
   
 
@@ -53,7 +76,7 @@
     color: #07516E;
     margin-bottom: 24px;
   }
-  
+
   .pricing__container-cardInfo {
     display: flex;
     flex-direction: column;
@@ -78,7 +101,7 @@
   }
   
   .pricing__container-features {
-    margin: 16px 0 32px;
+   font-size: 9px;
     list-style: none;
   }
   
@@ -130,10 +153,7 @@
       align-items: center;
       width: 100%;
     }
-  
-    .pricing__container-card {
-      width: 90%;
-    }
+ 
   
     .pricing__wrapper {
       margin: 0 30px;
@@ -143,6 +163,11 @@
     }
   
     .pricing__container-card:nth-child(2) {
+      transform: scale(1);
+      background: #242424;
+      margin: 24px;
+    }
+    ..pricing__container-card:nth-child(4) {
       transform: scale(1);
       background: #242424;
       margin: 24px;

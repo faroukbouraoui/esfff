@@ -8,6 +8,7 @@ import { getOffres } from "../redux/actions/offreActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Fragment } from "react";
 import { setOffre } from "../helpers/auth";
+import './Pricing.css'
 export default function Secondstep () {
   const { setStep, userData, setUserData, submitData } = useContext(
     multiStepContext
@@ -30,17 +31,21 @@ export default function Secondstep () {
   };
   return (
   <div className="container">
-    <div className='pricing__section'>
-    <div className='pricing__wrapper'>
-      <h1 className='pricing__heading'>L'offre qui convient a vos besoins !</h1>
-      <p className="pricing__description">Une plateforme unifiée, dotée de toutes les fonctionnalités e-commerce et de point de vente qu'il vous faut pour créer, gérer et développer votre activité.</p>
-      <div className='pricing__container'>
+    
+   
+      <h1 className='pricing__heading'>Créez une boutique et choisissez un forfait</h1>
+
+      <div className="row">
+      <div className='pricing__container' style={{marginLeft:"-64px"}}>
+     
+      {offres.map((offre)=>(
+      <div className="col-3">
         <div className='pricing__container-card'>
-        {offres.map((offre)=>(
+        
           <div className='pricing__container-cardInfo'>
             <div className='icon'>
             <img
-            src={`/uploads/${offre.fileName}`} 
+            src={`/uploads/${offre.filename}`} 
               className="iconimg_back"
               alt="icon-pricing"
             />
@@ -54,17 +59,18 @@ export default function Secondstep () {
               <li>{s.serviceName}</li>
             ))}
             </ul>
-            <Button buttonSize='btn--wide' buttonColor='primary'
+            <button className="pricing__btn"
             onClick={() => validerstepTwo(offre.name)}
             >
-              Choose Plan
-            </Button>
+              Choisir votre offre
+            </button>
           </div>
-          ))}
+         
       </div>
-        
       </div>
-      
+      ))}
+      </div>
+      </div>
       <div className="buttons">
       <Button
         onClick={() => setStep(1)}
@@ -75,8 +81,8 @@ export default function Secondstep () {
       </Button>
       </div>
     </div>
-  </div>
-  </div>      
+ 
+        
             
        
    

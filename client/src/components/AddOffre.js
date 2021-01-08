@@ -17,7 +17,7 @@ import { getServices } from '../redux/actions/serviceActions';
 	const { loading } = useSelector(state => state.loading);
 	const { successMsg, errorMsg } = useSelector(state => state.messages);
 	const { services } = useSelector(state => state.services);
-   
+  
 
   const dispatch = useDispatch();
   const [clientSideError, setClientSideError] = useState('');
@@ -25,6 +25,7 @@ import { getServices } from '../redux/actions/serviceActions';
 const optionss = (services.map((serv) =>{
  return ({label:serv.serviceName, value:serv._id})
 }))
+
 
 
  
@@ -35,7 +36,7 @@ const optionss = (services.map((serv) =>{
 		name: '',
     description: '',
     price:'',
-		servicesOffre: {},
+		servicesOffre: '',
 		
   });
 
@@ -44,7 +45,7 @@ const optionss = (services.map((serv) =>{
 		name,
     description,
     price,
-		servicesOffre,
+		servicesOffre ,
 
 	} = offreData;
 
@@ -62,10 +63,27 @@ const optionss = (services.map((serv) =>{
     });
     
   };
- const handleChange=(selectedOption) =>{
-   console.log(selectedOption)
-    setOffreData({...offreData, servicesOffre: selectedOption });
+
+ 
+ const handleChange=( selectedOption) =>{
+ 
+ /* const id = selectedOption.map((v)=>{
+  
+    return v.value
+  })*/
+ if (selectedOption){
+  var selectvalue = (selectedOption.map((v)=>{
+   return (v.value)
+ }))
+   
+   
+  }
+
+      setOffreData({...offreData, servicesOffre: JSON.stringify(selectvalue)  });
+      console.log(selectvalue)
+
 }
+ 
  
   
   
@@ -94,27 +112,29 @@ const optionss = (services.map((serv) =>{
 			
 		) {
 			setClientSideError('Please enter all fields');
-		} else if (isEmpty({servicesOffre})) {
+		} else if (Object.keys(servicesOffre).length === 0) {
 			setClientSideError('Please select a services');
-		} else {
+		}else {
 			let formData = new FormData();
 
 			formData.append('offreImage', offreImage);
 			formData.append('name', name);
       formData.append('description', description);
       formData.append('price', price);
-			formData.append('servicesOffre', servicesOffre);
+			formData.append('servicesOffre',servicesOffre );
 		
 
-			dispatch(createOffre(formData));
+      dispatch(createOffre(formData));
+      console.log(offreData)
 			setOffreData({
 				offreImage: null,
 				name: '',
         description: '',
         price:'',
-				servicesOffre: {},
+				servicesOffre: '',
 		
-			});
+      });
+  
 		}
 	};
 
@@ -135,7 +155,7 @@ const optionss = (services.map((serv) =>{
         <h5 className="panel-title">Add Offre</h5>
       </div>
       <div className="panel-body">
-        <form>
+        <form  onSubmit={handleOffreSubmit}>
         {clientSideError && showErrorMsg(clientSideError)}
         {errorMsg && showErrorMsg(errorMsg)}
         {successMsg && showSuccessMsg(successMsg)}
@@ -199,7 +219,7 @@ const optionss = (services.map((serv) =>{
       </Fragment>
       )}
       <div className="panel-footer text-right">
-      <button type="submit" className="btn btn-success mr-2" onClick={handleOffreSubmit} >Submit</button>
+      <button type="submit" className="btn btn-success mr-2"  >Submit</button>
       <button type="reset" className="btn btn-outline btn-secondary btn-outline-1x">Cancel</button>
     </div>
         </form>

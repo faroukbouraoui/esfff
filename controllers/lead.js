@@ -4,9 +4,10 @@ exports.create = async (req, res) => {
   const {
     nomComplet,
     entreprise,
-    rne,
+  
     telephone,
     adresse,
+    email,
     offre,
     template,
     services
@@ -18,9 +19,10 @@ exports.create = async (req, res) => {
     let lead = new Lead();
     lead.NomComplet = nomComplet;
     lead.entreprise = entreprise;
-    lead.rne = rne;
+   
     lead.numtel = telephone;
     lead.adresse = adresse;
+    lead.email= email;
     lead.refService= services;
     lead.refOffre = offre;
     lead.refTemplate = template;
@@ -37,4 +39,22 @@ exports.create = async (req, res) => {
       errorMessage: "Please try again later",
     });
   }
+};
+exports.readAll = async (req, res) => {
+	try {
+		const leads = await Lead.find({}).populate(
+			'refuser',
+			
+			
+			
+			
+		);
+
+		res.json({ leads});
+	} catch (err) {
+		console.log(err, 'leadController.readAll error');
+		res.status(500).json({
+			errorMessage: 'Please try again later',
+		});
+	}
 };

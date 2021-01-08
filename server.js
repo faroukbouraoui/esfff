@@ -15,11 +15,13 @@ const partenaireRouter = require ('./routes/partenaire')
 const contactRouter = require('./routes/contact')
 const templateRouter = require('./routes/template')
 const mongoose = require ('mongoose')
+var bodyParser = require('body-parser')
 
 // middleware
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(bodyParser.urlencoded({extended : true}));
 app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/category', categoryRoutes);

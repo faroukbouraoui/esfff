@@ -66,11 +66,11 @@ const Addservice =() => {
 	const handleServiceSubmit = evt => {
 		evt.preventDefault();
 
-		if (serviceImage === null) {
+	/*	if (serviceImage === null) {
 			setClientSideError('Please select an image');
-		} else if (
-			isEmpty(serviceName) ||
-			isEmpty(serviceDesc) 
+		}  */if (
+			isEmpty(serviceName)
+		
 			
 		) {
 			setClientSideError('Please enter all fields');
@@ -155,6 +155,7 @@ const Addservice =() => {
             className='custom-select mr-sm-2'
             name='serviceCategory'
             onChange={handleServiceChange}
+            
           >
             <option value=''>
               Choose one...

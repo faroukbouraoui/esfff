@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 import { logout } from '../helpers/auth';
 
 
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
 function Menu ({history})  {
   const handleLogout = (evt) => {
     logout(() => {
@@ -38,6 +38,9 @@ function Menu ({history})  {
             <li className="has-sub active">
               <a><i className="icon-screen-desktop" /><span>Dashboard</span><i className="arrow rotate" /></a>
               <ul className="sub-menu">
+              <li>
+              <Link to="/leads"><span>Gestion Des Clients</span></Link>
+            </li>
               <li>
               <Link to="/categories"><span>Gestion Des Categories</span></Link>
             </li>

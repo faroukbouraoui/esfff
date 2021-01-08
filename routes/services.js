@@ -5,7 +5,7 @@ const upload = require('../middleware/multer');
 const serviceController = require('../controllers/service');
 
 router.post(
-	'/',authenticatateJWT,upload.single('serviceImage'),
+	'/',/*authenticatateJWT,upload.single('serviceImage'),*/
 	
 	
 serviceController.create

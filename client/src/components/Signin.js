@@ -108,8 +108,8 @@ const Signin = () => {
             <div className="text-center">
               <MDBBtn type="submit">Login</MDBBtn>
             </div>
-            <p className='text-center text-balck'>
-            Have an account? <Link to='/signup'>Sign Up</Link>
+            <p className='text-center' style={{color:"#FF9C1E"}}>
+            Have an account? <Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
         </p>
           </form>
         </MDBCol>
@@ -122,9 +122,13 @@ const Signin = () => {
      * RENDERER
      ***************************/
     return (
-        <div className='signin-container'>
-            <div className='row px-3 vh-100'>
-                <div className='col-md-5 mx-auto align-self-center'>
+        <div className="background__signin">
+        <div className='container'>
+            <div className='row vh-100'>
+            
+           
+            
+                <div className='col-md-5 mx-auto align-self-right'>
                     {errorMsg && showErrorMsg(errorMsg)}
                     {loading && (
                         <div className='text-center pb-4'>{showLoading()}</div>
@@ -132,6 +136,7 @@ const Signin = () => {
                     {showSigninForm()}
                 </div>
             </div>
+        </div>
         </div>
     );
 };

@@ -21,7 +21,8 @@ const AddTemplate = () => {
 
   const [templateData, setTemplateData] = useState({
 		templateImage: null,
-		title: '',
+    title: '',
+    link:''
    
 		
 		
@@ -29,7 +30,8 @@ const AddTemplate = () => {
   
   const {
 		templateImage,
-		title,
+    title,
+    link,
   
 
 	} = templateData;
@@ -61,7 +63,8 @@ const AddTemplate = () => {
 		if (templateImage === null) {
 			setClientSideError('Please select an image');
 		} else if (
-			isEmpty(title) 
+      isEmpty(title) ||
+      isEmpty(link)
     
 			
 		) {
@@ -70,7 +73,8 @@ const AddTemplate = () => {
 			let formData = new FormData();
 
 			formData.append('templateImage', templateImage);
-			formData.append('title', title);
+      formData.append('title', title);
+      formData.append('link', link)
       
 			
 		
@@ -78,7 +82,8 @@ const AddTemplate = () => {
 			dispatch(createTemplate(formData));
 			setTemplateData({
 				templateImage: null,
-				title: '',
+        title: '',
+        link:'',
       
 				
 		
@@ -125,9 +130,15 @@ const AddTemplate = () => {
 </div>
     
       <div className="form-group row">
-        <label className="col-12 col-form-label">Blog Title <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
+        <label className="col-12 col-form-label">Template Title <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
         <div className="col-12">
           <input value={title} name='title' onChange={handleTemplateChange} type="text" className="form-control" placeholder="placeholder" />
+        </div>
+      </div>
+      <div className="form-group row">
+        <label className="col-12 col-form-label">Template Link <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
+        <div className="col-12">
+          <input value={link} name='link' onChange={handleTemplateChange} type="text" className="form-control" placeholder="placeholder" />
         </div>
       </div>
      

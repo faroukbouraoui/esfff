@@ -8,7 +8,7 @@ import serviceReducer from './reducers/serviceReducers';
 import offreReducer from './reducers/offreReducers';
 import blogReducer from './reducers/blogReducers';
 import templateReducers from './reducers/templateReducers';
-
+import leadReducer from './reducers/leadReducer';
 const reducer = combineReducers({
 	loading: loadingReducer,
 	messages: messageReducer,
@@ -16,7 +16,8 @@ const reducer = combineReducers({
 	services: serviceReducer,
 	offres: offreReducer,
 	blogs: blogReducer,
-	templates: templateReducers
+	templates: templateReducers,
+	leads: leadReducer,
 });
 
 const initialState = {};

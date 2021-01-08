@@ -126,7 +126,7 @@ const Signup = () => {
       <MDBRow>
         <MDBCol md="6">
           <form onSubmit={handleSubmit} noValidate>
-            <p className="h5 text-center mb-4">Sign up</p>
+            <p className="h5 text-center mb-4"><img src="/img/esflogo.png" style={{width:"50px"}}/></p>
             <div className="grey-text">
               <MDBInput label="Your name" name='username' icon="user" group type="text" value={username} onChange={handleChange} validate error="wrong"
                 success="right" />
@@ -153,7 +153,7 @@ const Signup = () => {
      * RENDERER
      ***************************/
     return (
-        <div className='signup-container'>
+        <div className='container'>
             <div className='row px-3 vh-100'>
                 <div className='col-md-5 mx-auto align-self-center'>
                     {successMsg && showSuccessMsg(successMsg)}

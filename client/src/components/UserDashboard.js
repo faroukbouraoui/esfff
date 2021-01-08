@@ -6,15 +6,27 @@ import FrontServices from './FrontServices'
 import Pricing from './Pricing';
 import FrontBlog from './FrontBlog'
 import Footer from './pages/Footer/Footer';
+
+import {
+    ScrollingProvider,
+    useScrollSection,
+    Section,
+  } from 'react-scroll-section';
 const UserDashboard = () => {
     return( <div>
-    <Navbar />
-    <HeroSection />
-    <FrontServices />
+        <ScrollingProvider>
+        <Navbar />
+        <HeroSection />
+        <Section id="serviceUser"><FrontServices /></Section>
+        <Section id="pricingUser"><Pricing /></Section>
+        <Footer /> 
+        </ScrollingProvider>
     
-    <Pricing />
+    
+    
+    
+    
   
-    <Footer /> 
     </div>)
 };
 
