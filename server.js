@@ -35,12 +35,9 @@ app.use('/contact',contactRouter)
 app.use('/api/template',templateRouter)
 
 app.use('/uploads', express.static('uploads'));
-app.use(express.static(path.join(__dirname,'build')));
-app.get('/*', function (req,res){
-    res.sendFile(path.jin(__dirname,'build','index.html'))
-})
 
-mongoose.connect('mongodb://localhost:27017/estoresdb',{ useNewUrlParser: true , useUnifiedTopology: true },
+
+mongoose.connect('mongodb+srv://estoresdb:farouk123@cluster0.sso99.mongodb.net/estoresdb?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true },
 err=> {
     if (!err)
     console.log('connection succeed')
