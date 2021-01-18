@@ -8,11 +8,12 @@ import {
 	CREATE_CATEGORY,
 } from '../constants/categoryConstants';
 import axios from 'axios';
+import {baseUrl} from '../../api/config'
 
 export const getCategories = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get('/api/category');
+		const response = await axios.get(baseUrl  + '/api/category');
 		dispatch({ type: STOP_LOADING });
 		dispatch({ type: GET_CATEGORIES, payload: response.data.categories });
 	} catch (err) {
@@ -33,7 +34,7 @@ export const createCategory = formData => async dispatch => {
 			},
 		};
 		dispatch({ type: START_LOADING });
-		const response = await axios.post('/api/category', formData, config);
+		const response = await axios.post(baseUrl  + '/api/category', formData, config);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_SUCCESS_MESSAGE,

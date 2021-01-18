@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {baseUrl} from './config'
 
 export const createBlog = async (formData) => {
     const config = {
@@ -7,13 +8,13 @@ export const createBlog = async (formData) => {
         },
     };
 
-    const response = await axios.post('/api/blog/', formData, config);
+    const response = await axios.post(baseUrl  + '/api/blog/', formData, config);
 
     return response;
 };
 
 export const getBlogs = async () => {
-    const response = await axios.get('/api/blog/');
+    const response = await axios.get(baseUrl  + '/api/blog/');
 
     return response;
 };

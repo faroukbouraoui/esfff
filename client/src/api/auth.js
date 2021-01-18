@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {baseUrl} from './config'
 
 export const signup = async (data) => {
     const config = {
@@ -7,7 +8,7 @@ export const signup = async (data) => {
         },
     };
 
-    const response = await axios.post('/api/auth/signup', data, config);
+    const response = await axios.post(baseUrl + '/api/auth/signup', data, config);
 
     return response;
 };
@@ -19,7 +20,7 @@ export const signin = async (data) => {
         },
     };
 
-    const response = await axios.post('/api/auth/signin', data, config);
+    const response = await axios.post(baseUrl + '/api/auth/signin', data, config);
 
     return response;
 };

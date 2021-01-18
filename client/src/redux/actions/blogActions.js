@@ -8,11 +8,12 @@ import {
 	GET_BLOGS,
 } from '../constants/blogConstants';
 import axios from 'axios';
+import {baseUrl} from '../../api/config'
 
 export const getBlogs = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get('/api/blog/');
+		const response = await axios.get(baseUrl  + '/api/blog/');
 		dispatch({ type: STOP_LOADING });
 		dispatch({ type: GET_BLOGS, payload: response.data.blogs });
 	} catch (err) {
@@ -30,7 +31,7 @@ export const createBlog = formData => async dispatch => {
 			},
 		};
 		dispatch({ type: START_LOADING });
-		const response = await axios.post('/api/blog/', formData, config);
+		const response = await axios.post(baseUrl  + '/api/blog/', formData, config);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_SUCCESS_MESSAGE,

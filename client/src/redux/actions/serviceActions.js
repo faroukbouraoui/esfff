@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {baseUrl} from '../../api/config'
 import { START_LOADING, STOP_LOADING } from '../constants/loadingConstants';
 import {
 	SHOW_ERROR_MESSAGE,
@@ -9,7 +10,7 @@ import { CREATE_SERVICE, GET_SERVICES } from '../constants/serviceConstants';
 export const createService = formData => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.post('/api/service/', formData);
+		const response = await axios.post(baseUrl  + '/api/service/', formData);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_SUCCESS_MESSAGE,
@@ -32,7 +33,7 @@ export const createService = formData => async dispatch => {
 export const getServices = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get('/api/service/');
+		const response = await axios.get(baseUrl  + '/api/service/');
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: GET_SERVICES,

@@ -8,11 +8,12 @@ import {
 	CREATE_TEMPLATE,
 } from '../constants/templateConstants';
 import axios from 'axios';
+import {baseUrl} from '../../api/config'
 
 export const getTemplates = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get('/api/template');
+		const response = await axios.get(baseUrl  + '/api/template');
 		dispatch({ type: STOP_LOADING });
 		dispatch({ type: GET_TEMPLATES, payload: response.data.templates });
 	} catch (err) {
@@ -30,7 +31,7 @@ export const createTemplate = formData => async dispatch => {
 			},
 		};
 		dispatch({ type: START_LOADING });
-		const response = await axios.post('/api/template', formData, config);
+		const response = await axios.post(baseUrl  + '/api/template', formData, config);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_SUCCESS_MESSAGE,

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {baseUrl} from '../../api/config'
 import { START_LOADING, STOP_LOADING } from '../constants/loadingConstants';
 import {
 	SHOW_ERROR_MESSAGE,
@@ -9,7 +10,7 @@ import { CREATE_OFFRE,GET_OFFRES } from '../constants/offreConstant';
 export const createOffre = formData => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.post('/api/offre/', formData);
+		const response = await axios.post(baseUrl  + '/api/offre/', formData);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_SUCCESS_MESSAGE,
@@ -32,7 +33,7 @@ export const createOffre = formData => async dispatch => {
 export const getOffres = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get('/api/offre/');
+		const response = await axios.get(baseUrl  + '/api/offre/');
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: GET_OFFRES,
