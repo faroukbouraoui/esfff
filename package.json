@@ -8,10 +8,9 @@
 		"npm": "6.13.4"
 	},
 	"scripts": {
-		"start":"node server.js",
-		"client":"cd client && npm start",
+		"start": "node server.js",
+		"client": "cd client && npm start",
 		"dev": "concurrently \"nodemon server.js\" \"npm run client\""
-
 	},
 	"author": "Jorge Alvarado",
 	"license": "MIT",
