@@ -1,6 +1,6 @@
 let baseUrl = ''
 if (!window.location.hostname.includes("localhost")) {
-    baseUrl = 'https://api.a5e39e5f.nip.io'
+    baseUrl = 'https://api.esftunisie.com'
 }
 
 export {baseUrl}
