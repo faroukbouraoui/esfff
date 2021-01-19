@@ -122,7 +122,7 @@ const Signin = () => {
      * RENDERER
      ***************************/
     return (
-        <div className="background__signin">
+        <div>
         <div className='container'>
             <div className='row vh-100'>
             
