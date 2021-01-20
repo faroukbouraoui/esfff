@@ -5,7 +5,7 @@ exports.create = async (req, res) => {
 	const {
 		serviceName,
 		
-		
+		serviceDesc,
 		serviceCategory,
 		
 	} = req.body;
@@ -14,7 +14,7 @@ exports.create = async (req, res) => {
 		let service = new Service();
 	
 		service.serviceName = serviceName;
-		
+		service.serviceDesc=serviceDesc;
 		service.serviceCategory = serviceCategory;
 		
 

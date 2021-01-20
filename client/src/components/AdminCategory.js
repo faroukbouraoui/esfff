@@ -19,7 +19,7 @@ const AdminCategory = () => {
   <div className="page-title">
   <div className="row align-items-center">
     <div className="col-sm-6">
-    <button className="btn btn-primary btn-pill btn-sm"><Link to="/add-category">create service</Link></button>
+    <button className="btn btn-white btn-pill btn-sm"><Link to="/add-category">create Category</Link></button>
     </div>
     <div className="col-sm-6 text-right">
       <div className="breadcrumbs">

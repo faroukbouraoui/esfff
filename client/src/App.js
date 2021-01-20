@@ -28,8 +28,9 @@ import Home from './components/pages/HomePage/Home';
 import GlobalProcess from './components/GlobalProcess';
 import StepContext from './StepContext'
 import Leads from './components/Leads';
+import SigninAdmin from "./components/SigninAdmin"
 
-
+import SignupAdmin from "./components/SignupAdmin"
 
 
 
@@ -57,7 +58,8 @@ function App() {
 					
 					<Route exact path='/signup' component={Signup} />
 					<Route exact path='/signin' component={Signin} />
-					
+					<Route exact path="/signinAdmin" component={SigninAdmin}/>
+					<Route exact path ="/signupAdmin" component={SignupAdmin} />
 					
           <AdminRoute  path="/services" component={Services} />
           <AdminRoute  path="/post-service" component={Addservice} />  

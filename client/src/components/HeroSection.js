@@ -52,7 +52,7 @@ function HeroSection({
               Un centre de services mutualisés et une plateforme unifiée de création et de gestion de votre <span className="hero-span">Ecommerce.</span>
                 </p>
                 <div className="input-areas">
-                <input type="text" className="input-domaine" placeholder="Coisissez un nom de domaine" />
+                
                   {isAuthenticated() && isAuthenticated().role=== 0 ?(
                 <Link to='/process'>
                   <Button buttonSize='btn--wide' onClick={redirected} buttonColor='orange'>

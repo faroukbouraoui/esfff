@@ -9,8 +9,7 @@ import { signin } from '../api/auth';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
 import "mdbreact/dist/css/mdb.css";
 import './Signin.css'
-import Navbar from './pages/Navbar/Navbar'
-import Footer from './pages/Footer/Footer';
+
 const Signin = () => {
     let history = useHistory();
 
@@ -111,7 +110,7 @@ const Signin = () => {
               <MDBBtn type="submit">Login</MDBBtn>
             </div>
             <p className='text-center' style={{color:"#FF9C1E"}}>
-            Have an account? <Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
+            Have an account? <Link to='/signupAdmin' style={{color:"#07516E"}}> Sign Up</Link>
         </p>
           </form>
         </MDBCol>
@@ -125,7 +124,7 @@ const Signin = () => {
      ***************************/
     return (
         <div style={{backgroundColor:"#F4FAFF"}}>
-            <Navbar />
+            
         <div className='container'>
             <div className='row vh-100'>
             
@@ -140,7 +139,7 @@ const Signin = () => {
                 </div>
             </div>
         </div>
-        <Footer />
+        
         </div>
     );
 };

@@ -37,7 +37,7 @@ app.use('/api/template',templateRouter)
 app.use('/uploads', express.static('uploads'));
 
 
-mongoose.connect('mongodb+srv://estoresdb:farouk1234@cluster0.sso99.mongodb.net/esf?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true },
+mongoose.connect('mongodb+srv://estoresdb:farouk1234@cluster0.sso99.mongodb.net/estoresdb?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true },
 err=> {
     if (!err)
     console.log('connection succeed')

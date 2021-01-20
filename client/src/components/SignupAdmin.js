@@ -10,8 +10,7 @@ import { signup } from '../api/auth';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 import "mdbreact/dist/css/mdb.css";
 import './Signin.css'
-import Navbar from './pages/Navbar/Navbar';
-import Footer from './pages/Footer/Footer';
+
 
 
 
@@ -141,7 +140,7 @@ const Signup = () => {
               <MDBBtn type="submit" color="primary">Register</MDBBtn>
             </div>
             <p className='text-center text-balck'>
-            Have an account? <Link to='/signin'>Log In</Link>
+            Have an account? <Link to='/signinAdmin'>Log In</Link>
         </p>
           </form>
         </MDBCol>
@@ -155,7 +154,7 @@ const Signup = () => {
      ***************************/
     return (
         <div style={{backgroundColor:"#F4FAFF"}}>
-            <Navbar />
+            
         <div className='container'>
             <div className='row px-3 vh-100'>
                 <div className='col-md-5 mx-auto align-self-center'>
@@ -169,7 +168,7 @@ const Signup = () => {
                 </div>
             </div>
         </div>
-        <Footer />
+      
         </div>
     );
 };

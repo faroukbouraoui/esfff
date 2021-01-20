@@ -27,7 +27,7 @@ const Tempteles = () => {
         <h2 className="page-title-text">Templates</h2>
       </div>
           <div className="col-sm-6">
-          <button className="btn btn-primary btn-pill btn-sm" ><Link to='/Add-template'>create Template</Link></button>
+          <button className="btn btn-white btn-pill btn-sm " ><Link to='/Add-template'>create Template</Link></button>
           </div>
          
         </div>

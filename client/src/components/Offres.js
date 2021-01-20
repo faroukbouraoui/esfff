@@ -23,7 +23,7 @@ const Offres = ()=>  {
     <div className="page-title">
       <div className="row align-items-center">
         <div className="col-sm-6">
-        <button className="btn btn-success btn-pill"><Link to="/add-offre">create offre</Link></button>
+        <button className="btn btn-white btn-pill"><Link to="/add-offre">create offre</Link></button>
         </div>
         <div className="col-sm-6 text-right">
           <div className="breadcrumbs">

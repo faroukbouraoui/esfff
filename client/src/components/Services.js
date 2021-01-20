@@ -39,7 +39,7 @@ useEffect(() => {
   <div className="page-title">
   <div className="row align-items-center">
     <div className="col-sm-6">
-    <button className="btn btn-primary btn-pill btn-sm"><Link to="/post-service">create service</Link></button>
+    <button className="btn btn-white btn-pill btn-sm"><Link to="/post-service">create service</Link></button>
     </div>
     <div className="col-sm-6 text-right">
       <div className="breadcrumbs">

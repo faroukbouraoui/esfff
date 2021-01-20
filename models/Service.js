@@ -10,13 +10,13 @@ const ServiceSchema = new mongoose.Schema(
 		},
 		serviceName: {
 			type: 'String',
-			required: false,
+			required: true,
 			trim: true,
 			
 		},
 		serviceDesc: {
 			type: 'String',
-			trim: true,
+			required:false
 		},
 	
 		serviceCategory: 

@@ -36,7 +36,7 @@ import Menu from './Menu'
         </div>
       </div>
     </div>
-    <button className="btn btn-success btn-pill" style={{marginBottom:"10px",marginLeft:"500px"}}><Link to="/add-blog">create blog</Link></button>
+    <button className="btn btn-white btn-pill" style={{marginBottom:"10px",marginLeft:"500px"}}><Link to="/add-blog">create blog</Link></button>
     {/* Page Body */}
     
     <div className="page-body" >

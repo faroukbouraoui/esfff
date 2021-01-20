@@ -137,7 +137,7 @@ const Addservice =() => {
         <div className="form-group row">
           <label className="col-12 col-form-label">Service name <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
           <div className="col-12">
-            <input name="serviceName" onChange={handleServiceChange} value={serviceName} type="text" className="form-control" placeholder="placeholder" />
+            <input name="serviceName" onChange={handleServiceChange} value={serviceName} type="text" className="form-control" placeholder="service name" />
           </div>
         </div>
         <div className="form-group row">
