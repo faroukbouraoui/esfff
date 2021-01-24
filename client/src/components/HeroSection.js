@@ -1,21 +1,10 @@
 import React from 'react';
-import './HeroSection.css';
-import { Button } from './Button';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+
+import { Link} from 'react-router-dom';
 import { isAuthenticated } from '../helpers/auth';
 
-function HeroSection({
-  lightBg,
-  topLine,
-  lightText,
-  lightTextDesc,
-  headline,
-  description,
-  buttonLabel,
-  img,
-  alt,
-  imgStart
-}) {
+
+function HeroSection() {
 
  const redirected= ()=>{
   localStorage.setItem('redirected','/process')
@@ -24,61 +13,40 @@ function HeroSection({
 
 
   return (
-    <>
-      <div
-        className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
-      >
-        <div className='container'>
-          <div
-            className='row home__hero-row'
-            style={{
-              display: 'flex',
-              flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'
-            }}
-          >
-            <div className='col'>
-              <div className='home__hero-text-wrapper'>
-                <div className='top-line'>{topLine}</div>
-                <h1 className={lightText ? 'heading' : 'heading '}>
-                Démarez votre commerce en ligne <br/> avec  <span className="hero-span">eStores Factory</span>
-                </h1>
-                <p
-                  className={
-                    lightTextDesc
-                      ? 'home__hero-subtitle'
-                      : 'home__hero-subtitle '
-                  }
-                >
-              Un centre de services mutualisés et une plateforme unifiée de création et de gestion de votre <span className="hero-span">Ecommerce.</span>
-                </p>
-                <div className="input-areas">
-                
-                  {isAuthenticated() && isAuthenticated().role=== 0 ?(
-                <Link to='/process'>
-                  <Button buttonSize='btn--wide' onClick={redirected} buttonColor='orange'>
-                  Démarer
-                  </Button>
-                </Link>
-                ):(
-                  <Link to='/signin'>
-                  <Button buttonSize='btn--wide' onClick={redirected} buttonColor='orange'>
-                  Démarer
-                  </Button>
-                </Link>
-                )}
-                </div>
-                
+    <div>
+    <section className="fullscreen-banner p-0 banner o-hidden grediant-overlay" data-overlay={10}>
+      <div className="d-none d-md-block">
+        <img className="img-fluid" src="deco/images/bg/08.png" alt />
+      </div>
+      <div className="align-center">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 col-md-12 order-lg-12 sm-mt-5">
+              <div className="seo-img animated zoomIn delay-5 duration-4">
+                <img className="img-center" src="deco/images/banner/04.png" alt />
               </div>
             </div>
-            <div className='col'>
-              <div className='home__hero-img-wrapper'>
-                <img src="/img/hero.png" alt={alt} className='home__hero-img' />
+            <div className="col-lg-6 col-md-12 order-lg-1 md-mt-5">
+              <h1 className="mb-4 text-white font-w-5 animated bounceInLeft delay-2 duration-3">Démarez votre commerce en ligne avec <span className="text-">Estores Factory</span> </h1>
+              <p className="lead text-white animated fadeInUp delay-3 duration-3">Un centre de services mutualisés et une plateforme unifiée de création et de gestion de votre Ecommerce</p>
+              <div className="animated fadeInUp delay-3 duration-3">
+              {isAuthenticated() && isAuthenticated().role=== 0 ?(
+                <Link to="/process">
+                  <button className="btn btn-white" onClick={redirected}>Démarer</button>
+                </Link>
+              ):(
+                <Link to="/signin">
+                <button className="btn btn-white" onClick={redirected}>Démarer</button>
+              </Link>
+              )}
               </div>
-            </div>
+            </div>        
           </div>
         </div>
       </div>
-    </>
+    </section>
+    
+            </div>
   );
 
 }

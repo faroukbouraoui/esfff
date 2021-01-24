@@ -10,7 +10,7 @@ import { signup } from '../api/auth';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 import "mdbreact/dist/css/mdb.css";
 import './Signin.css'
-import Navbar from './pages/Navbar/Navbar';
+import Navbar from './Navbar';
 import Footer from './pages/Footer/Footer';
 
 

@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { showErrorMsg } from '../helpers/message';
-import { showLoading } from '../helpers/loading';
+
 import { setAuthentication, isAuthenticated } from '../helpers/auth';
 import isEmpty from 'validator/lib/isEmpty';
 import isEmail from 'validator/lib/isEmail';
 import { signin } from '../api/auth';
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
-import "mdbreact/dist/css/mdb.css";
-import './Signin.css'
-import Navbar from './pages/Navbar/Navbar'
+
+
+
+import Navbar from './Navbar'
 import Footer from './pages/Footer/Footer';
 const Signin = () => {
     let history = useHistory();
@@ -95,53 +94,61 @@ const Signin = () => {
     /****************************
      * VIEWS
      ***************************/
-    const showSigninForm = () => (
-      <div className="signin__form">
-      <MDBContainer>
-      <MDBRow>
-        <MDBCol md="6">
-          <form onSubmit={handleSubmit} noValidate>
-            <p className="h4 text-center mb-4" style={{color:"#FF9C1E"}}>Sign In</p>
-            <div className="grey-text">
-              <MDBInput label="Type your email" icon="envelope" group type="email" value={email} name='email' onChange={handleChange} validate error="wrong"
-                success="right" />
-              <MDBInput label="Type your password" icon="lock" group type="password" value={password} name='password' onChange={handleChange}  validate />
-            </div>
-            <div className="text-center">
-              <MDBBtn type="submit">Login</MDBBtn>
-            </div>
-            <p className='text-center' style={{color:"#FF9C1E"}}>
-            Have an account? <Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
-        </p>
-          </form>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-    </div>
-    );
-
+    
     /****************************
      * RENDERER
      ***************************/
     return (
-        <div style={{backgroundColor:"#F4FAFF"}}>
+        <div>
             <Navbar />
-        <div className='container'>
-            <div className='row vh-100'>
-            
-           
-            
-                <div className='col-md-5 mx-auto align-self-right'>
-                    {errorMsg && showErrorMsg(errorMsg)}
-                    {loading && (
-                        <div className='text-center pb-4'>{showLoading()}</div>
-                    )}
-                    {showSigninForm()}
+        <div>
+          <section className="page-title o-hidden text-center grey-bg bg-contain animatedBackground" data-bg-img="assets/images/pattern/05.png">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-md-12">
+                  <h1 className="title">Login</h1>
+        
                 </div>
+              </div>
             </div>
-        </div>
-        <Footer />
-        </div>
+            <div className="page-title-pattern"><img className="img-fluid" src="assets/images/bg/06.png" alt /></div>
+          </section>
+          {/*page title end*/}
+          {/*body content start*/}
+          <div className="page-content">
+            {/*login start*/}
+            <section className="login">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-6 col-md-10 ml-auto mr-auto">
+                    <div className="login-form text-center box-shadow  px-5 py-5 xs-px-2 xs-py-2" style={{backgroundColor:"#ff9c1e"}}>
+                      <h2 className="title mb-5">Login</h2>
+                      <form id="contact-form" onSubmit={handleSubmit}>
+                        <div className="messages" />
+                        <div className="form-group">
+                          <input id="form_email" type="text" name="email" value={email} onChange={handleChange} className="form-control" placeholder="User name" required="required" data-error="Username is required." />
+                          <div className="help-block with-errors" />
+                        </div>
+                        <div className="form-group">
+                          <input id="form_password" type="password" name="password" value={password} onChange={handleChange} className="form-control" placeholder="Password" required="required" data-error="password is required." />
+                          <div className="help-block with-errors" />
+                        </div>
+                        <div className="form-group mt-4 mb-5">
+                        
+                        </div> <button className="btn btn-white btn-sm" type="submit">Login</button>
+                        <p className='text-center' style={{color:"#000"}}>
+                             Have an account? <Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
+                        </p>
+                      </form>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div></div>
+        
+                </div>
     );
 };
 

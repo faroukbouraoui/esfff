@@ -5,7 +5,7 @@ import Thirdstep from "./Thirdstep";
 import { Stepper, StepLabel, Step } from "@material-ui/core";
 import { multiStepContext } from "../StepContext";
 import "./GlobalProcess.css";
-import Navbar from "./pages/Navbar/Navbar";
+import Navbar from "./Navbar";
 import Footer from "./pages/Footer/Footer";
 import Fourthstep from "./Fourthstep";
 function GlobalProcess() {

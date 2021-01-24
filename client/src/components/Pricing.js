@@ -24,63 +24,48 @@ function Pricing() {
   }, [dispatch])
 
   return (
-    <IconContext.Provider value={{ color: '#07516E', size: 64 }}>
-      <div className='pricing__section'>
-        <div className='pricing__wrapper'>
-          <h1 className='pricing__heading'>L'offre qui convient a vos besoins !</h1>
-          <p className="pricing__description">Une plateforme unifiée, dotée de toutes les fonctionnalités e-commerce et de point de vente qu'il vous faut pour créer, gérer et développer votre activité.</p>
-          <div className="row">
-          <div className='pricing__container'>
-          
-         
-          {offres.map((offre)=>(
-            <div className="col-3">
-          
-            <div  className='pricing__container-card'>
-                
-              <div className='pricing__container-cardInfo'>
-                <div className='icon'>
-                <img
-                src={`/uploads/${offre.filename}`} 
-                  className=""
-                  alt=""
-                />
-                <h2>{offre.name}<br/> {offre.price} <sup>dt</sup><span>/mois</span> </h2>
-               
-                
-                
-                </div>
-                <ul className='pricing__container-features'>
-                {offre.servicesOffre.map((s) =>(
-                  <li>{s.serviceName}</li>
-                ))}
-                </ul>
-                {isAuthenticated() && isAuthenticated().role=== 0 ?(
-                  <Link to='/process'>
-                    <button className="pricing__btn">
-                    Choose Plan
-                    </button>
-                  </Link>
-                  ):(
-                    <Link to='/signin'>
-                    <button className="pricing__btn">
-                    Choose Plan
-                    </button>
-                  </Link>
-                  )}
-              </div>
-              
+    <div>
+    <section className="grey-bg" data-bg-img="images/bg/02.png" style={{paddingBottom:"40px"}}>
+      <div className="container">
+        <div className="row text-center">
+          <div className="col-lg-8 col-md-12 ml-auto mr-auto">
+            <div className="section-title">
+              <h2 className="title">Choose Your Pricing plan</h2>
+              <p className="mb-0">Deos et accusamus et iusto odio dignissimos qui blanditiis praesentium voluptatum dele corrupti quos dolores et quas molestias.</p>
             </div>
-          
-            </div>
-            ))}
-            
-            </div>
-            
           </div>
         </div>
-      </div>
-    </IconContext.Provider>
+        <div className="row">
+          {offres.map((o)=>(
+          <div className="col-lg-3 col-md-12">
+            <div className="price-table" style={{height:"1200px"}}>
+              <div className="price-header">
+                <h3 className="price-title">{o.name}</h3>
+              </div>
+              <img className="img-center my-4" src={`/uploads/${o.filename}`} alt />
+              <div className="price-value">
+                <h2>{o.price}<span>dt/Month</span></h2>
+              </div>
+              {o.servicesOffre.map((s)=>(
+              <div className="price-list">
+              
+                <ul className="list-unstyled">
+                  
+                  <li><i className="flaticon-tick" />{s.serviceName}</li>
+                  
+                </ul>
+                
+              </div>
+              ))}
+              <a className="btn btn-white mt-5" href="#" style={{position:"absolute",bottom:"34px",marginLeft:"-25%"}}> <span>Get Started</span>
+              </a>
+            </div>
+          </div>
+          ))}
+          </div>
+          </div>
+          </section>
+          </div>
   );
 }
 export default Pricing;

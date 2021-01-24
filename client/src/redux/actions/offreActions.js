@@ -44,7 +44,7 @@ export const getOffres = () => async dispatch => {
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_ERROR_MESSAGE,
-			payload: err.response.data.errorMessage,
+			
 		});
 	}
 };
