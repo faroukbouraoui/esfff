@@ -26,7 +26,7 @@ export default function Firststep() {
   
 
   return (
-    <>
+    <div>
       <Formik
         initialValues={{
           nomComplett: "",
@@ -127,7 +127,8 @@ export default function Firststep() {
 
             <div className="form-group">
             
-              <Button
+              <button
+              className="btn btn-white btn-md"
                 type="submit"
                 onClick={validerstepone}
                
@@ -135,12 +136,12 @@ export default function Firststep() {
                 
               >
                 Suivant
-              </Button>
+              </button>
             </div>
           </Form>
         
       </Formik>
-    </>
+    </div>
   );
 
               }

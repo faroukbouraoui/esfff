@@ -10,7 +10,7 @@ function Footer() {
       <div className="primary-footer">
           <div className="container-fluid p-0">
               <div className="row">
-                  <div className="col-lg-4 py-10">
+                  <div className="col-lg-4 py-0">
                       <div className="ht-theme-info bg-contain bg-pos-r h-100 dark-bg text-white" data-bg-img="deco/images/bg/02.png">
                           <div className="footer-logo">
                               <a href="index.html">

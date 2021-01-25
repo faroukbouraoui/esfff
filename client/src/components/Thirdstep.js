@@ -2,15 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { setLocalStorage } from "../helpers/localStorage";
 import { multiStepContext } from "../StepContext";
 import "./Secondstep.css";
-import axios from "axios";
-import { Button } from "./Button";
 import { useDispatch, useSelector } from "react-redux";
 import { getTemplates } from "../redux/actions/templateActions";
-import { Fragment } from "react";
 import './thirdstep.css'
 import Axios from "axios";
 import {Modal} from './Modal'
-import { FaYoutubeSquare } from "react-icons/fa";
+
+
 
 
 export default function Thirdstep() {
@@ -188,17 +186,16 @@ const {checked , setChecked}= useState(false)
       </div>
       <Modal show={show} close={closeModalHandler} />
       <div className="boutton">
-      <Button
+      <button
         onClick={() => setStep(2)}
-        buttonStyle="btn--primary1"
-        buttonColor="orange"
+        className="btn btn-md btn-orange"
       >
         Back
-      </Button>
+      </button>
       { show ? <div onClick={closeModalHandler} className="back-drop"></div> : null }
-      <Button className="btn btn-openModal"  onClick={()=>{validerstepthree();setShow(true)}}>
+      <button className="btn btn-openModal"  onClick={()=>{validerstepthree();setShow(true)}}>
       submit
-      </Button>
+      </button>
       
       </div>
      

@@ -121,56 +121,67 @@ const Signup = () => {
     /****************************
      * VIEWS
      ***************************/
-    const showSignupForm = () => (
-      <div className="signup__form">
-      <MDBContainer>
-      <MDBRow>
-        <MDBCol md="6">
-          <form onSubmit={handleSubmit} noValidate>
-          <p className="h4 text-center mb-4" style={{color:"#FF9C1E"}}>Sign Up</p>
-            <div className="grey-text">
-              <MDBInput label="Your name" name='username' icon="user" group type="text" value={username} onChange={handleChange} validate error="wrong"
-                success="right" />
-              <MDBInput label="Your email" name='email' icon="envelope" group type="email" value={email} onChange={handleChange} validate error="wrong"
-                success="right" />
-              <MDBInput label="Your password" name='password' icon="lock" group type="password" value={password} onChange={handleChange} validate
-                error="wrong" success="right" />
-              <MDBInput label="Confirm your password" name='password2' icon="exclamation-triangle" value={password2} onChange={handleChange} group type="password" validate error="wrong" success="right" />
-            </div>
-            <div className="text-center">
-              <MDBBtn type="submit" color="primary">Register</MDBBtn>
-            </div>
-            <p className='text-center text-balck'>
-            Have an account? <Link to='/signin'>Log In</Link>
-        </p>
-          </form>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-    </div>
-    );
-
+ 
     /****************************
      * RENDERER
      ***************************/
     return (
-        <div style={{backgroundColor:"#F4FAFF"}}>
+        <div >
             <Navbar />
-        <div className='container'>
-            <div className='row px-3 vh-100'>
-                <div className='col-md-5 mx-auto align-self-center'>
-                    {successMsg && showSuccessMsg(successMsg)}
-                    {errorMsg && showErrorMsg(errorMsg)}
-                    {loading && (
-                        <div className='text-center pb-4'>{showLoading()}</div>
-                    )}
-                    {showSignupForm()}
-                    {/* <p style={{ color: 'white' }}>{JSON.stringify(formData)}</p> */}
-                </div>
+        <div>
+          <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  data-bg-img="deco/images/pattern/05.png">
+            <div className="container">
+              <div className="row align-items-center">
+              
+              </div>
             </div>
-        </div>
+            <div className="page-title-pattern"><img className="img-fluid" src="deco/images/bg/06.png" alt /></div>
+          </section>
+          {/*page title end*/}
+          {/*body content start*/}
+          <div className="page-content">
+            {/*login start*/}
+            <section className="login">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-6 col-md-10 ml-auto mr-auto">
+                    <div className="login-form text-center box-shadow  px-5 py-5 xs-px-2 xs-py-2" style={{backgroundColor:"#ff9c1e"}}>
+                      <h2 className="title mb-5">Sign Up</h2>
+                      <form id="contact-form" onSubmit={handleSubmit}>
+                        <div className="messages" />
+                        <div className="form-group">
+                        <input id="form_email" type="text" name="username" value={username} onChange={handleChange} className="form-control" placeholder="Username" required="required" data-error="Username is required." />
+                        <div className="help-block with-errors" />
+                      </div>
+                      <div className="form-group">
+                      <input id="form_email" type="text" name="email" value={email} onChange={handleChange} className="form-control" placeholder="Adresse mail" required="required" data-error="Username is required." />
+                      <div className="help-block with-errors" />
+                    </div>
+                       
+                        <div className="form-group">
+                          <input id="form_password" type="password" name="password2" value={password2} onChange={handleChange} className="form-control" placeholder="Password" required="required" data-error="password is required." />
+                          <div className="help-block with-errors" />
+                        </div>
+                        <div className="form-group">
+                        <input id="form_password" type="password" name="password" value={password} onChange={handleChange} className="form-control" placeholder="Confirm your password" required="required" data-error="password is required." />
+                        <div className="help-block with-errors" />
+                      </div>
+                        <div className="form-group mt-4 mb-5">
+                        
+                        </div> <button className="btn btn-white btn-sm" type="submit">Signup</button>
+                        <p className='text-center' style={{color:"#000"}}>
+                             Have an account? <Link to='/signin' style={{color:"#07516E"}}> Sign In</Link>
+                        </p>
+                      </form>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div></div>
         <Footer />
-        </div>
+                </div>
     );
 };
 

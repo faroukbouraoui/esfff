@@ -246,7 +246,7 @@ a, i, .btn, button, img, span, .animatedBackground, .navbar-nav .nav-link:before
 .navbar-nav .nav-link{color: #111121; font-weight: 500; padding: 15px 10px !important; border-radius: 0; text-transform: capitalize; overflow: hidden; position: relative;}
 .navbar-nav .nav-link:before {position:absolute; left: 0; width:100%; margin:0 auto; bottom:0; height: 1.5px; animation: rotate 80s infinite linear; -webkit-animation: rotate 80s infinite linear; content: ""; border-radius: 15px; opacity: 0;
   background: rgb(255,120,16); 
-background: -moz-linear-gradient(left,  rgba(255,120,16,1) 0%, rgba(255,21,106,1) 25%, rgba(255,183,47,1) 50%, rgba(187,13,76,1) 75%, rgba(69,204,137,1) 100%);
+background: -moz-linear-gradient(left,  rgba(255,120,16,1) 0%, rgb(145, 145, 145) 25%, rgba(255,183,47,1) 50%, rgba(187,13,76,1) 75%, rgba(69,204,137,1) 100%);
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,120,16,1)), color-stop(25%,rgba(255,21,106,1)), color-stop(50%,rgba(255,183,47,1)), color-stop(75%,rgba(187,13,76,1)), color-stop(100%,rgba(255,120,16,1))); 
 background: -webkit-linear-gradient(left,  rgba(255,120,16,1) 0%,rgba(255,21,106,1) 25%,rgba(255,183,47,1) 50%,rgba(187,13,76,1) 75%,rgba(69,204,137,1) 100%); 
 background: -o-linear-gradient(left,  rgba(255,120,16,1) 0%,rgba(255,21,106,1) 25%,rgba(255,183,47,1) 50%,rgba(187,13,76,1) 75%,rgba(69,204,137,1) 100%);
@@ -281,7 +281,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7810', end
 #ht-main-nav .ht-nav-toggle span{width: 40px;}
 .side-logo{height: 60px;}
 
-.header-2 .navbar-nav .nav-link, .header-2 .navbar-nav .nav-link:hover, .header-2 .navbar-nav .nav-item .nav-link.active{color: #1c2045}
+.header-2 .navbar-nav .nav-link, .header-2 .navbar-nav .nav-link:hover, .header-2 .navbar-nav .nav-item .nav-link.active{color: gray}
 .header-2 .search-button{color:lightgray;}
 .header-2 .ht-nav-toggle span, .header-2 .ht-nav-toggle span::before, .header-2 .ht-nav-toggle span::after{background: #141414}
 .header-2 #header-wrap.fixed-header .navbar-nav .nav-link{color: gray}
@@ -328,8 +328,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7810', end
 /* ------------------------
     Page Title
 ------------------------*/
-.page-title {display: block; position: relative; padding: 200px 0; }
-.page-title h1{font-size: 50px; color: #1c2045; line-height: 60px; font-weight: 700; margin-bottom: 30px;}
+.page-titlee {display: block; position: relative; padding: 200px 0; }
+.page-titlee h1{font-size: 50px; color: #1c2045; line-height: 60px; font-weight: 700; margin-bottom: 30px;}
 .breadcrumb {padding: 0; background:none; display: inline-block; border-radius: 0; margin: 0; text-transform: uppercase; color: #111121; font-weight: 700;}
 .breadcrumb-item{display: inline-block;}
 .breadcrumb-item a{color: #111121}

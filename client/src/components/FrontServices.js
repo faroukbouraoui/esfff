@@ -23,7 +23,7 @@ dispatch(getCategories());
     return (
       <div>
       <section className="grey-bg pos-r text-center">
-      <div className="pattern-3">
+      <div style={{position:"absolute",left:"27%",top:"18%",WebkitTransform:"translateX(-50%) translateY(-50%);"}}>
         <img className="img-fluid rotateme" src="deco/images/pattern/03.png" alt="" />
       </div>
       <div className="container">
@@ -53,7 +53,8 @@ dispatch(getCategories());
           ))}
           </div>
           </div>
-          </section></div>
+          </section>
+          </div>
 
     );
   }

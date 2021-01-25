@@ -8,7 +8,7 @@ import { getOffres } from "../redux/actions/offreActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Fragment } from "react";
 import { setOffre } from "../helpers/auth";
-import './Pricing.css'
+import './Secondstep.css'
 export default function Secondstep () {
   const { setStep, userData, setUserData, submitData } = useContext(
     multiStepContext
@@ -33,53 +33,57 @@ export default function Secondstep () {
   <div className="container">
     
    
-      <h1 className='pricing__heading'>Créez une boutique et choisissez un forfait</h1>
-
+  <div>
+  <section className="grey-bg" data-bg-img="images/bg/02.png" style={{paddingBottom:"40px"}}>
+    <div className="container">
+      <div className="row text-center">
+        <div className="col-lg-8 col-md-12 ml-auto mr-auto">
+          <div className="section-title">
+            <h2 className="title">Choose Your Pricing plan</h2>
+            <p className="mb-0">Deos et accusamus et iusto odio dignissimos qui blanditiis praesentium voluptatum dele corrupti quos dolores et quas molestias.</p>
+          </div>
+        </div>
+      </div>
       <div className="row">
-      <div className='pricing__container' style={{marginLeft:"-64px"}}>
-     
-      {offres.map((offre)=>(
-      <div className="col-3">
-        <div className='pricing__container-card'>
-        
-          <div className='pricing__container-cardInfo'>
-            <div className='icon'>
-            <img
-            src={`/uploads/${offre.filename}`} 
-              className="iconimg_back"
-              alt="icon-pricing"
-            />
-            <h2>{offre.name}<br/> {offre.price}  <sup>dt</sup><span>/mois</span> </h2>
-           
-            
-            
+        {offres.map((o)=>(
+        <div className="col-lg-3 col-md-12">
+          <div className="price-table" style={{height:"1200px"}}>
+            <div className="price-header">
+              <h3 className="price-title">{o.name}</h3>
             </div>
-            <ul className='pricing__container-features'>
-            {offre.servicesOffre.map((s) =>(
-              <li>{s.serviceName}</li>
+            <img className="img-center my-4" src={`/uploads/${o.filename}`} alt />
+            <div className="price-value">
+              <h2>{o.price}<span>dt/Month</span></h2>
+            </div>
+            {o.servicesOffre.map((s)=>(
+            <div className="price-list">
+            
+              <ul className="list-unstyled">
+                
+                <li><i className="flaticon-tick" />{s.serviceName}</li>
+                
+              </ul>
+              
+            </div>
             ))}
-            </ul>
-            <button className="pricing__btn"
-            onClick={() => validerstepTwo(offre.name)}
-            >
-              Choisir votre offre
+            <button className="btn btn-white mt-5" onClick={()=> validerstepTwo(o.name)} style={{position:"absolute",bottom:"14px",marginLeft:"-36%"}}> <span>Choisir votre offre</span>
             </button>
           </div>
-         
-      </div>
-      </div>
-      ))}
-      </div>
-      </div>
-      <div className="buttons">
-      <Button
-        onClick={() => setStep(1)}
-        buttonStyle="btn--primary1"
-        buttonColor="orange"
-      >
+        </div>
+        ))}
+        </div>
+        </div>
+        </section>
+        <div className="button__back">
+        <button 
+        onClick={()=> setStep(1)}
+        className="btn btn-md btn-orange"
+        >
         Back
-      </Button>
-      </div>
+        </button>
+        
+        </div>
+        </div>
     </div>
  
         

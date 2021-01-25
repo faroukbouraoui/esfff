@@ -1,13 +1,13 @@
 .process__section{
-    padding: 100px 0 160px;
+    padding: 253px 0 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #F4FAFF;
+    
 }
 
 div.MuiPaper-root.MuiStepper-horizontal.MuiPaper-elevation0{
-    background-color:#F4FAFF!important ;
+    background-color:#f5fff3!important ;
 
 }
 .MuiStepIcon-root.MuiStepIcon-active{

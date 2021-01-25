@@ -91,27 +91,18 @@ const Signin = () => {
         }
     };
 
-    /****************************
-     * VIEWS
-     ***************************/
-    
-    /****************************
-     * RENDERER
-     ***************************/
+
     return (
-        <div>
+        <div >
             <Navbar />
         <div>
-          <section className="page-title o-hidden text-center grey-bg bg-contain animatedBackground" data-bg-img="assets/images/pattern/05.png">
+          <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  data-bg-img="deco/images/pattern/05.png">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-md-12">
-                  <h1 className="title">Login</h1>
-        
-                </div>
+              
               </div>
             </div>
-            <div className="page-title-pattern"><img className="img-fluid" src="assets/images/bg/06.png" alt /></div>
+            <div className="page-title-pattern"><img className="img-fluid" src="deco/images/bg/06.png" alt /></div>
           </section>
           {/*page title end*/}
           {/*body content start*/}
@@ -122,7 +113,7 @@ const Signin = () => {
                 <div className="row">
                   <div className="col-lg-6 col-md-10 ml-auto mr-auto">
                     <div className="login-form text-center box-shadow  px-5 py-5 xs-px-2 xs-py-2" style={{backgroundColor:"#ff9c1e"}}>
-                      <h2 className="title mb-5">Login</h2>
+                      <h2 className="title mb-5">Sign In</h2>
                       <form id="contact-form" onSubmit={handleSubmit}>
                         <div className="messages" />
                         <div className="form-group">
@@ -135,7 +126,7 @@ const Signin = () => {
                         </div>
                         <div className="form-group mt-4 mb-5">
                         
-                        </div> <button className="btn btn-white btn-sm" type="submit">Login</button>
+                        </div> <button  className="btn btn-white btn-sm" type="submit">Login</button>
                         <p className='text-center' style={{color:"#000"}}>
                              Have an account? <Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
                         </p>
@@ -147,7 +138,7 @@ const Signin = () => {
               </div>
             </section>
           </div></div>
-        
+        <Footer />
                 </div>
     );
 };

@@ -12,7 +12,7 @@ import {Link, withRouter} from 'react-router-dom'
 import {isAuthenticated} from '../helpers/auth'
 import { logout } from '../helpers/auth';
 import PowerSettingsNewSharpIcon from '@material-ui/icons/PowerSettingsNewSharp';
-
+import './Navbar.css'
 function Navbar({history}) {
 
 const serviceSection = useScrollSection('serviceUser');
@@ -37,7 +37,7 @@ const pricingSection = useScrollSection('pricingUser');
             <div className="row">
               <div className="col-lg-12">
                 
-                <nav className="navbar navbar-expand-lg">
+                <nav className="navbarr navbar-expand-lg" >
                 <Link to="/" class="navbar-brand logo">
                     <img id="logo-white-img" className="img-center" src="deco/images/Logo-ESF.png" alt="" />
                     <img id="logo-img" className="img-center sticky-logo" src="deco/images/Logo-ESF.png" alt="" />
@@ -46,7 +46,7 @@ const pricingSection = useScrollSection('pricingUser');
                     <span></span>
                     <span></span>
                   </button>
-                  <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                  <div className="collapse navbar-collapse" id="navbarNavDropdown" >
                     <ul className="navbar-nav ml-auto mr-auto">
                       
                       <li className="nav-item " data-toggle="hover"> <Link to="/" className="nav-link " >Home</Link>
@@ -61,7 +61,7 @@ const pricingSection = useScrollSection('pricingUser');
                       
                       
                      
-                      <li className="nav-item " data-toggle="hover"> <Link to="/contact" className="nav-link" >Contact</Link>
+                      <li className="nav-item " data-toggle="hover"> <Link to="/front-contact" className="nav-link" >Contact</Link>
                        
                       </li>
                    
@@ -80,7 +80,7 @@ const pricingSection = useScrollSection('pricingUser');
 )}
     </div>
     <div>
-   <a href="#" className="ht-nav-toggle"><span /></a>
+   <Link to="" className="ht-nav-toggle"><span /></Link>
    </div>
 
                  
@@ -90,11 +90,11 @@ const pricingSection = useScrollSection('pricingUser');
           </div>
         </div>
      </header>
-     <nav id="ht-main-nav"> <a href="#" className="ht-nav-toggle active"><span></span></a>
+     <nav id="ht-main-nav"> <a  className="ht-nav-toggle active"><span></span></a>
         <div className="container">
             <div className="row">
             <div className="col-md-12">
-                <img className="img-fluid side-logo mb-3" src="assets/images/logo-ESF.png" alt="" />
+                <img className="img-fluid side-logo mb-3" src="deco/images/logo-ESF.png" alt="" />
                 <p className="mb-5">E-stores Factory best way to achive your trading goals .</p>
                 <div className="form-info">
                 <h4 className="title">Contact info</h4>

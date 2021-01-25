@@ -1,0 +1,13 @@
+.navbarr{
+    padding: 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 992px){
+.navbarr {
+    justify-content: flex-end;
+    width: 100%;
+    border-radius: 0 !important;
+}
+}

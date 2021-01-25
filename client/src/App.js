@@ -31,6 +31,8 @@ import Leads from './components/Leads';
 import SigninAdmin from "./components/SigninAdmin"
 
 import SignupAdmin from "./components/SignupAdmin"
+import FrontContact from './components/FrontContact';
+import About from './components/About';
 
 
 
@@ -60,7 +62,7 @@ function App() {
 					<Route exact path='/signin' component={Signin} />
 					<Route exact path="/signinAdmin" component={SigninAdmin}/>
 					<Route exact path ="/signupAdmin" component={SignupAdmin} />
-					
+				
           <AdminRoute  path="/services" component={Services} />
           <AdminRoute  path="/post-service" component={Addservice} />  
           <AdminRoute path="/updateservice/:id" component={UpdateService} />
@@ -75,6 +77,8 @@ function App() {
 		  <AdminRoute path="/templates" component={templates} />
 		  <AdminRoute path ="/categories" component={AdminCategory} />
 		  <AdminRoute path="/add-category" component={AddCategory} />
+		  <Route path="/front-contact" component={FrontContact} />	
+		  <Route path="/about" component={About} />
 	<Route exact path='/' component={UserDashboard} />
 	  <AdminRoute
 		  exact
