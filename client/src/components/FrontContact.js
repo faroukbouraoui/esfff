@@ -7,7 +7,18 @@ function FrontContact() {
         <div>
            <Navbar /> 
            <div>
-<section className="contact-1" data-bg-img="deco/images/pattern/02.png">
+<section className="contact-1" data-bg-img="deco/images/pattern/02.png" >
+<section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  data-bg-img="deco/images/pattern/05.png">
+<div className="container">
+  <div className="row align-items-center">
+  <div class="col-md-12">
+<h1 class="title">Contactez Nous</h1>
+
+</div>
+  </div>
+</div>
+<div className="page-title-pattern"><img className="img-fluid" src="deco/images/bg/06.png" alt /></div>
+</section>
 <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-7">
@@ -35,7 +46,7 @@ function FrontContact() {
                   <div className="help-block with-errors"></div>
                 </div>
                 <div className="col-md-12">
-                <button className="btn btn-theme btn-radius"><span>Send Message</span>
+                <button className="btn btn-orange btn-radius" style={{marginLeft:"28%",marginTop:"-33px"}}><span>Send Message</span>
                 </button>
                 </div>
               </form>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div>
-    <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png">
+    <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png" style={{marginTop:"15px"}}>
     <div className="round-p-animation"></div>
       <div className="primary-footer">
           <div className="container-fluid p-0">

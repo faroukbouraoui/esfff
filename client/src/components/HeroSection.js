@@ -23,7 +23,7 @@ function HeroSection() {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12 order-lg-12 sm-mt-5">
               <div className="seo-img animated zoomIn delay-5 duration-4">
-                <img className="img-center" src="deco/images/banner/04.png" alt />
+                <img className="img-center" src="deco/images/banner/herophoto.png" alt />
               </div>
             </div>
             <div className="col-lg-6 col-md-12 order-lg-1 md-mt-5">

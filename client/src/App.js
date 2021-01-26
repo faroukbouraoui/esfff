@@ -33,6 +33,8 @@ import SigninAdmin from "./components/SigninAdmin"
 import SignupAdmin from "./components/SignupAdmin"
 import FrontContact from './components/FrontContact';
 import About from './components/About';
+import FrontPricing from './components/FrontPricing';
+import ServicesSingle from './components/ServicesSingle';
 
 
 
@@ -79,6 +81,8 @@ function App() {
 		  <AdminRoute path="/add-category" component={AddCategory} />
 		  <Route path="/front-contact" component={FrontContact} />	
 		  <Route path="/about" component={About} />
+		  <Route path="/front-pricing" component={FrontPricing} />
+		  <Route path="/services-single" component={ServicesSingle}/>
 	<Route exact path='/' component={UserDashboard} />
 	  <AdminRoute
 		  exact

@@ -20,6 +20,7 @@ dispatch(getTemplates());
     <div className="row align-items-end">
       <div className="col-lg-5 col-md-12">
         <div className="section-title">
+        <h6 >Templates</h6>
           <h2 className="title">Let’s Check some Work here</h2>
         </div>
       </div>

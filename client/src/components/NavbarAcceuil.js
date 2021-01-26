@@ -3,20 +3,15 @@ import React, { useEffect, useState } from 'react'
 
 
 
-  import {
-    ScrollingProvider,
-    useScrollSection,
-    Section,
-  } from 'react-scroll-section';
+ 
 import {Link, withRouter} from 'react-router-dom'
 import {isAuthenticated} from '../helpers/auth'
 import { logout } from '../helpers/auth';
 import PowerSettingsNewSharpIcon from '@material-ui/icons/PowerSettingsNewSharp';
-import './Navbar.css'
-function Navbar({history}) {
 
-const serviceSection = useScrollSection('serviceUser');
-const pricingSection = useScrollSection('pricingUser');
+function NavbarAcceuil({history}) {
+
+
 
   const redirected= ()=>{
     localStorage.setItem('redirected','/process')
@@ -49,19 +44,19 @@ const pricingSection = useScrollSection('pricingUser');
                   <div className="collapse navbar-collapse" id="navbarNavDropdown" >
                     <ul className="navbar-nav ml-auto mr-auto">
                       
-                      <li className="nav-item " data-toggle="hover"> <Link to="/" className="nav-link " >Home</Link>
+                      <li className="nav-item " data-toggle="hover" > <Link to="/" className="nav-link " style={{color:"white"}} >Home</Link>
                       </li>
-                      <li className="nav-item " data-toggle="hover"> <Link to="/about" className="nav-link">Qui Somme Nous</Link></li>
-                      <li className="nav-item " data-toggle="hover"> <Link to="/services-single" className="nav-link" >Services</Link>
+                      <li className="nav-item " data-toggle="hover"> <Link to="/about" className="nav-link"  style={{color:"white"}}>Qui Somme Nous</Link></li>
+                      <li className="nav-item " data-toggle="hover"> <Link to="/services-single" className="nav-link"  style={{color:"white"}}>Services</Link>
                      
                       </li>
-                      <li className="nav-item " data-toggle="hover"> <Link to="/front-pricing" className="nav-link">Offres</Link>
+                      <li className="nav-item " data-toggle="hover"> <Link to="/front-pricing" className="nav-link"  style={{color:"white"}}>Offres</Link>
                        
                       </li>
                       
                       
                      
-                      <li className="nav-item " data-toggle="hover"> <Link to="/front-contact" className="nav-link" >Contact</Link>
+                      <li className="nav-item " data-toggle="hover"> <Link to="/front-contact" className="nav-link"  style={{color:"white"}}>Contact</Link>
                        
                       </li>
                    
@@ -126,7 +121,7 @@ const pricingSection = useScrollSection('pricingUser');
     </nav>
        
 </div>
-    )
+)
 }
 
-export default withRouter(Navbar) 
+export default withRouter(NavbarAcceuil) 

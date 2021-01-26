@@ -12,10 +12,11 @@ import {
     useScrollSection,
     Section,
   } from 'react-scroll-section';
+import NavbarAcceuil from './NavbarAcceuil';
 const UserDashboard = () => {
     return( <div>
         <ScrollingProvider>
-        <Navbar />
+        <NavbarAcceuil />
         <HeroSection />
         <Section id="serviceUser"><FrontServices /></Section>
         <FrontTemplates />

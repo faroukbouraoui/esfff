@@ -1,3 +1,14 @@
+.col__colorone{
+  background: linear-gradient(90deg, rgb(255, 120, 16) 0%, rgb(255, 94, 44) 90%);
+  color:black;
+}
+.col__colortwo{
+  background: linear-gradient(90deg, rgba(52,20,188,1) 0%, rgba(201,0,139,1) 90%);
+}
+
+
+
+
 .pricing__section {
   padding-left: 15px;
   padding-top: 43px;

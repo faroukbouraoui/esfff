@@ -64,7 +64,7 @@ p{line-height: 1.9;}
 .z-index-0{z-index: 0; position: relative;}
 .z-index-1{z-index: 1; position: relative;}
 h1 span{color: #ff7810;}
-section{padding: 180px 0;}
+section{padding: 0px 0;}
 .section-title{margin-bottom:50px;}
 .section-title p{font-size: 16px;}
 .align-item-middle{display: -webkit-flex; /* Safari */  -webkit-align-items: center; /* Safari 7.0+ */  display: flex; align-items: center;}

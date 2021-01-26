@@ -284,7 +284,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7810', end
 .header-2 .navbar-nav .nav-link, .header-2 .navbar-nav .nav-link:hover, .header-2 .navbar-nav .nav-item .nav-link.active{color: gray}
 .header-2 .search-button{color:lightgray;}
 .header-2 .ht-nav-toggle span, .header-2 .ht-nav-toggle span::before, .header-2 .ht-nav-toggle span::after{background: #141414}
-.header-2 #header-wrap.fixed-header .navbar-nav .nav-link{color: gray}
+.header-2 #header-wrap.fixed-header .navbar-nav .nav-link{color: gray!important}
 .header-2 #header-wrap.fixed-header .search-button, .header-2 #header-wrap.fixed-header .navbar-nav .nav-link:hover, .header-2 #header-wrap.fixed-header .navbar-nav .nav-item .nav-link.active{color: #ff7810}
 .header-2 #header-wrap.fixed-header .ht-nav-toggle span, .header-2 #header-wrap.fixed-header .ht-nav-toggle span::before, .header-2 #header-wrap.fixed-header .ht-nav-toggle span::after{background: #141414}
 .logo .sticky-logo{display: none !important;}
