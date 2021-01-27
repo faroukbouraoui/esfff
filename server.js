@@ -31,7 +31,7 @@ app.use('/api/blog',blogRouter)
 app.use('/api/offre',offreRouter)
 app.use('/leads',leadRouter)
 app.use('/partenaires',partenaireRouter)
-app.use('/contact',contactRouter)
+app.use('/api/contact',contactRouter)
 app.use('/api/template',templateRouter)
 
 app.use('/uploads', express.static('uploads'));

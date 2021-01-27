@@ -11,6 +11,6 @@ router.post(
 serviceController.create
 );
 
-router.get('/', authenticatateJWT,serviceController.readAll);
+router.get('/',serviceController.readAll);
 
 module.exports = router;

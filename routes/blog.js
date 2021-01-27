@@ -29,7 +29,7 @@ router.post('/',authenticatateJWT,upload.single('blogImage'),
 	
 blogController.create
 );
-router.get('/',authenticatateJWT,blogController.readAll)
+router.get('/',blogController.readAll)
  
  
    

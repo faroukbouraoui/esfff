@@ -1,0 +1,35 @@
+.ancre{display: none;}
+.wrapper {
+
+  display: flex;
+  align-items: center;
+  padding: 15px;
+ 
+ 
+}
+.mes-boutons a {
+  
+  cursor: pointer;
+  text-align: center;
+  padding-left: 15px;
+  text-decoration:none;
+  color: #000;
+  background-color: gray;
+}
+.mes-boutons a:hover {
+  background-color: #3414bc;
+  color: #fff;
+}
+
+ .bloc {
+  display: none;
+  
+  left: 50%;
+  top: 3px;
+  position: relative;
+}
+.wrapper :target + div{
+  display:flex;
+}
+
+
