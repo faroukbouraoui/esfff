@@ -13,74 +13,60 @@ function Footer() {
                   <div className="col-lg-4 py-0">
                       <div className="ht-theme-info bg-contain bg-pos-r h-100 dark-bg text-white" data-bg-img="deco/images/bg/02.png">
                           <div className="footer-logo">
-                              <a href="index.html">
+                              <Link to="/">
                 <img className="img-center" src="deco/images/Logo-ESF.png" alt="" />
-                </a>
+                </Link>
                           </div>
-                          <p className="mb-3">Loptus Digital Marketing HTML5 Template Is fully responsible, Performance oriented theme, Build whatever you like with the Loptus, Loptus is the creative, modern HTML5 Template suitable for Your business.</p> <a className="btn-simple" href="#"><span>Read More <i className="fas fa-long-arrow-alt-right"></i></span></a>
+                          <p className="mb-3">eStores Factory est le centre Digital de services dédié à la démocratisation et à l'accélération des projets de boutiques en ligne. Nous mettons à la disposition des PMEs tous les outils et toutes les ressources nécessaires au lancement, à la réussite, et la pérennisation de leurs commerce en ligne. eStores Factory est votre "One Stop Shop" pour vos projet e-commerce.</p> <Link className="btn-simple" to="/about"><span>Read More <i className="fas fa-long-arrow-alt-right"></i></span></Link>
                           <div className="social-icons social-border circle social-hover mt-5">
                               <h4 className="title">Follow Us</h4>
                               <ul className="list-inline">
-                                  <li className="social-facebook"><a href="#"><i className="fab fa-facebook-f"></i></a>
+                                  <li className="social-facebook"><a href="https://www.facebook.com/eStoresFactory"><i className="fab fa-facebook-f"></i></a>
                                   </li>
-                                  <li className="social-twitter"><a href="#"><i className="fab fa-twitter"></i></a>
+                                
+                                  <li className="social-gplus"><a href="https://www.instagram.com/estoresfactory/"><i className="fab fa-instagram"></i></a>
                                   </li>
-                                  <li className="social-gplus"><a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                  </li>
-                                  <li className="social-linkedin"><a href="#"><i className="fab fa-linkedin-in"></i></a>
-                                  </li>
-                                  <li className="social-skype"><a href="#"><i className="fab fa-skype"></i></a>
-                                  </li>
+                             
                               </ul>
                           </div>
                       </div>
                   </div>
-                  <div className="col-lg-8 py-10 md-px-5">
+                  <div className="col-lg-8 py-0 md-px-5">
                       <div className="row">
                           <div className="col-lg-6 col-md-6 footer-list">
                               <h4 className="title">Useful Links</h4>
                               <div className="row">
                                   <div className="col-sm-5">
                                       <ul className="list-unstyled">
-                                          <li><a href="about-us.html">About Us</a>
+                                          <li><Link to="/about">A propos</Link>
                                           </li>
-                                          <li><a href="service.html">Our Service</a>
+                                          <li><Link to="/services-single">Services</Link>
                                           </li>
-                                          <li><a href="case-studies-grid-3.html">Case Studies</a>
-                                          </li>
-                                          <li><a href="project-grid-3.html">Project</a>
-                                          </li>
-                                          <li><a href="faq.html">Faq</a>
-                                          </li>
+                                          
                                       </ul>
                                   </div>
                                   <div className="col-sm-7">
                                       <ul className="list-unstyled">
-                                          <li><a href="team.html">Our Team</a>
+                                          <li><Link to="/front-pricing">Offres</Link>
                                           </li>
-                                          <li><a href="blog-grid-3.html">Blog</a>
+                                          <li><Link to="/front-contact">Contact</Link>
                                           </li>
-                                          <li><a href="privacy-policy.html">Privacy Policy</a>
-                                          </li>
-                                          <li><a href="terms-and-conditions.html">Terms & Condition</a>
-                                          </li>
-                                          <li><a href="contact.html">Contact Us</a>
-                                          </li>
+                                     
                                       </ul>
                                   </div>
                               </div>
                           </div>
                           <div className="col-lg-6 col-md-6 sm-mt-5">
-                              <h4 className="title">Contact us</h4>
+                              <h4 className="title">Contact</h4>
                               <ul className="media-icon list-unstyled">
                                   <li>
-                                      <p className="mb-0">423B, Road Wordwide Country, USA</p>
+                                      <p className="mb-0">Résidence El Badr, Avenue Hédi Nouira, Ariana 2037,Tunisie</p>
                                   </li>
-                                  <li><a href="mailto:themeht23@gmail.com">themeht23@gmail.com</a>
+                                  <li><a href="mailto:themeht23@gmail.com">hello@esftunisie.com</a>
                                   </li>
-                                  <li><a href="tel:+912345678900">+91-234-567-8900</a>
+                                  <li><a href="tel:+912345678900">+216 20 28 69 66</a>
                                   </li>
-                                  <li><a href="tel:+912345678900">+91-234-567-8900</a>
+                                  <li><a href="tel:+912345678900">+216 54 82 22 91</a>
                                   </li>
                               </ul>
                           </div>
@@ -98,11 +84,23 @@ function Footer() {
                               </div>
                           </div>
                       </div>
+
                   </div>
               </div>
-          </div>
+           
+        </div>
+<div className="secondary-footer">
+  <div className="container">
+    <div className="copyright" style={{textAlign: 'center'}}>
+      <div className="row align-items-center">
+        <div className="col"> <span>Copyright 2020 | All Rights Reserved</span></div>
       </div>
+    </div>
+  </div>
+</div>
 
+      </div>
+ 
   </footer>
 </div>
   );

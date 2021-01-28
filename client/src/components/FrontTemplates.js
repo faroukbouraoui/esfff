@@ -17,7 +17,7 @@ dispatch(getTemplates());
 
     return (
         <div>
-<section className="o-hidden" data-bg-img="images/pattern/01.png">
+<section className="o-hidden" data-bg-img="deco/images/pattern/01.png">
   <div className="container">
     <div className="row align-items-end">
       <div className="col-lg-5 col-md-12">

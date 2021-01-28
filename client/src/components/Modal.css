@@ -16,6 +16,7 @@
     max-width: 800px;
     margin: 4rem auto;
     transition: all .5s ease;
+    
   }
   
   .modal-header {
@@ -71,6 +72,7 @@
     position: fixed;
     transition: all 1.3s;
     width: 100%;
-    transform: translateY(0vh);
+    transform: translateY(-100vh) translateX(-27vw);
+    z-index: 999999;
 
   }

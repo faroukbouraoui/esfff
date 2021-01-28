@@ -3,13 +3,16 @@
     margin-left: 41%;
 }
 img:hover {
-    opacity:0.6;
+   /* opacity:0.6;*/
     cursor: pointer;
   }
   
   img:active {
-    opacity:0.4;
+  /*  opacity:0.4;*/
     cursor: pointer;
+  }
+  .modal-content{
+    margin-top: 47%;
   }
   
   input[type=radio]:checked + label > img {
@@ -19,15 +22,12 @@ img:hover {
     border: 20px solid #F4FAFF;
   }
   .label_third{
-      background-color: #F4FAFF!important;
+      background-color: #f5fff3!important;
   }
   .colonne{
       padding-bottom: 15px;
   }
-  .boutton{
-      padding-left: 46%;
-      margin-top: -49%;
-  }
+  
 
 
 /*

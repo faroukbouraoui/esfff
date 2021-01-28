@@ -95,16 +95,18 @@ const pricingSection = useScrollSection('pricingUser');
             <div className="row">
             <div className="col-md-12">
                 <img className="img-fluid side-logo mb-3" src="deco/images/logo-ESF.png" alt="" />
-                <p className="mb-5">E-stores Factory best way to achive your trading goals .</p>
+                <p className="mb-5"></p>
                 <div className="form-info">
                 <h4 className="title">Contact info</h4>
                 <ul className="contact-info list-unstyled mt-4">
                     <li className="mb-4"><i className="flaticon-location"></i><span>Address:</span>
-                    <p>Naser 2, Tunis</p>
+                    <p>Résidence El Badr, Avenue Hédi Nouira, Ariana 2037,Tunisie</p>
                     </li>
-                    <li className="mb-4"><i className="flaticon-call"></i><span>Phone:</span><a href="tel:+912345678900">+216 25.392.018</a>
+                    <li className="mb-4"><i className="flaticon-call"></i><span>Numéro télephone :</span><a href="tel:+21620286966">+216 20 28 69 66</a>
                     </li>
-                    <li><i className="flaticon-email"></i><span>Email</span><a href="mailto:themeht23@gmail.com">faroukbr050@gmail.com</a>
+                    <li className="mb-4"><i className="flaticon-call"></i><span>Numéro télephone :</span><a href="tel:+21654822291">+216 54 82 22 91</a>
+                    </li>
+                    <li><i className="flaticon-email"></i><span>Email</span><a href="mailto:themeht23@gmail.com">hello@esftunisie.com</a>
                     </li>
                 </ul>
                 </div>

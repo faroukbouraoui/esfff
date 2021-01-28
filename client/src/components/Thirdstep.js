@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTemplates } from "../redux/actions/templateActions";
 import './thirdstep.css'
 import Axios from "axios";
-import {Modal} from './Modal'
+import {Modal, Button} from 'react-bootstrap'
 
 
 
@@ -43,7 +43,7 @@ const {checked , setChecked}= useState(false)
   };*/
   const [show, setShow] = useState(false);
 
-  const closeModalHandler = () => setShow(false);
+  const HandleModal = () => setShow(!show);
   
   const validerstepthree = async (response) => {
 
@@ -67,6 +67,7 @@ const {checked , setChecked}= useState(false)
     }
     
   };
+  
 
   return (
 
@@ -164,27 +165,39 @@ const {checked , setChecked}= useState(false)
     
     <div className="row">
     {templates.map((temp)=>(
-      <div className="col-md-3 colonne">
+      <div className="col-3 colonne">
      
       <div className="custom-control custom-radio">
           <input type="radio" name="hello" className="custom-control-input"  id={temp.title} value={userData['template']} onClick={(e)=>setUserData({...userData, "template" : e.target.id })} />
             
           <label className="label_third" htmlFor={temp.title} >
-          <img
+          <img style={{width:"132%"}}
           src={`/upload/${temp.fileName}`} 
             
             
           />
+          {temp.title}
           </label>
     
        
       </div>
       
-      </div>))}
       </div>
-     
+      ))}
       </div>
-      <Modal show={show} close={closeModalHandler} />
+      <Modal show={show}>
+      <Modal.Header>Modal head</Modal.Header>
+      <Modal.Body>
+        hi hi hi hi 
+      </Modal.Body>
+      <Modal.Footer>
+      <Button onClick={()=>{HandleModal()}}>
+      close
+      </Button>
+      </Modal.Footer>
+    </Modal>
+      </div>
+
       <div className="boutton">
       <button
         onClick={() => setStep(2)}
@@ -192,13 +205,16 @@ const {checked , setChecked}= useState(false)
       >
         Back
       </button>
-      { show ? <div onClick={closeModalHandler} className="back-drop"></div> : null }
-      <button className="btn btn-openModal"  onClick={()=>{validerstepthree();setShow(true)}}>
+      
+      <button className="btn btn-openModal"  onClick={()=>{validerstepthree();HandleModal()}}>
       submit
       </button>
-      
+
       </div>
-     
+    
+    
+  
       </div>
+
   )
 }

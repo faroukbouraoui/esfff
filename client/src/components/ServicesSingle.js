@@ -26,7 +26,7 @@ dispatch(getServices())
     return (
       <div>
       <Navbar/>
-      <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  data-bg-img="deco/images/pattern/05.png">
+      <section className="animatedBackground page-titlee o-hidden text-center grey-bg bg-contain " style={{backgroundImage:"url('deco/images/pattern/05.png')"}} >
       <div className="container">
         <div className="row align-items-center">
         <div class="col-md-12">

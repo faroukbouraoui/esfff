@@ -34,7 +34,7 @@ export default function Secondstep () {
     
    
   <div>
-  <section className="grey-bg" data-bg-img="images/bg/02.png" style={{paddingBottom:"40px"}}>
+  <section className="grey-bg" data-bg-img="deco/images/bg/02.png" style={{paddingBottom:"40px"}}>
     <div className="container">
       <div className="row text-center">
         <div className="col-lg-8 col-md-12 ml-auto mr-auto">
@@ -55,17 +55,17 @@ export default function Secondstep () {
             <div className="price-value">
               <h2>{o.price}<span>dt/Month</span></h2>
             </div>
-            {o.servicesOffre.map((s)=>(
+            
             <div className="price-list">
             
               <ul className="list-unstyled">
                 
-                <li><i className="flaticon-tick" />{s.serviceName}</li>
+                <li><i className="flaticon-tick" />{o.description}</li>
                 
               </ul>
               
             </div>
-            ))}
+          
             <button className="btn btn-white mt-5" onClick={()=> validerstepTwo(o.name)} style={{position:"absolute",bottom:"14px",marginLeft:"-36%"}}> <span>Choisir votre offre</span>
             </button>
           </div>

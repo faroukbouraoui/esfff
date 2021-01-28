@@ -8,7 +8,7 @@ function About() {
         <Navbar />
         <div className="page-content">
         <section className="pos-r o-hidden">
-        <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  data-bg-img="deco/images/pattern/05.png">
+        <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  style={{backgroundImage:"url('deco/images/pattern/05.png')"}}>
 <div className="container">
   <div className="row align-items-center">
   <div class="col-md-12">

@@ -34,7 +34,7 @@ import SignupAdmin from "./components/SignupAdmin"
 import FrontContact from './components/FrontContact';
 import About from './components/About';
 import FrontPricing from './components/FrontPricing';
-import ServicesSingle from './components/ServicesSingle';
+import SingleServices from './components/SingleServices';
 
 
 
@@ -82,7 +82,7 @@ function App() {
 		  <Route path="/front-contact" component={FrontContact} />	
 		  <Route path="/about" component={About} />
 		  <Route path="/front-pricing" component={FrontPricing} />
-		  <Route path="/services-single" component={ServicesSingle}/>
+		  <Route path="/services-single" component={SingleServices}/>
 	<Route exact path='/' component={UserDashboard} />
 	  <AdminRoute
 		  exact
