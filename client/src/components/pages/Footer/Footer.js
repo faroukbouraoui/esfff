@@ -64,9 +64,9 @@ function Footer() {
                                   </li>
                                   <li><a href="mailto:themeht23@gmail.com">hello@esftunisie.com</a>
                                   </li>
-                                  <li><a href="tel:+912345678900">+216 20 28 69 66</a>
+                                  <li><a href="tel:+216202869660">+216 20 28 69 66</a>
                                   </li>
-                                  <li><a href="tel:+912345678900">+216 54 82 22 91</a>
+                                  <li><a href="tel:+21654822291">+216 54 82 22 91</a>
                                   </li>
                               </ul>
                           </div>
