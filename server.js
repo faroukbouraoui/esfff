@@ -34,7 +34,7 @@ app.use('/partenaires',partenaireRouter)
 app.use('/api/contact',contactRouter)
 app.use('/api/template',templateRouter)
 
-app.use('/uploads', express.static('uploads'));
+app.use('/upload', express.static('upload'));
 
 
 mongoose.connect('mongodb+srv://estoresdb:farouk1234@cluster0.sso99.mongodb.net/estoresdb?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true },
