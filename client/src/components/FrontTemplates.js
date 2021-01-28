@@ -40,7 +40,7 @@ dispatch(getTemplates());
 
           <div className="grid-item cat3">
             <div className="portfolio-item">
-              <img className="img-center w-100" src={`/uploads/${t.fileName}`} alt />
+              <img className="img-center w-100" src={`/upload/${t.fileName}`} alt />
               <div className="portfolio-title">
                 <h4>{t.title}</h4>
               </div>

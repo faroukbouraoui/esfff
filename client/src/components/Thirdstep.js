@@ -171,7 +171,7 @@ const {checked , setChecked}= useState(false)
             
           <label className="label_third" htmlFor={temp.title} >
           <img
-          src={`/uploads/${temp.fileName}`} 
+          src={`/upload/${temp.fileName}`} 
             
             
           />

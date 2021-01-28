@@ -41,7 +41,7 @@ const Tempteles = () => {
 			<a href='#!'>
 				<img
 					className='img-fluid w-100'
-					src={`/uploads/${t.fileName}`} 
+					src={`/upload/${t.fileName}`} 
 					alt='template'
 				/>
 			</a>

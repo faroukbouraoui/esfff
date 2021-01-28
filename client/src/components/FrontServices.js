@@ -40,7 +40,7 @@ dispatch(getCategories());
           <div className="col-lg-4 col-md-6">
             <div className="featured-item text-center">
               <div className="featured-icon">
-                <img className="img-center" src={`/uploads/${cat.fileName}`} alt="" />
+                <img className="img-center" src={`/upload/${cat.fileName}`} alt="" />
               </div>
               <div className="featured-title">
                 <h5>{cat.category}</h5>

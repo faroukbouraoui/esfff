@@ -60,7 +60,7 @@ import Menu from './Menu'
                   <div className="theme-accordion-bdy">
                     <div className="row p-3">
                       <div className="col-sm-3 theme-accordian-img text-center">
-                        <img className="img-responsive img-thumbnail" src={`/uploads/${blog.fileName}`} alt='imgblog' />
+                        <img className="img-responsive img-thumbnail" src={`/upload/${blog.fileName}`} alt='imgblog' />
                       </div>
                       <div className="col-sm-9">
                         <p style={{borderBottom:"1px lightgray solid"}} className="paragraph-small paragraph-black">

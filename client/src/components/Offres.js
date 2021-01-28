@@ -49,7 +49,7 @@ const Offres = ()=>  {
             
               <div className="icon_pricing">
               <img
-              src={`/uploads/${offre.fileName}`} 
+              src={`/upload/${offre.fileName}`} 
               className="iconimg_back"
               alt="icon-pricing"
             />

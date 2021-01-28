@@ -64,7 +64,7 @@ useEffect(() => {
         <div className="panel-title">
           <i className=" panel-head-icon text-primary">
           <img
-          src={`/uploads/${service.fileName}`} 
+          src={`/upload/${service.fileName}`} 
           className="iconimg_service"
           alt="icon-pricing"
         /></i>

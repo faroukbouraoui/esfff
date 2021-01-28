@@ -51,7 +51,7 @@ export default function Secondstep () {
             <div className="price-header">
               <h3 className="price-title">{o.name}</h3>
             </div>
-            <img className="img-center my-4" src={`/uploads/${o.filename}`} alt />
+            <img className="img-center my-4" src={`/upload/${o.fileName}`} alt />
             <div className="price-value">
               <h2>{o.price}<span>dt/Month</span></h2>
             </div>
