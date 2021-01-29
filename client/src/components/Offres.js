@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getOffres } from '../redux/actions/offreActions'
 import Menu from './Menu'
+import {baseUrl} from '../api/config'
 
 const Offres = ()=>  {
   const dispatch = useDispatch ();
@@ -49,7 +50,7 @@ const Offres = ()=>  {
             
               <div className="icon_pricing">
               <img
-              src={`/upload/${offre.fileName}`} 
+              src={baseUrl+`/upload/${offre.fileName}`} 
               className="iconimg_back"
               alt="icon-pricing"
             />
