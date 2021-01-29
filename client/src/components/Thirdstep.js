@@ -7,6 +7,7 @@ import { getTemplates } from "../redux/actions/templateActions";
 import './thirdstep.css'
 import Axios from "axios";
 import {Modal, Button} from 'react-bootstrap'
+import { baseUrl } from "../api/config";
 
 
 
@@ -172,7 +173,7 @@ const {checked , setChecked}= useState(false)
             
           <label className="label_third" htmlFor={temp.title} >
           <img style={{width:"132%"}}
-          src={`/upload/${temp.fileName}`} 
+          src={baseUrl+`/upload/${temp.fileName}`} 
             
             
           />

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Menu from './Menu'
 import './Services.css'
 import { getServices } from '../redux/actions/serviceActions';
+import { baseUrl } from '../api/config'
 
 
 const Services = ()=> {
@@ -64,7 +65,7 @@ useEffect(() => {
         <div className="panel-title">
           <i className=" panel-head-icon text-primary">
           <img
-          src={`/upload/${service.fileName}`} 
+          src={baseUrl+`/upload/${service.fileName}`} 
           className="iconimg_service"
           alt="icon-pricing"
         /></i>

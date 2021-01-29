@@ -6,6 +6,7 @@ import React, { Component, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../redux/actions/categoryActions";
 import { Link } from "react-router-dom";
+import { baseUrl } from "../api/config";
 
 const FrontServices = ()=> {
   
@@ -40,7 +41,7 @@ dispatch(getCategories());
           <div className="col-lg-4 col-md-6">
             <div className="featured-item text-center">
               <div className="featured-icon">
-                <img className="img-center" src={`/upload/${cat.fileName}`} alt="" />
+                <img className="img-center" src={baseUrl+`/upload/${cat.fileName}`} alt="" />
               </div>
               <div className="featured-title">
                 <h5>{cat.category}</h5>
