@@ -189,11 +189,7 @@ a, i, .btn, button, img, span, .animatedBackground, .navbar-nav .nav-link:before
 #mc-form input[type="email"]::-moz-placeholder {color: #111121;}
 #mc-form input[type="email"]:-ms-input-placeholder {color: #111121;}
 #mc-form input[type="email"].placeholder {color: #111121 !important;}
-<<<<<<< HEAD
 #mc-form .btn {position: absolute; border-radius: 0px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; top: 0; right: 0; padding: 12px 25px; transition: 0.20s; height: 44px;}
-=======
-#mc-form .btn {position: absolute; border-radius: 0px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; top: 0; right: 0; padding: 12px 25px; transition: 0.20s; height: 50px;}
->>>>>>> 0da1cde21bce27555af5a83024db23571519ebf7
 #mc-form .btn:hover{animation: inherit;}
 
 /* ------------------------
@@ -255,11 +251,7 @@ background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255
 background: -webkit-linear-gradient(left,  rgba(255,120,16,1) 0%,rgba(255,21,106,1) 25%,rgba(255,183,47,1) 50%,rgba(187,13,76,1) 75%,rgba(69,204,137,1) 100%); 
 background: -o-linear-gradient(left,  rgba(255,120,16,1) 0%,rgba(255,21,106,1) 25%,rgba(255,183,47,1) 50%,rgba(187,13,76,1) 75%,rgba(69,204,137,1) 100%);
 background: -ms-linear-gradient(left,  rgb(255, 255, 68) 0%,rgba(255,21,106,1) 25%,rgba(255,183,47,1) 50%,rgba(187,13,76,1) 75%,rgba(69,204,137,1) 100%);
-<<<<<<< HEAD
 background: #fff; 
-=======
-background: #441cae; 
->>>>>>> 0da1cde21bce27555af5a83024db23571519ebf7
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7810', endColorstr='#ff7810',GradientType=1 ); }
 .navbar-nav .nav-link:hover, .navbar-nav .nav-item .nav-link.active {color: #ff7810;}
 .navbar-nav .nav-link:hover:before, .navbar-nav .nav-item .nav-link.active:before{opacity: 1;}
@@ -336,11 +328,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7810', end
 /* ------------------------
     Page Title
 ------------------------*/
-<<<<<<< HEAD
 .page-titlee {display: block; position: relative; padding: 138px 0; }
-=======
-.page-titlee {display: block; position: relative; padding: 200px 0; }
->>>>>>> 0da1cde21bce27555af5a83024db23571519ebf7
 .page-titlee h1{font-size: 50px; color: #1c2045; line-height: 60px; font-weight: 700; margin-bottom: 30px;}
 .breadcrumb {padding: 0; background:none; display: inline-block; border-radius: 0; margin: 0; text-transform: uppercase; color: #111121; font-weight: 700;}
 .breadcrumb-item{display: inline-block;}

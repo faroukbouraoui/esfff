@@ -42,17 +42,10 @@ body {font-family: 'Poppins', sans-serif; font-weight: normal; font-style: norma
 /* ------------------------
     Typography
 ------------------------*/
-<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6{font-weight:normal; margin-top: 0px; margin-bottom: 0px;  letter-spacing: 2px;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 h1 { font-size: 60px; font-style: normal; line-height: 70px; font-weight: 700;  color: #1c2045; letter-spacing: 0;}
 h2 { font-size: 38px; font-style: normal; line-height: 46px; font-weight: 600; color: #1c2045;  margin-bottom: 10px; position: relative;}
-=======
-h1, h2, h3, h4, h5, h6{font-weight:normal; margin-top: 0px; margin-bottom: 0px; text-transform: capitalize; letter-spacing: 2px;}
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
-h1 { font-size: 60px; font-style: normal; line-height: 70px; font-weight: 700; text-transform: capitalize; color: #1c2045; letter-spacing: 0;}
-h2 { font-size: 38px; font-style: normal; line-height: 46px; font-weight: 600; color: #1c2045; text-transform: capitalize; margin-bottom: 10px; position: relative;}
->>>>>>> 0da1cde21bce27555af5a83024db23571519ebf7
 h3 { font-size: 30px; font-style: normal; line-height: 36px; font-weight: 500;}
 h4 { font-size: 24px; font-style: normal; margin-bottom: 10px; font-weight: 500; line-height: 30px; color: #1c2045;}
 h5 { font-size: 20px; font-style: normal; margin-bottom: 10px; font-weight: 500; line-height: 26px; color: #1c2045;}
@@ -313,11 +306,7 @@ iframe{width: 100%; border: none; pointer-events: auto;}
     Bg Animated Image
 ------------------------*/
 .pattern-3{position: absolute; left: 50%; top: 60%;}
-<<<<<<< HEAD
 .info-img:before {position: absolute; left: 0; top: 0; height: 451px; width: 100%; content: ""; background-image: url(../images/pattern/07.png); z-index: -1;}
-=======
-.info-img:before {position: absolute; left: 0; top: 0; height: 330px; width: 100%; content: ""; background-image: url(../images/pattern/07.png); z-index: -1;}
->>>>>>> 0da1cde21bce27555af5a83024db23571519ebf7
 
 
 /* ------------------------
