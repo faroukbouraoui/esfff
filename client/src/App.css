@@ -1,0 +1,17 @@
+.btn-hello{
+    background-color: #27558e!important;
+    color: #fff!important;
+}
+.title1::before{
+    position: absolute;
+    left: 14%;
+    width: 44%;
+    margin: 0 auto;
+    bottom: -13px;
+    height: 3px;
+    animation: rotate 80s infinite linear;
+    -webkit-animation: rotate 80s infinite linear;
+    content: "";
+    border-radius: 5px;
+    background: black;
+}

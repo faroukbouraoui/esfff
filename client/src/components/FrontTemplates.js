@@ -19,15 +19,14 @@ dispatch(getTemplates());
         <div>
 <section className="o-hidden" data-bg-img="deco/images/pattern/01.png">
   <div className="container">
-    <div className="row align-items-end">
-      <div className="col-lg-5 col-md-12">
-        <div className="section-title">
-        <h6 >Templates</h6>
-          <h2 className="title">Let’s Check some Work here</h2>
-        </div>
-      </div>
-      
+  <div className="row">
+  <div className="col-lg-6 col-md-12 ml-auto mr-auto">
+    <div className="section-title">
+     
+      <h2 className="title1" style={{left:"100px"}}>Nos templates et shops</h2> 
     </div>
+  </div>
+</div>
     
     <div className="row">
       <div className="col-lg-12 col-md-3">

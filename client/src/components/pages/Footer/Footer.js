@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div>
-    <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png" style={{marginTop:"15px"}}>
+    <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png" style={{marginTop:"111px"}}>
     <div className="round-p-animation"></div>
       <div className="primary-footer">
           <div className="container-fluid p-0">
@@ -78,7 +78,7 @@ function Footer() {
                                   <div className="subscribe-form sm-mt-2">
                                       <form id="mc-form" className="group">
                                           <input type="email" value="" name="EMAIL" className="email" id="mc-email" placeholder="Email Address" required="" />
-                                          <input className="btn" type="submit" name="subscribe" style={{background:"linear-gradient(90deg, rgba(255,120,16,1) 0%, rgba(255,94,44,1) 90%)"}} value="Subscribe" />
+                                          <input className="btn" type="submit" name="subscribe" style={{background:"#27558e",color:"#fff"}} value="Subscribe" />
                                       </form>
                                   </div>
                               </div>

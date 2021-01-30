@@ -46,7 +46,7 @@ function NavbarAcceuil({history}) {
                       
                       <li className="nav-item " data-toggle="hover" > <Link to="/" className="nav-link " style={{color:"white"}} >Home</Link>
                       </li>
-                      <li className="nav-item " data-toggle="hover"> <Link to="/about" className="nav-link"  style={{color:"white"}}>Qui Somme Nous</Link></li>
+                      <li className="nav-item " data-toggle="hover"> <Link to="/about" className="nav-link"  style={{color:"white"}}>Qui Sommes Nous</Link></li>
                       <li className="nav-item " data-toggle="hover"> <Link to="/services-single" className="nav-link"  style={{color:"white"}}>Services</Link>
                      
                       </li>
@@ -95,23 +95,20 @@ function NavbarAcceuil({history}) {
                 <h4 className="title">Contact info</h4>
                 <ul className="contact-info list-unstyled mt-4">
                     <li className="mb-4"><i className="flaticon-location"></i><span>Address:</span>
-                    <p>Naser 2, Tunis</p>
+                    <p>Résidence El Badr, Avenue Hédi Nouira, Ariana 2037,Tunisie</p>
                     </li>
-                    <li className="mb-4"><i className="flaticon-call"></i><span>Phone:</span><a href="tel:+912345678900">+216 25.392.018</a>
+                    <li className="mb-4"><i className="flaticon-call"></i><span>Phone:</span><a href="tel:+216 20 28 69 66">+216 20 28 69 66</a>
                     </li>
-                    <li><i className="flaticon-email"></i><span>Email</span><a href="mailto:themeht23@gmail.com">faroukbr050@gmail.com</a>
+                    <li><i className="flaticon-email"></i><span>Email</span><a href="mailto:hello@esftunisie.com">hello@esftunisie.com</a>
                     </li>
                 </ul>
                 </div>
                 <div className="social-icons social-colored mt-5">
                 <ul className="list-inline">
-                    <li className="mb-2 social-facebook"><a href="#"><i className="fab fa-facebook-f"></i></a>
+                    <li className="mb-2 social-facebook"><a href="https://www.facebook.com/eStoresFactory"><i className="fab fa-facebook-f"></i></a>
                     </li>
-                    <li className="mb-2 social-twitter"><a href="#"><i className="fab fa-twitter"></i></a>
-                    </li>
-                    <li className="mb-2 social-linkedin"><a href="#"><i className="fab fa-linkedin-in"></i></a>
-                    </li>
-                    <li className="mb-2 social-gplus"><a href="#"><i className="fab fa-google-plus-g"></i></a>
+                   
+                    <li className="mb-2 social-gplus"><a href="https://www.instagram.com/estoresfactory/"><i className="fab fa-google-plus-g"></i></a>
                     </li>
                 </ul>
                 </div>

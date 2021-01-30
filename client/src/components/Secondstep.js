@@ -47,7 +47,7 @@ export default function Secondstep () {
       <div className="row">
         {offres.map((o)=>(
         <div className="col-lg-3 col-md-12">
-          <div className="price-table" style={{height:"1200px"}}>
+          <div className="price-table" style={{height:"800px"}}>
             <div className="price-header">
               <h3 className="price-title">{o.name}</h3>
             </div>

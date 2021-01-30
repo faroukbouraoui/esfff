@@ -29,10 +29,7 @@ dispatch(getCategories());
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-12 ml-auto mr-auto">
-            <div className="section-title">
-              <h6>Service</h6>
-              <h2 className="title">We’r Provided Best Digital Marketing Services!</h2> 
-            </div>
+           
           </div>
         </div>
         <div className="row">

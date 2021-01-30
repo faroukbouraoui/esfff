@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Footer from './pages/Footer/Footer';
 import CheckIcon from '@material-ui/icons/Check';
 import { isAuthenticated } from '../helpers/auth';
+import NavbarAcceuil from './NavbarAcceuil';
 const FrontPricing = () => {
 
   const redirected= ()=>{
@@ -14,12 +15,24 @@ const FrontPricing = () => {
    
     return (
       <div>
-      <Navbar/>
-      <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  style={{backgroundImage:"url('deco/images/pattern/05.png')"}}>
+      <NavbarAcceuil/>
+      <section className="o-hidden" >
+<section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
+<div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
+
+<div className="container">
+<div className="row align-items-center">
+<div class="col-md-12">
+
+
+</div>
+</div>
+</div>
+</section>
 <div className="container">
   <div className="row align-items-center">
   <div class="col-md-12">
-<h1 class="title">Nos Offres</h1>
+<h1 style={{marginTop:"29px",marginBottom:"29px"}}>Nos Offres</h1>
 
 </div>
   </div>
@@ -30,7 +43,7 @@ const FrontPricing = () => {
       <div className="row">
         <div className="col-12">
           <div className="panel panel-default">
-    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div className="section-title"><h6 style={{marginLeft: "50%"}}>Offres</h6><h2 style={{marginLeft: "35%"}} className="title">choose your plan</h2></div></div>
+    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div><h2 style={{marginLeft: "35%",paddingTop:"18px"}}>Choisissez votre plan</h2></div></div>
     
             <div className="panel-body">
               
@@ -43,10 +56,10 @@ const FrontPricing = () => {
     
         </tr>
         <tr>
-          <th scope="col" className="">Starter</th>
-          <th scope="col" className="">Marketshare Growth</th>
-          <th scope="col" className="">Pionner</th>
-          <th scope="col" className="">Gold</th>
+          <th scope="col" className="" style={{textAlign:"center"}}>Starter <br/><span style={{color:"rgb(39, 85, 142)"}}> 300Dt/M </span></th>
+          <th scope="col" className=""  style={{textAlign:"center"}}>Market Growth <br/><span style={{color:"rgb(39, 85, 142)"}}>800Dt/M</span></th>
+          <th scope="col" className=""  style={{textAlign:"center"}}>Pionner <br/><span style={{color:"rgb(39, 85, 142)"}}>1000Dt/M</span></th>
+          <th scope="col" className=""  style={{textAlign:"center"}}>Gold <br/><span style={{color:"rgb(39, 85, 142)"}}>1000Dt/M</span></th>
           
         </tr>
         <tr>
@@ -142,26 +155,53 @@ const FrontPricing = () => {
     <td className="">Mail et téléphone</td>
     <td className="">Mail et téléphone</td>
     </tr>
-    <tr>
-    <th scope="row"></th>
-    <td scope="col" className="col__colorone">300dt/mois</td>
-    <td scope="col" className="col__colorone">800dt/mois</td>
-    <td scope="col" className="col__colorone">1500dt/mois</td>
-    <td scope="col" className="col__colorone">2000dt/mois</td>
+   
     
-    </tr>
       </tbody></table>
      <div>
      {isAuthenticated() && isAuthenticated().role=== 0 ?(
       <Link to="/process">
-        <button className="btn btn-orange btn-lg" style={{marginLeft:"50%"}} onClick={redirected}>Démarer</button>
+        <button className="btn btn-hello btn-sm" style={{marginLeft:"44%"}} onClick={redirected}>Démarer</button>
       </Link>
     ):(
       <Link to="/signin">
-      <button className="btn btn-orange btn-lg" style={{marginLeft:"50%"}} onClick={redirected}>Démarer</button>
+      <button className="btn btn-hello btn-sm" style={{marginLeft:"44%"}} onClick={redirected}>Démarer</button>
     </Link>
     )}
       </div>
+      <div>
+      {isAuthenticated() && isAuthenticated().role=== 0 ?(
+       <Link to="/process">
+         <button className="btn btn-hello btn-sm" style={{marginLeft:"56%",marginTop:"-6%"}} onClick={redirected}>Démarer</button>
+       </Link>
+     ):(
+       <Link to="/signin">
+       <button className="btn btn-hello btn-sm"style={{marginLeft:"56%",marginTop:"-6%"}} onClick={redirected}>Démarer</button>
+     </Link>
+     )}
+       </div>
+       <div>
+       {isAuthenticated() && isAuthenticated().role=== 0 ?(
+        <Link to="/process">
+          <button className="btn btn-hello btn-sm" style={{marginLeft:"72%",marginTop:"-10%"}} onClick={redirected}>Démarer</button>
+        </Link>
+      ):(
+        <Link to="/signin">
+        <button className="btn btn-hello btn-sm" style={{marginLeft:"70%",marginTop:"-10%"}}  onClick={redirected}>Démarer</button>
+      </Link>
+      )}
+        </div>
+        <div>
+        {isAuthenticated() && isAuthenticated().role=== 0 ?(
+         <Link to="/process">
+           <button className="btn btn-hello btn-sm" style={{marginLeft:"87%",marginTop:"-14%"}}  onClick={redirected}>Démarer</button>
+         </Link>
+       ):(
+         <Link to="/signin">
+         <button className="btn btn-hello btn-sm" style={{marginLeft:"87%",marginTop:"-14%"}}  onClick={redirected}>Démarer</button>
+       </Link>
+       )}
+         </div>
             </div>
           </div>
         </div>

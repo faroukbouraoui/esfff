@@ -31,40 +31,40 @@ function Pricing() {
     <div>
    
       
-      <section className="grey-bg pos-r text-center">
+      <section className="grey-bg pos-r text-center" style={{marginTop:"-9px"}}>
         
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-12 ml-auto mr-auto">
             <div className="section-title">
-              <h6>Service</h6>
-              <h2 className="title">We’r Provided Best Digital Marketing Services!</h2> 
+             
+              <h2 className="title">Choisissez le meilleur plan pour votre entreprise</h2> 
             </div>
           </div>
         </div>
           <div className="row">
           {offres.map((o)=>(
             <div className="col-lg-6 col-md-12">
-              <div className="price-table style-2 bg-contain bg-pos-r"  style={{backgroundImage: 'url("images/bg/02.png")'}}>
+              <div className="price-table style-2 bg-contain bg-pos-r" data-bg-img="deco/images/pattern/01.png" style={{height:"387px",marginBottom:"15px"}}>
                 <div className="price-header d-md-flex justify-content-between">
                   <h3 className="price-title">{o.name}</h3>
                   <div className="price-value">
-                    <h2>{o.price}dt/<span>Mois</span></h2>
+                    <h2 style={{fontSize:"20px"}}>{o.price}dt/<span>Mois</span></h2>
                   </div>
                 </div>
                 <div className="price-list">
                   <p>{o.description}</p>
                 </div>
                 <Link to="/front-pricing">
-                <button className="btn btn-orange">voir détails</button>
+                <button className="btn btn-hello btn-sm"  style={{background:"#27558e!important",color:"#fff",position:"absolute",bottom:"8px",left:"62%",padding:"9px"}}>voir détails</button>
                 </Link>
                 {isAuthenticated() && isAuthenticated().role=== 0 ?(
                   <Link to="/process">
-                    <button className="btn btn-white"  onClick={redirected}>Démarer</button>
+                    <button className="btn btn-white btn-sm"  style={{position:"absolute",bottom:"8px",left:"80%",padding:"9px"}} onClick={redirected}>Démarer</button>
                   </Link>
                 ):(
                   <Link to="/signin">
-                  <button className="btn btn-white"  onClick={redirected}>Démarer</button>
+                  <button className="btn btn-white btn-sm"  style={{position:"absolute",bottom:"8px",left:"80%",padding:"9px"}} onClick={redirected}>Démarer</button>
                 </Link>
                 )}
                 

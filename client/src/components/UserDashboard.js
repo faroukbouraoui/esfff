@@ -13,6 +13,7 @@ import {
     Section,
   } from 'react-scroll-section';
 import NavbarAcceuil from './NavbarAcceuil';
+import DescriptionSectioon from './DescriptionSectioon';
 const UserDashboard = () => {
     return( <div>
         <ScrollingProvider>
@@ -20,6 +21,7 @@ const UserDashboard = () => {
         <HeroSection />
         <Section id="serviceUser"><FrontServices /></Section>
         <FrontTemplates />
+        <DescriptionSectioon />
         <Section id="pricingUser"><Pricing /></Section>
         
         <Footer /> 

@@ -1,25 +1,27 @@
 import React from 'react'
 import Navbar from './Navbar'
+import NavbarAcceuil from './NavbarAcceuil'
 import Footer from './pages/Footer/Footer'
 
 function About() {
     return (
         <div>
-        <Navbar />
+        <NavbarAcceuil />
         <div className="page-content">
         <section className="pos-r o-hidden">
-        <section className="page-titlee o-hidden text-center grey-bg bg-contain animatedBackground"  style={{backgroundImage:"url('deco/images/pattern/05.png')"}}>
+        <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
+        <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
+
 <div className="container">
   <div className="row align-items-center">
   <div class="col-md-12">
-<h1 class="title">Estres Factory</h1>
+
 
 </div>
   </div>
 </div>
-<div className="page-title-pattern"><img className="img-fluid" src="deco/images/bg/06.png" alt /></div>
 </section>
-  <div style={{position:"absolute",left:"27%",top:"18%",WebkitTransform:"translateX(-50%) translateY(-50%);"}} >
+  <div style={{position:"absolute",left:"27%",top:"54%",WebkitTransform:"translateX(-50%) translateY(-50%);"}} >
     <img className="img-fluid rotateme" src="deco/images/pattern/03.png" alt="" />
   </div>
   <div className="container">
@@ -27,7 +29,7 @@ function About() {
       <div className="col-lg-12 col-md-12">
         <div className="section-title">
           
-          <h2 className="title">C'est quoi Estores Factory</h2> 
+          <h3 className="" style={{paddingTop:"27px"}}>Nous sommes votre <span style={{color:"#ff7810"}}>One Stop Shop</span><br/> de vos projets<span style={{color:"#ff7810"}}> E-commerce</span></h3> 
         </div>
        <p>eStores Factory est une plateforme de gestion de commerce électronique unifiée qui est le partenaire en ligne de choix aux marques qui opèrent en Tunisie et en Afrique. 
        Nous aidons les marques à gérer tous les aspects de leur commerce électronique à travers nos capacités de vente omnicanal et notre gestion des canaux. 
