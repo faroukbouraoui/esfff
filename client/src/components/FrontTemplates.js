@@ -2,6 +2,7 @@ import React, {  useEffect }  from 'react'
 import { Fragment } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../api/config';
 import { getTemplates } from "../redux/actions/templateActions";
 const FrontTemplates = () => {
 
@@ -39,7 +40,7 @@ dispatch(getTemplates());
 
           <div className="grid-item cat3">
             <div className="portfolio-item">
-              <img className="img-center w-100" src={`/upload/${t.fileName}`} alt />
+              <img className="img-center w-100" src={baseUrl+`/upload/${t.fileName}`} alt />
               <div className="portfolio-title">
                 <h4>{t.title}</h4>
               </div>

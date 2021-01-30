@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { setLocalStorage } from "../helpers/localStorage";
 import { multiStepContext } from "../StepContext";
-
+import { baseUrl } from '../api/config'
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { getOffres } from "../redux/actions/offreActions";
@@ -51,7 +51,7 @@ export default function Secondstep () {
             <div className="price-header">
               <h3 className="price-title">{o.name}</h3>
             </div>
-            <img className="img-center my-4" src={`/upload/${o.fileName}`} alt />
+            <img className="img-center my-4" src={baseUrl+`/upload/${o.fileName}`} alt />
             <div className="price-value">
               <h2>{o.price}<span>dt/Month</span></h2>
             </div>

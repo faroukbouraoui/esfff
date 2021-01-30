@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { baseUrl } from '../api/config';
 import { getTemplates } from '../redux/actions/templateActions';
 import Menu from './Menu'
 
@@ -41,7 +42,7 @@ const Tempteles = () => {
 			<a href='#!'>
 				<img
 					className='img-fluid w-100'
-					src={`/upload/${t.fileName}`} 
+					src={baseUrl+`/upload/${t.fileName}`} 
 					alt='template'
 				/>
 			</a>
