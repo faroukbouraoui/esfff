@@ -25,7 +25,7 @@ exports.signupController = async (req, res) => {
         await newUser.save();
 
         res.json({
-            successMessage: 'Registration success. Please signin.',
+            successMessage: 'votre inscription à été effectuée avec succès,merci de se connecter',
         });
     } catch (err) {
         console.log('signupController error: ', err);
@@ -42,14 +42,14 @@ exports.signinController = async (req, res) => {
         const user = await User.findOne({ email });
         if (!user) {
             return res.status(400).json({
-                errorMessage: 'Invalid credentials',
+                errorMessage: 'Email invalide',
             });
         }
 
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(400).json({
-                errorMessage: 'Invalid credentials',
+                errorMessage: 'mot de passe invalide',
             });
         }
 
@@ -71,7 +71,7 @@ exports.signinController = async (req, res) => {
     } catch (err) {
         console.log('signinController error: ', err);
         res.status(500).json({
-            errorMessage: 'Server error',
+            errorMessage: 'Email et mot de passse invalides',
         });
     }
 };

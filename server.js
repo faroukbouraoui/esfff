@@ -14,6 +14,7 @@ const leadRouter = require('./routes/lead')
 const partenaireRouter = require ('./routes/partenaire')
 const contactRouter = require('./routes/contact')
 const templateRouter = require('./routes/template')
+const newsletterRouter = require('./routes/newsletter')
 const mongoose = require ('mongoose')
 var bodyParser = require('body-parser')
 
@@ -33,6 +34,7 @@ app.use('/leads',leadRouter)
 app.use('/partenaires',partenaireRouter)
 app.use('/api/contact',contactRouter)
 app.use('/api/template',templateRouter)
+app.use('/api/newsletter',newsletterRouter)
 
 app.use('/upload', express.static('upload'));
 

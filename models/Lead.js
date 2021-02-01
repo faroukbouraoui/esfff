@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Offres = require("./Offres");
+
 require("mongoose-type-email");
 const { ObjectId } = mongoose.Schema;
 const leadSchema = new mongoose.Schema({
