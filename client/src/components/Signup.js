@@ -115,6 +115,7 @@ const Signup = () => {
                     });
                 });
         }
+        
     };
     
 
@@ -153,6 +154,8 @@ const Signup = () => {
                   <div className="col-lg-6 col-md-10 ml-auto mr-auto" style={{marginTop:"46px"}}>
                     <div className="login-form text-center box-shadow  px-5 py-5 xs-px-2 xs-py-2" style={{backgroundColor:"#ff9c1e"}}>
                       <h2 className="title mb-5">Sign Up</h2>
+                      {successMsg && showSuccessMsg(successMsg)}
+                      {errorMsg && showErrorMsg(errorMsg)}
                       <form id="contact-form" onSubmit={handleSubmit}>
                         <div className="messages" />
                         <div className="form-group">
@@ -176,7 +179,7 @@ const Signup = () => {
                         
                         </div> <button className="btn btn-white btn-sm" type="submit">Signup</button>
                         <p className='text-center' style={{color:"#000"}}>
-                             Have an account? <Link to='/signin' style={{color:"#07516E"}}> Sign In</Link>
+                            j'ai un compte ? <Link to='/signin' style={{color:"#07516E"}}> Sign In</Link>
                         </p>
                       </form>
                      

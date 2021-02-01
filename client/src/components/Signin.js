@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-
+import { showErrorMsg } from '../helpers/message';
 import { setAuthentication, isAuthenticated } from '../helpers/auth';
 import isEmpty from 'validator/lib/isEmpty';
 import isEmail from 'validator/lib/isEmail';
@@ -58,6 +58,9 @@ const Signin = () => {
                 ...formData,
                 errorMsg: 'Invalid email',
             });
+        
+     
+
         } else {
             const { email, password } = formData;
             const data = { email, password };
@@ -120,21 +123,22 @@ const Signin = () => {
                   <div className="col-lg-6 col-md-10 ml-auto mr-auto" style={{marginTop:"46px"}}>
                     <div className="login-form text-center box-shadow  px-5 py-5 xs-px-2 xs-py-2" style={{backgroundColor:"#ff9c1e"}}>
                       <h2 className="title mb-5">Sign In</h2>
+                      {errorMsg && showErrorMsg(errorMsg)}
                       <form id="contact-form" onSubmit={handleSubmit}>
                         <div className="messages" />
                         <div className="form-group">
                           <input id="form_email" type="text" name="email" value={email} onChange={handleChange} className="form-control" placeholder="Adresse Email" required="required" data-error="Adresse Email obligatoire." />
-                          <div className="help-block with-errors" />
+                          
                         </div>
                         <div className="form-group">
                           <input id="form_password" type="password" name="password" value={password} onChange={handleChange} className="form-control" placeholder="Mot de passe" required="required" data-error="Mot de passe obligatoire." />
-                          <div className="help-block with-errors" />
+                         
                         </div>
                         <div className="form-group mt-4 mb-5">
                         
                         </div> <button  className="btn btn-white btn-sm" type="submit">Login</button>
                         <p className='text-center' style={{color:"#000"}}>
-                             Have an account? <Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
+                            j'ai un compte ?<Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
                         </p>
                       </form>
                      
