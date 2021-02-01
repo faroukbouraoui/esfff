@@ -10,6 +10,7 @@ import blogReducer from './reducers/blogReducers';
 import templateReducers from './reducers/templateReducers';
 import leadReducer from './reducers/leadReducer';
 import contactReducers from './reducers/contactReducers';
+import newsletterReducers from './reducers/newsletterReducers';
 const reducer = combineReducers({
 	loading: loadingReducer,
 	messages: messageReducer,
@@ -19,7 +20,8 @@ const reducer = combineReducers({
 	blogs: blogReducer,
 	templates: templateReducers,
 	leads: leadReducer,
-	contacts:contactReducers
+	contacts:contactReducers,
+	newsletters:newsletterReducers
 });
 
 const initialState = {};

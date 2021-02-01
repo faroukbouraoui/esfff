@@ -1,8 +1,75 @@
-import React from 'react';
+import Axios from 'axios';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../../../api/config';
+import { clearMessages } from '../../../redux/actions/messageActions';
+import { createNewsletter } from '../../../redux/actions/newslettersActions';
+
+
 
 function Footer() {
+
+
+    const { loading } = useSelector(state => state.loading);
+	const { successMsg, errorMsg } = useSelector(state => state.messages);
+	
+   
+
+  const dispatch = useDispatch();
+  const [clientSideError, setClientSideError] = useState('');
+  
+
+  const [newsletterData, setNewsletterData] = useState({
+		email:""
+		
+		
+  });
+  
+  const {
+	email
+
+	} = newsletterData;
+
+
+  const handleMessages = evt => {
+		dispatch(clearMessages());
+		setClientSideError('');
+  };
+  
+  const handleNewsletterChange = evt => {
+    setNewsletterData({
+			...newsletterData,
+			[evt.target.name]: evt.target.value,
+		});
+  };
+
+  
+  const handleBlogSubmit = evt => {
+		evt.preventDefault();
+
+		if (email === null) {
+			setClientSideError('Please select an image');
+		}  else {
+			let formData = new FormData();
+
+			formData.append('email', email);
+	
+			
+		
+
+			dispatch(createNewsletter(formData));
+			setNewsletterData({
+				email: "",
+	
+				
+		
+			});
+		}
+	};
+
   return (
     <div>
     <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png" style={{marginTop:"111px"}}>
@@ -76,8 +143,8 @@ function Footer() {
                               <div className="align-items-center white-bg box-shadow px-3 py-3 radius d-md-flex justify-content-between">
                                   <h4 className="mb-0">NewsLetter</h4>
                                   <div className="subscribe-form sm-mt-2">
-                                      <form id="mc-form" className="group">
-                                          <input type="email" value="" name="EMAIL" className="email" id="mc-email" placeholder="Email Address" required="" />
+                                      <form id="mc-form" className="group" onClick={handleBlogSubmit}>
+                                          <input type="email" value={email} name="email" onChange={handleNewsletterChange} className="email" id="mc-email" placeholder="Email Address" required="" />
                                           <input className="btn" type="submit" name="subscribe" style={{background:"#27558e",color:"#fff"}} value="Subscribe" />
                                       </form>
                                   </div>
