@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Footer from './pages/Footer/Footer';
 import CheckIcon from '@material-ui/icons/Check';
 import { isAuthenticated } from '../helpers/auth';
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import './Secondstep.css'
 export default function Secondstep () {
   const { setStep, userData, setUserData, submitData } = useContext(
@@ -164,14 +164,14 @@ export default function Secondstep () {
    <div>
    
    
-      <button  style={{marginLeft:"-4%"}} onClick={()=>validerstepTwo("starter")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px"}}/></button>
+      <button  style={{marginLeft:"-6%"}} onClick={()=>validerstepTwo("starter")}><span style={{border:"2px solid #27558e",padding:"10px",borderRadius:"25px"}}>j'y vais<ArrowForwardIosIcon/></span></button>
  
 </div>
   
     <div>
    
     
-       <button  style={{marginLeft:"19%"}} onClick={()=>validerstepTwo("market growth")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px",marginTop:"-131%"}}/></button>
+       <button  style={{marginLeft:"19%"}} onClick={()=>validerstepTwo("market growth")}><span style={{border:"2px solid #27558e",padding:"10px",borderRadius:"25px",position:"relative",top:"-24px"}}>j'y vais<ArrowForwardIosIcon style={{color:"#27558e",marginTop:"-4%"}}/></span></button>
  
    
  
@@ -179,7 +179,7 @@ export default function Secondstep () {
      <div>
     
      
-        <button  style={{marginLeft:"50%"}} onClick={()=>validerstepTwo("pioneer")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px",marginTop:"-205%"}}/></button>
+        <button  style={{marginLeft:"50%"}} onClick={()=>validerstepTwo("pioneer")}><span style={{border:"2px solid #27558e",padding:"10px",borderRadius:"25px",position:"relative",top:"-49px"}}>j'y vais<ArrowForwardIosIcon style={{color:"#27558e",marginTop:"-2%"}}/></span></button>
    
   
    
@@ -188,7 +188,7 @@ export default function Secondstep () {
       <div>
      
       
-         <button  style={{marginLeft:"84%"}}  onClick={()=>validerstepTwo("gold")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px",marginTop:"-278%"}}/></button>
+         <button  style={{marginLeft:"84%"}}  onClick={()=>validerstepTwo("gold")}><span style={{border:"2px solid #27558e",padding:"10px",borderRadius:"25px",position:"relative", top:"-75px"}}>j'y vais<ArrowForwardIosIcon style={{color:"#27558e",marginTop:"-2%"}}/></span></button>
    
       
       

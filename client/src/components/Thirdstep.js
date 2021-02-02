@@ -187,7 +187,7 @@ const {checked , setChecked}= useState(false)
       ))}
       </div>
       <Modal show={show}>
-      <Modal.Header>Cher client ,suite à la création d'un forfait:</Modal.Header>
+      <Modal.Header><span style={{color:"#27558e"}}>Cher client </span></Modal.Header>
       <Modal.Body>
         Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures
       </Modal.Body>
