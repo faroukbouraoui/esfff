@@ -23,7 +23,7 @@ function Footer() {
   
 
   const [newsletterData, setNewsletterData] = useState({
-		email:""
+		email:"",
 		
 		
   });

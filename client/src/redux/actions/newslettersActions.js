@@ -13,7 +13,7 @@ import {baseUrl} from '../../api/config'
 export const getNewsletters = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get(baseUrl  + '/api/newsletter');
+		const response = await axios.get(baseUrl  + '/api/newsletter/');
 		dispatch({ type: STOP_LOADING });
 		dispatch({ type: GET_NEWSLETTERS, payload: response.data.newsletters });
 	} catch (err) {
@@ -34,7 +34,7 @@ export const createNewsletter = formData => async dispatch => {
 			},
 		};
 		dispatch({ type: START_LOADING });
-		const response = await axios.post(baseUrl  + '/api/newsletter', formData, config);
+		const response = await axios.post(baseUrl  + '/api/newsletter/', formData, config);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_SUCCESS_MESSAGE,

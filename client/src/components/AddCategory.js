@@ -105,7 +105,7 @@ const AddCategory = () => {
         <div className="panel panel-default">
 <div className="panel">
   <div className="panel-head">
-    <h5 className="panel-title">Add Blog</h5>
+    <h5 className="panel-title">Add Category</h5>
   </div>
   <div className="panel-body">
     <form onSubmit={handleCategorySubmit}>
@@ -132,14 +132,14 @@ const AddCategory = () => {
 </div>
     
       <div className="form-group row">
-        <label className="col-12 col-form-label">Blog Title <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
+        <label className="col-12 col-form-label">category normalizeEmail <i className="tip tippy bg-secondary" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is placeholder." /></label>
         <div className="col-12">
           <input value={category} name='category' onChange={handleCategoryChange} type="text" className="form-control" placeholder="placeholder" />
         </div>
       </div>
 
       <div className="form-group row">
-        <label className="col-12 col-form-label">Blog description <i className="tip tippy bg-success" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is textarea." /></label>
+        <label className="col-12 col-form-label">category description <i className="tip tippy bg-success" data-tippy-animation="scale" data-tippy-arrow="true" data-tippy data-original-title="This is textarea." /></label>
         <div className="col-sm-12" >
           <textarea  value={description} name='description' onChange={handleCategoryChange} className="form-control" rows={5} placeholder="Description"/>
         </div>

@@ -37,7 +37,7 @@ function NavbarAcceuil({history}) {
                     <img id="logo-white-img" className="img-center" src="deco/images/Logo-ESF.png" alt="" />
                     <img id="logo-img" className="img-center sticky-logo" src="deco/images/Logo-ESF.png" alt="" />
                 </Link>
-                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span></span>
+                  <button className="navbar-toggler" style={{backgroundColor:"#000"}} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span></span>
                     <span></span>
                     <span></span>
                   </button>

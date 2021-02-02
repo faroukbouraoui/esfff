@@ -24,7 +24,7 @@ dispatch(getTemplates());
   <div className="col-lg-6 col-md-12 ml-auto mr-auto">
     <div className="section-title">
      
-      <h2 className="title1" style={{left:"100px"}}>Nos templates et shops</h2> 
+      <h2 className="title1" style={{left:"10vmin"}}>Nos templates et shops</h2> 
     </div>
   </div>
 </div>
