@@ -34,13 +34,10 @@ export const createNewsletter = formData => async dispatch => {
 			},
 		};
 		dispatch({ type: START_LOADING });
-		const response = await axios.post(baseUrl  + '/api/newsletter/', formData, config);
-		dispatch({ type: STOP_LOADING });
-		dispatch({
-			type: SHOW_SUCCESS_MESSAGE,
-			payload: response.data.successMessage,
-		});
-		dispatch({ type: CREATE_NEWSLETTER, payload: response.data.category });
+		const response = await axios.post(baseUrl  + '/api/newsletter', formData, config);
+		
+
+		dispatch({ type: CREATE_NEWSLETTER, payload: response.data.newsletter });
 	} catch (err) {
 		console.log('createNewsletter api error: ', err);
 		dispatch({ type: STOP_LOADING });

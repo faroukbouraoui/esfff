@@ -187,14 +187,14 @@ const {checked , setChecked}= useState(false)
       ))}
       </div>
       <Modal show={show}>
-      <Modal.Header>Modal head</Modal.Header>
+      <Modal.Header>Cher client ,suite à la création d'un forfait:</Modal.Header>
       <Modal.Body>
-        hi hi hi hi 
+        Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures
       </Modal.Body>
       <Modal.Footer>
-      <Button onClick={()=>{HandleModal()}}>
+      <button className="btn btn-hello" onClick={()=>{HandleModal()}}>
       close
-      </Button>
+      </button>
       </Modal.Footer>
     </Modal>
       </div>
@@ -207,7 +207,7 @@ const {checked , setChecked}= useState(false)
         Back
       </button>
       
-      <button className="btn btn-openModal"  onClick={()=>{validerstepthree();HandleModal()}}>
+      <button className="btn btn-hello"  onClick={()=>{validerstepthree();HandleModal()}}>
       submit
       </button>
 

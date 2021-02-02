@@ -2,14 +2,14 @@ const { check, validationResult } = require('express-validator');
 
 exports.signupValidator = [
     check('username').not().isEmpty().trim().withMessage('All fields required'),
-    check('email').isEmail().normalizeEmail().withMessage('Invalid email'),
+    check('email').isEmail().normalizeEmail().withMessage('Email invalide'),
     check('password')
         .isLength({ min: 6 })
         .withMessage('Password must be at least 6 characters long'),
 ];
 
 exports.signinValidator = [
-    check('email').isEmail().normalizeEmail().withMessage('Invalid email'),
+    check('email').isEmail().normalizeEmail().withMessage('Email invalide'),
     check('password')
         .isLength({ min: 6 })
         .withMessage('Password must be at least 6 characters long'),

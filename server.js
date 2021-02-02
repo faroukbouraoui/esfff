@@ -22,7 +22,7 @@ var bodyParser = require('body-parser')
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(express.urlencoded({extended : true}));
 app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/category', categoryRoutes);

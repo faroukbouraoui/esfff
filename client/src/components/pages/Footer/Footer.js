@@ -4,13 +4,15 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
+import isEmpty from 'validator/lib/isEmpty';
 import { baseUrl } from '../../../api/config';
+import { showErrorMsg, showSuccessMsg } from '../../../helpers/message';
 import { clearMessages } from '../../../redux/actions/messageActions';
 import { createNewsletter } from '../../../redux/actions/newslettersActions';
 
 
 
-function Footer() {
+const Footer=()=> {
 
 
     const { loading } = useSelector(state => state.loading);
@@ -22,16 +24,9 @@ function Footer() {
   const [clientSideError, setClientSideError] = useState('');
   
 
-  const [newsletterData, setNewsletterData] = useState({
-		email:"",
-		
-		
-  });
+  const [newsletterData, setNewsletterData] = useState({email:""});
   
-  const {
-	email
-
-	} = newsletterData;
+  const {email} = newsletterData;
 
 
   const handleMessages = evt => {
@@ -43,15 +38,16 @@ function Footer() {
     setNewsletterData({
 			...newsletterData,
 			[evt.target.name]: evt.target.value,
-		});
+        });
+        
   };
 
   
-  const handleBlogSubmit = evt => {
+  const handleNewsletterSubmit = evt => {
 		evt.preventDefault();
 
-		if (email === null) {
-			setClientSideError('Please select an image');
+		if (isEmpty(email)) {
+			setClientSideError('entrer votre email');
 		}  else {
 			let formData = new FormData();
 
@@ -143,10 +139,12 @@ function Footer() {
                               <div className="align-items-center white-bg box-shadow px-3 py-3 radius d-md-flex justify-content-between">
                                   <h4 className="mb-0">NewsLetter</h4>
                                   <div className="subscribe-form sm-mt-2">
-                                      <form id="mc-form" className="group" onClick={handleBlogSubmit}>
-                                          <input type="email" value={email} name="email" onChange={handleNewsletterChange} className="email" id="mc-email" placeholder="Email Address" required="" />
-                                          <input className="btn" type="submit" name="subscribe" style={{background:"#27558e",color:"#fff"}} value="Subscribe" />
+                                      <form id="mc-form" className="group" onSubmit={handleNewsletterSubmit} >
+
+                                          <input type="email" value={email} name="email" onChange={handleNewsletterChange} className="email"  placeholder="Email Address" required="" />
+                                          <button className="btn" type="submit"  style={{background:"#27558e",color:"#fff"}} >subscribe</button>
                                       </form>
+                                      
                                   </div>
                               </div>
                           </div>
