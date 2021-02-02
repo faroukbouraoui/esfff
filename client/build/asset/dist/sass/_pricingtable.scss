@@ -56,7 +56,7 @@
 		.price {
 			font-size: 80px;
 			font-weight: bold;
-			
+			font-family: $fontHeading;
 			line-height: 1;
 		}
 
@@ -135,6 +135,9 @@
 			font-weight: 500;
 		}
 
+		.price {
+			font-family: $fontHeading;
+		}
 	}
 
 	.pricing-body {
