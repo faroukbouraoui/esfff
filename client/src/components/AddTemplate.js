@@ -23,9 +23,6 @@ const AddTemplate = () => {
 		templateImage: null,
     title: '',
     link:''
-   
-		
-		
   });
   
   const {
@@ -103,7 +100,7 @@ const AddTemplate = () => {
         <div className="panel panel-default">
 <div className="panel">
   <div className="panel-head">
-    <h5 className="panel-title">Add Blog</h5>
+    <h5 className="panel-title">Add Template</h5>
   </div>
   <div className="panel-body">
     <form onSubmit={handleTemplateSubmit}>

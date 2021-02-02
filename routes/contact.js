@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router()
 const ContactModel = require ('./../models/Contact')
 const contactController = require('../controllers/contact')
+const { authenticatateJWT } = require('../middleware/authenticator')
 router.get('/readall', async(req,res)=>{
     try{
         const contact = await ContactModel.find()
@@ -13,10 +14,6 @@ router.get('/readall', async(req,res)=>{
     }
 })
 
-router.post('/',
-	
-	
-contactController.create
-);
+router.post('/',authenticatateJWT,contactController.create);
 
 module.exports=router

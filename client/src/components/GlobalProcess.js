@@ -8,11 +8,13 @@ import "./GlobalProcess.css";
 import Navbar from "./Navbar";
 import Footer from "./pages/Footer/Footer";
 import Fourthstep from "./Fourthstep";
+import ZeroStep from "./ZeroStep";
 function GlobalProcess() {
   const { currentStep, finalData } = useContext(multiStepContext);
 
   function showStep(step) {
     switch (step) {
+     
       case 1:
         return <Firststep  />;
       case 2:
@@ -39,14 +41,15 @@ function GlobalProcess() {
               activeStep={currentStep - 1}
               orientation="horizontal"
             >
+           
               <Step>
-                <StepLabel>form</StepLabel>
+                <StepLabel>Mon Entreprise</StepLabel>
               </Step>
               <Step>
-                <StepLabel>pricing</StepLabel>
+                <StepLabel>Mon package</StepLabel>
               </Step>
               <Step>
-                <StepLabel>templates</StepLabel>
+                <StepLabel>Mon site</StepLabel>
               </Step>
              
             </Stepper>

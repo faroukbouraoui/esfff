@@ -5,18 +5,20 @@ const ContactModel = new mongoose.Schema({
    
     nom:{
         type:String,
-        
+        required:true   
     },
     email:{
-        type:Email,
+        type:String,
+        required:true
     
     },
     phone:{
-        type:Number,
-        
+        type:String,
+        required:true
     },
     demande:{
         type:String,
+        required:true
         
     }
 })

@@ -46,6 +46,7 @@ function FrontContact() {
   };
   
   const handleContactChange = evt => {
+   
 		setContactData({
 			...contactData,
 			[evt.target.name]: evt.target.value,
@@ -57,9 +58,9 @@ function FrontContact() {
   const handleContactSubmit = evt => {
 		evt.preventDefault();
 
-    if (nom === " ") {
-			setClientSideError('Please select an image');
-		} else if (
+    
+		 if (
+       isEmpty(nom) ||
 			isEmpty(email) ||
       isEmpty(phone) ||
       isEmpty(demande)
@@ -94,7 +95,7 @@ function FrontContact() {
     return (
         <div>
            <NavbarAcceuil /> 
-           <div>
+           <div onClick={handleMessages}>
            <section className="o-hidden" >
            <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
            <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
@@ -116,41 +117,42 @@ function FrontContact() {
               <h2>Contactez-nous</h2> 
             </div>
             <div className="contact-main">
-              <form  className="row">
-              {clientSideError && showErrorMsg(clientSideError)}
+            {clientSideError && showErrorMsg(clientSideError)}
               {errorMsg && showErrorMsg(errorMsg)}
               {successMsg && showSuccessMsg(successMsg)}
+              <form  className="row" >
+              
                 
                 {loading ?(
                   <div className='text-center'>
-                  {showLoading()}
+                 
                   </div>
                 ):(
                   <Fragment>
                 <div className="form-group col-md-6">
-                  <input  type="text" value={nom} onChange={handleContactChange} name="nom" className="form-control" placeholder="Name" required="required" data-error="Name is required." />
+                  <input  type="text" value={nom} onChange={handleContactChange} name="nom" className="form-control" placeholder="Nom et prénom" required="required"  />
                 
                 </div>
                 <div className="form-group col-md-6">
-                  <input  type="email" name="email" value={email} onChange={handleContactChange} className="form-control" placeholder="Email" required="required" data-error="Valid email is required." />
+                  <input  type="email" name="email" value={email} onChange={handleContactChange} className="form-control" placeholder="Adresse Email" required="required"  />
                 
                 </div>
                 <div className="form-group col-md-12">
-                  <input  type="text" name="phone" value={phone} onChange={handleContactChange} className="form-control" placeholder="Phone" required="required" data-error="Phone is required" />
+                  <input  type="text" name="phone" value={phone} onChange={handleContactChange} className="form-control" placeholder="Phone" required="required"  />
                 
                 </div>
                 <div className="form-group col-md-12">
-                  <textarea  name="demande" value={demande} onChange={handleContactChange} className="form-control" placeholder="Message" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                  <textarea  name="demande" value={demande} onChange={handleContactChange} className="form-control" placeholder="Message" rows="4" required="required" ></textarea>
                 
                 </div>
-                <div className="col-md-12">
-                <button type="submit" onClick={handleContactSubmit} className="btn btn-hello btn-radius" style={{marginLeft:"28%",marginTop:"7px"}}><span>Send Message</span>
-                </button>
-                </div>
+                
                 </Fragment>
                 )}
               </form>
-              
+              <div className="col-md-12">
+                <button type="submit" onClick={handleContactSubmit}  className="btn btn-hello btn-radius" style={{marginLeft:"28%",marginTop:"7px"}}><span>Send Message</span>
+                </button>
+                </div>
             </div>
             
             

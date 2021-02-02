@@ -18,15 +18,16 @@ exports.create = async (req, res) => {
           contact.nom= nom;
           contact.email= email;
           contact.phone= phone;
-          contact.demande=demande
+          contact.demande=demande;
          
       
   
-      await contact.save();
+      contact = await contact.save();
   
-      res.json({
-        successMessage: `${nom} was created`,
-        contact,
+      res.status(200).json({
+        nom:contact,
+        successMessage: `${contact.nom} was created`,
+       
       });
     } catch (err) {
       console.log(err, 'error');

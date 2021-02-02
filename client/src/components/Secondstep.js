@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { getOffres } from "../redux/actions/offreActions";
 import { useDispatch, useSelector } from "react-redux";
-import { Fragment } from "react";
-import { setOffre } from "../helpers/auth";
+
+import Footer from './pages/Footer/Footer';
+import CheckIcon from '@material-ui/icons/Check';
+import { isAuthenticated } from '../helpers/auth';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import './Secondstep.css'
 export default function Secondstep () {
   const { setStep, userData, setUserData, submitData } = useContext(
@@ -29,63 +32,187 @@ export default function Secondstep () {
     setLocalStorage("processValues", userData);
     setStep(3);
   };
+
+  const redirected= ()=>{
+    localStorage.setItem('redirected','/process')
+  }
   return (
-  <div className="container">
-    
+
+    <div>
    
-  <div>
-  <section className="grey-bg" data-bg-img="deco/images/bg/02.png" style={{paddingBottom:"40px"}}>
-    <div className="container">
-      <div className="row text-center">
-        <div className="col-lg-8 col-md-12 ml-auto mr-auto">
-          <div className="section-title">
-            <h2 className="title">Choose Your Pricing plan</h2>
-            <p className="mb-0">Deos et accusamus et iusto odio dignissimos qui blanditiis praesentium voluptatum dele corrupti quos dolores et quas molestias.</p>
+    
+
+    <div className="page-body" style={{marginTop:"0px"}}>
+    <div className="row">
+      <div className="col-12">
+        <div className="panel panel-default">
+  <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div><h2 style={{marginLeft: "-4%",paddingTop:"18px"}}>Choisissez votre plan</h2></div></div>
+  
+          <div className="panel-body">
+            
+  <table class="table table-striped table-bordered add-row-datatable" cellspacing="0" width="100%">
+    <colgroup><col />
+    </colgroup><colgroup span={2} />
+    <colgroup span={2} />
+    <tbody><tr>
+        <td rowSpan={2} />
+  
+      </tr>
+      <tr>
+        <th scope="col" className="" style={{textAlign:"center"}}>Starter <br/><span style={{color:"rgb(39, 85, 142)"}}> 300Dt/M </span></th>
+        <th scope="col" className=""  style={{textAlign:"center"}}>Market Growth <br/><span style={{color:"rgb(39, 85, 142)"}}>800Dt/M</span></th>
+        <th scope="col" className=""  style={{textAlign:"center"}}>Pionner <br/><span style={{color:"rgb(39, 85, 142)"}}>1500Dt/M</span></th>
+        <th scope="col" className=""  style={{textAlign:"center"}}>Gold <br/><span style={{color:"rgb(39, 85, 142)"}}>1000Dt/M</span></th>
+        
+      </tr>
+      <tr>
+        <th scope="row">Nom de domaine et Hébergement + Adresses e-mail
+        </th>
+        <td className=""><CheckIcon/></td>
+        <td className=""><CheckIcon/></td>
+        <td className=""><CheckIcon/></td>
+        <td className=""><CheckIcon/></td>      
+      </tr>
+      <tr>
+        <th scope="row">Conception et mise en œuvre de la boutique en ligne</th>
+        <td className=""><CheckIcon/></td>
+        <td className=""><CheckIcon/></td>
+        <td className=""><CheckIcon/></td>
+        <td className=""><CheckIcon/></td>
+        
+      </tr>
+      <tr>
+      <th scope="row">Gestion des commandes et des réclamations</th>
+      <td className=""><CheckIcon/></td>
+      <td className=""><CheckIcon/></td>
+      <td className=""><CheckIcon/></td>
+      <td className=""><CheckIcon/></td>
+    </tr>
+    <tr>
+    <th scope="row">Formation et Coaching mensuels</th>
+    <td className=""><CheckIcon/></td>
+    <td className=""><CheckIcon/></td>
+    <td className=""></td>
+    <td className=""></td>
+  </tr>
+    <tr>
+    <th scope="row">Gestion des livraisons</th>
+    <td className=""></td>
+    <td className=""></td>
+    <td className=""><CheckIcon/></td>
+    <td className=""><CheckIcon/></td>
+  </tr>
+  <tr>
+  <th scope="row">Référencement SEO</th>
+  <td className=""></td>
+  <td className=""></td>
+  <td className="">3 mot clé</td>
+  <td className="">10 mot clé + SMO</td>
+  </tr>
+  <tr>
+  <th scope="row">Création et envoi de newsletters</th>
+  <td className=""></td>
+  <td className="">Semestriel</td>
+  <td className="">Trimestriel</td>
+  <td className="">Mensuel</td>
+  </tr>
+  <tr>
+  <th scope="row">Community Management</th>
+  <td className=""></td>
+  <td className=""></td>
+  <td className=""><CheckIcon/></td>
+  <td className=""><CheckIcon/></td>
+  </tr>
+  <tr>
+  <th scope="row"><span style={{marginLeft:"30px"}}>- Commentaires et messagerie</span></th>
+  <td className=""></td>
+  <td className=""></td>
+  <td className=""></td>
+  <td className=""></td>
+  </tr>
+  <tr>
+  <th scope="row"><span style={{marginLeft:"30px"}}>- publications sur les réseaux sociaux</span></th>
+  <td className=""></td>
+  <td className=""></td>
+  <td className="">4 par semaine</td>
+  <td className="">10 par semaine</td>
+  </tr>
+  <tr>
+  <th scope="row">Préparation et gestion des campagnes promotionnelles (1 produit ou une marque)</th>
+  <td className=""></td>
+  <td className="">1 promo chaque semestre</td>
+  <td className="">1 promo chaque trimestre</td>
+  <td className="">1 promo chaque mois</td>
+  </tr>
+  <tr>
+  <th scope="row">Mises à jour de la boutique</th>
+  <td className=""></td>
+  <td className="">1 Mise à jour chaque semestre</td>
+  <td className="">1 Mise à jour chaque trimestre</td>
+  <td className="">1 Mise à jour chaque trimestre</td>
+  </tr>
+  <tr>
+  <th scope="row">Assistance Technique</th>
+  <td className="">Mail</td>
+  <td className="">Mail et téléphone</td>
+  <td className="">Mail et téléphone</td>
+  <td className="">Mail et téléphone</td>
+  </tr>
+ 
+  
+    </tbody></table>
+   <div>
+   
+   
+      <button  style={{marginLeft:"-4%"}} onClick={()=>validerstepTwo("starter")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px"}}/></button>
+ 
+</div>
+  
+    <div>
+   
+    
+       <button  style={{marginLeft:"19%"}} onClick={()=>validerstepTwo("market growth")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px",marginTop:"-131%"}}/></button>
+ 
+   
+ 
+     </div>
+     <div>
+    
+     
+        <button  style={{marginLeft:"50%"}} onClick={()=>validerstepTwo("pioneer")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px",marginTop:"-205%"}}/></button>
+   
+  
+   
+    
+      </div>
+      <div>
+     
+      
+         <button  style={{marginLeft:"84%"}}  onClick={()=>validerstepTwo("gold")}><ArrowRightAltIcon style={{color:"#27558e",fontSize:"62px",marginTop:"-278%"}}/></button>
+   
+      
+      
+    
+       </div>
+       
+       <div className="button__back">
+       <button 
+       style={{marginTop:"-15%"}}
+       onClick={()=> setStep(1)}
+       className="btn btn-md btn-orange"
+       >
+       Back
+       </button>
+       
+       </div>
           </div>
         </div>
       </div>
-      <div className="row">
-        {offres.map((o)=>(
-        <div className="col-lg-3 col-md-12">
-          <div className="price-table" style={{height:"800px"}}>
-            <div className="price-header">
-              <h3 className="price-title">{o.name}</h3>
-            </div>
-            <img className="img-center my-4" src={baseUrl+`/upload/${o.fileName}`} alt />
-            <div className="price-value">
-              <h2>{o.price}<span>dt/Month</span></h2>
-            </div>
-            
-            <div className="price-list">
-            
-              <ul className="list-unstyled">
-                
-                <li><i className="flaticon-tick" />{o.description}</li>
-                
-              </ul>
-              
-            </div>
-          
-            <button className="btn btn-white mt-5" onClick={()=> validerstepTwo(o.name)} style={{position:"absolute",bottom:"14px",marginLeft:"-36%"}}> <span>Choisir votre offre</span>
-            </button>
-          </div>
-        </div>
-        ))}
-        </div>
-        </div>
-        </section>
-        <div className="button__back">
-        <button 
-        onClick={()=> setStep(1)}
-        className="btn btn-md btn-orange"
-        >
-        Back
-        </button>
-        
-        </div>
-        </div>
     </div>
- 
+    </div>
+    <Footer/>
+    </div>
+
         
             
        

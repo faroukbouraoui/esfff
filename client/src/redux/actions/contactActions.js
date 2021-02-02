@@ -30,10 +30,7 @@ export const createContact = formData => async dispatch => {
 	} catch (err) {
 		console.log('createContact api error: ', err);
 		dispatch({ type: STOP_LOADING });
-        dispatch({
-			type: SHOW_ERROR_MESSAGE,
-			payload: err.response.data.errorMessage,
-		});
+     
 	}
 };
 

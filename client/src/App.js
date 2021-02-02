@@ -5,8 +5,6 @@ import './App.css';
 
 import Signup from './components/Signup';
 import Signin from './components/Signin';
-
-import UserRoute from './components/UserRoute';
 import AdminRoute from './components/AdminRoute';
 import AdminDashboard from './components/AdminDashboard'
 import UserDashboard from './components/UserDashboard';
@@ -23,8 +21,6 @@ import AddTemplate from './components/AddTemplate'
 import templates from './components/Tempteles'
 import AdminCategory from './components/AdminCategory';
 import AddCategory from './components/AddCategory';
-
-import Home from './components/pages/HomePage/Home';
 import GlobalProcess from './components/GlobalProcess';
 import StepContext from './StepContext'
 import Leads from './components/Leads';
@@ -35,6 +31,7 @@ import FrontContact from './components/FrontContact';
 import About from './components/About';
 import FrontPricing from './components/FrontPricing';
 import SingleServices from './components/SingleServices';
+
 
 
 
@@ -84,6 +81,7 @@ function App() {
 		  <Route path="/front-pricing" component={FrontPricing} />
 		  <Route path="/services-single" component={SingleServices}/>
 	<Route exact path='/' component={UserDashboard} />
+
 	  <AdminRoute
 		  exact
 		  path='/admin'
