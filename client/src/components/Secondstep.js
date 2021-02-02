@@ -210,7 +210,7 @@ export default function Secondstep () {
       </div>
     </div>
     </div>
-    <Footer/>
+    
     </div>
 
         
