@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const { jwtSecret, jwtExpire } = require('../config/keys');
 
 exports.signupController = async (req, res) => {
-    const { username, email,role, password } = req.body;
+    const { username, email,numtel,role, password } = req.body;
 
     try {
         const user = await User.findOne({ email });
@@ -17,6 +17,7 @@ exports.signupController = async (req, res) => {
         const newUser = new User();
         newUser.username = username;
         newUser.email = email;
+        newUser.numtel=numtel;
        
 
         const salt = await bcrypt.genSalt(10);
@@ -61,11 +62,11 @@ exports.signinController = async (req, res) => {
 
         jwt.sign(payload, jwtSecret, { expiresIn: jwtExpire }, (err, token) => {
             if (err) console.log('jwt error: ', err);
-            const { _id, username, email, role } = user;
+            const { _id, username, email, numtel,role } = user;
 
             res.json({
                 token,
-                user: { _id, username, email, role },
+                user: { _id, username, email, numtel,role },
             });
         });
     } catch (err) {

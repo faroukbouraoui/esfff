@@ -3,27 +3,30 @@ const mongoose = require("mongoose");
 require("mongoose-type-email");
 const { ObjectId } = mongoose.Schema;
 const leadSchema = new mongoose.Schema({
-  NomComplet: {
+  raionSocial: {
     type: String,
     required: true,
   },
-
-  entreprise: {
-    type: String,
-    required: true,
-  },
-
-  numtel: {
-    type: Number,
-    required: true,
-  },
-  email:{
-    type:String,
-    required:true
-  },
-
   adresse: {
     type: String,
+    required:true
+  },
+  catproduit:{
+    type:String,
+  },
+  produit:[
+    {
+      type:String
+    }
+  ],
+  facebookLink:{
+    type:String,
+  },
+  instagramLink:{
+    type:String,
+  },
+  sitewebLink:{
+    type:String,
   },
   refOffre: {
     type: String,

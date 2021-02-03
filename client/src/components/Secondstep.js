@@ -30,7 +30,7 @@ export default function Secondstep () {
     
     setUserData({ ...userData, offre: name });
     setLocalStorage("processValues", userData);
-    setStep(3);
+    setStep(4);
   };
 
   const redirected= ()=>{

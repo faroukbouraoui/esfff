@@ -2,12 +2,14 @@ const Lead = require("../models/Lead");
 
 exports.create = async (req, res) => {
   const {
-    nomComplet,
-    entreprise,
-  
-    telephone,
+    raisonSocial,
+    
+    catproduit,
+    produit,
     adresse,
-    email,
+    facebookLink,
+    instagramLink,
+    sitewebLink,
     offre,
     template,
     services
@@ -17,12 +19,14 @@ exports.create = async (req, res) => {
     console.log(req.body);
     console.log(req.body.userid);
     let lead = new Lead();
-    lead.NomComplet = nomComplet;
-    lead.entreprise = entreprise;
+    lead.raionSocial = raisonSocial;
+    lead.catproduit = catproduit;
    
-    lead.numtel = telephone;
+    lead.produit = produit;
     lead.adresse = adresse;
-    lead.email= email;
+    lead.facebookLink= facebookLink;
+    lead.instagramLink=instagramLink;
+    lead.sitewebLink=sitewebLink;
     lead.refService= services;
     lead.refOffre = offre;
     lead.refTemplate = template;

@@ -34,6 +34,7 @@ const Signup = () => {
     const [formData, setFormData] = useState({
         username: '',
         email: '',
+        numtel:'',
         password: '',
         password2: '',
         successMsg: false,
@@ -43,6 +44,7 @@ const Signup = () => {
     const {
         username,
         email,
+        numtel,
         password,
         password2,
         successMsg,
@@ -69,6 +71,7 @@ const Signup = () => {
         if (
             isEmpty(username) ||
             isEmpty(email) ||
+            isEmpty(numtel) ||
             isEmpty(password) ||
             isEmpty(password2)
         ) {
@@ -87,8 +90,8 @@ const Signup = () => {
                 errorMsg: 'Passwords do not match',
             });
         } else {
-            const { username, email, password } = formData;
-            const data = { username, email, password };
+            const { username, email, numtel,password } = formData;
+            const data = { username, email, numtel,password };
 
             setFormData({ ...formData, loading: true });
             
@@ -100,6 +103,7 @@ const Signup = () => {
                     setFormData({
                         username: '',
                         email: '',
+                        numtel:'',
                         password: '',
                         password2: '',
                         loading: false,
@@ -164,6 +168,10 @@ const Signup = () => {
                       </div>
                       <div className="form-group">
                       <input id="form_email" type="text" name="email" value={email} onChange={handleChange} className="form-control" placeholder="Adresse Email" required="required" data-error="Adresse Email obligatoire." />
+                      <div className="help-block with-errors" />
+                    </div>
+                    <div className="form-group">
+                      <input id="form_email" type="text" name="numtel" value={numtel} onChange={handleChange} className="form-control" placeholder="Numéro téléphone" required="required" data-error="Numéro téléphone obligatoire." />
                       <div className="help-block with-errors" />
                     </div>
                        

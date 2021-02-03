@@ -7,20 +7,21 @@ import { multiStepContext } from "../StepContext";
 import "./GlobalProcess.css";
 import Navbar from "./Navbar";
 import Footer from "./pages/Footer/Footer";
-import Fourthstep from "./Fourthstep";
+
 import ZeroStep from "./ZeroStep";
 function GlobalProcess() {
   const { currentStep, finalData } = useContext(multiStepContext);
 
   function showStep(step) {
     switch (step) {
-     
-      case 1:
-        return <Firststep  />;
+     case 1:
+       return <ZeroStep/>;
       case 2:
+        return <Firststep  />;
+      case 3:
         return <Secondstep />;
 
-      case 3:
+      case 4:
         return <Thirdstep />;
 
      
@@ -37,11 +38,13 @@ function GlobalProcess() {
         <div className="container">
           <div className="stepper__position">
             <Stepper
-              style={{ width: "40%" }}
+              style={{ width: "70%",marginLeft:"173px" }}
               activeStep={currentStep - 1}
               orientation="horizontal"
             >
-           
+            <Step>
+            <StepLabel>Mes coordonnées</StepLabel>
+          </Step>
               <Step>
                 <StepLabel>Mon Entreprise</StepLabel>
               </Step>
