@@ -29,7 +29,7 @@ export default function Secondstep () {
   const validerstepTwo = (name) => {
     
     setUserData({ ...userData, offre: name });
-    setLocalStorage("processValues", userData);
+    setLocalStorage("processValues" ,userData);
     setStep(4);
   };
 

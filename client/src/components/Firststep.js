@@ -1,108 +1,236 @@
-import React, { useContext, useState } from "react";
-import { multiStepContext } from "../StepContext";
-
-import {useFormik} from 'formik';
-import * as yup from "yup";
+import React , { Component}  from 'react';
+import { setLocalStorage } from '../helpers/localStorage';
+import { InputTagsContainer } from 'react-input-tags';
 import "./FirstStep.css";
 import { Tag, X } from "react-feather";
-import { setLocalStorage } from "../helpers/localStorage";
+import { multiStepContext } from "../StepContext";
+import "@pathofdev/react-tag-input/build/index.css";
+import ReactTagInput from "@pathofdev/react-tag-input";
+const FormErrors = ({formErrors}) =>
+  <div className='formErrors'>
+    {Object.keys(formErrors).map((fieldName, i) => {
+      if(formErrors[fieldName].length > 0){
+        return (
+          <p key={i}>{fieldName} {formErrors[fieldName]}</p>
+        )        
+      } else {
+        return '';
+      }
+    })}
+  </div>
 
-const Firststep = () => {
-  
 
+class Form extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      raisonSocial: '',
+      adresse: '',
+      catproduit: '',
+      produit:[],
+      facebookLink:'',
+      instagramLink:'',
+      sitewebLink:'',
+      tags:[],
+			formErrors: {raisonSocial: '', adresse: '', catproduit: '',facebookLink:'',instagramLink:'',sitewebLink:''}, // error messages content
+			raisonSocialValid: false,
+      adresseValid:false,
+      catproduitValid:false,
+      
+      
+			formValid: false
+    };
 
-  const formik=useFormik({
+		
+    this.handleUserInput = this.handleUserInput.bind(this);// do I need to bind it?
+  }
 
-    initialValues:{
-
-  
-
-      raisonSocial:'',
-
-      adresse:'',
-
-      catproduit:'',
-
+  handleUserInput(e) {
+    const value = e.target.value;
+    const name = e.target.name;
+    this.setState({[name]: value},
+		 () => {this.validateField(name, value) });
+  }
+	
+	// validate each field
+	// update their state + the whole form's state
+	// and set their error messages
+	validateField(fieldName, value) {
+		let fieldValidationErrors = this.state.formErrors;
+		let raisonSocialValid = this.state.raisonSocialValid;
+		let adresseValid = this.state.adresseValid;
+    let catproduitValid = this.state.catproduitValid;
+   
+    
+		switch(fieldName) {
+			case 'raisonSocial':
+				raisonSocialValid = value.length > 0;
+				fieldValidationErrors.raisonSocial = raisonSocialValid ? '' : '  obligatoire';
+				break;
+			case 'adresse':
+				adresseValid = value.length > 0;
+				fieldValidationErrors.adresse = adresseValid ? '' : ' obligatoire';
+        break;
+      	case 'catproduit':
+				catproduitValid = value.length > 0;
+				fieldValidationErrors.catproduit = catproduitValid ? '' : '  obligatoire';
+        break;
+        
+        
+			default:
+				break;
+		}
+		
+		this.setState({formErrors: fieldValidationErrors,
+      raisonSocialValid: raisonSocialValid,
+      adresseValid: adresseValid,
+      catproduitValid:catproduitValid,
      
 
-    },
+									}, this.validateForm); // + set the validation state for the whole form
+	}
+	
+	validateForm() {
+		this.setState({formValid: this.state.raisonSocialValid && this.state.adresseValid && this.state.catproduitValid  });
+	}
+	
+	errorClass(error) {
+		return(error.length === 0 ? '' : 'has-danger');
+  }
+ 
+  static contextType = multiStepContext;
+  
+  
+  handleUpdateTags = (tags) => {
+    this.setState({ tags });
+  }
+  handlechangetag=(newtag)=>{
+      this.setState.tags(newtag)
+  }
 
-    validationSchema: yup.object({
-
-      raisonSocial: yup.string()
-
-       
-
-        .required('Please Enter Employee Name'),
-
-      adresse: yup.string()
-
-        .required('Please Enter Employee Location'),
-
-      catproduit: yup.string()
-
+  render() {
+    const { setStep} = this.context
+    const validerstepone = () => {
+      if(this.state.formValid){
+       const raisonSocial = this.state.raisonSocial;
+       const adresse = this.state.adresse;
+       const catproduit = this.state.catproduit
+       const facebookLink=this.state.facebookLink
+       const instagramLink=this.state.instagramLink
+       const sitewebLink = this.state.sitewebLink
+       const tags =this.state.tags
+       const tagsdata= JSON.stringify(tags)
+        const data = {raisonSocial,adresse,catproduit,facebookLink,instagramLink,sitewebLink}
+        const dataa= JSON.stringify(data)
+        localStorage.setItem('data',dataa)  
+        localStorage.setItem('tagsdata',tagsdata)      
+      setStep(3);
+      }
+     
+    };
+    return (
+      <form className="formone" >
         
+				
+				<div className="panel panel-default">
+					<FormErrors formErrors={this.state.formErrors}/>
+				</div>
 
-        .required('Please Enter Email Id'),
+        <div className={`form-group ${this.errorClass(this.state.formErrors.raisonSocial)}`}>
+          
+          <input 
+            className="form-control"
+            type="text" 
+            name="raisonSocial"
+            placeholder="Raison sociale *"
+            value={this.state.raisonSocial}
+            onChange={this.handleUserInput}>
+          </input>
+        </div>
 
-    }),
+        <div className={`form-group ${this.errorClass(this.state.formErrors.adresse)}`}>
+          
+          <input 
+            className="form-control"
+            type="text" 
+            name="adresse"
+            placeholder="Adresse *"
+            value={this.state.adresse}
+            onChange={this.handleUserInput}>
+          </input>
+        </div>
 
-    onSubmit:values=>{
+        <div className={`form-group ${this.errorClass(this.state.formErrors.catproduit)}`}>
+          
+        <input 
+          className="form-control"
+          type="text" 
+          name="catproduit"
+          placeholder="Catégorie des produits *"
+          value={this.state.catproduit}
+          onChange={this.handleUserInput}>
+        </input>
+      </div>
 
-      alert(JSON.stringify(values));
+      <div className="form-group">
+      <ReactTagInput 
+      tags={this.state.tags} 
+      onChange={(newtag)=>this.setState({tags:newtag})}
+    />
+     </div>
+     <div className={`form-group ${this.errorClass(this.state.formErrors.facebookLink)}`}>
+          
+     <input 
+       className="form-control"
+       type="text" 
+       name="facebookLink"
+       placeholder="Mettez le lien de votre page facebook"
+       value={this.state.facebookLink}
+       onChange={this.handleUserInput}>
+     </input>
+   </div>
+   <div className={`form-group ${this.errorClass(this.state.formErrors.instagramLink)}`}>
+          
+     <input 
+       className="form-control"
+       type="text" 
+       name="instagramLink"
+       placeholder="Mettez le lien de votre page facebook"
+       value={this.state.instagramLink}
+       onChange={this.handleUserInput}>
+     </input>
+   </div>
+   <div className={`form-group ${this.errorClass(this.state.formErrors.sitewebLink)}`}>
+          
+   <input 
+     className="form-control"
+     type="text" 
+     name="sitewebLink"
+     placeholder="Mettez le lien de votre page facebook"
+     value={this.state.sitewebLink}
+     onChange={this.handleUserInput}>
+   </input>
+ </div>
+				
+				
 
-    }
+          <div className="boutton">
+          <button
+            onClick={() => setStep(2)}
+            className="btn btn-md btn-orange"
+          >
+            Back
+          </button>
 
-  });
-
-
-
-const { setStep, userData, setUserData } = useContext(multiStepContext);
-const validerstepone = () => {
-  setLocalStorage("processValues", userData);
-  setStep(3);
+          <button type="submit" className="btn btn-hello"
+          disabled={!this.state.formValid} onClick={validerstepone} >Suivant</button>
+         </div>
+      </form>
+    );
+  }
 }
-  return (
-   <div>
-   <form className="formone" onSubmit={formik.handleSubmit}>
 
-
-
-   <div className="form-group">
-
-      <label htmlFor="raisonSocial">Employee Name : </label>
-
-      <input type="text" name="raisonSocial" {...formik.getFieldProps("raisonSocial")}  value={userData["raisonSocial"]} onChange={(e) =>setUserData({ ...userData, raisonSocial: e.target.value })}></input>
-
-             {formik.touched.raisonSocial && formik.errors.raisonSocial ? <span style={{color:'red'}}>{formik.errors.raisonSocial}</span> : null}
-   </div>
-
-    <p>
-
-      <label htmlFor="adresse">Employee Location : </label>
-
-      <input type="text" name="adresse" {...formik.getFieldProps("adresse")}  ></input>
-
-             {formik.touched.adresse && formik.errors.adresse ? <span style={{color:'red'}}>{formik.errors.adresse}</span> : null}
-    </p>
-
-    <p>
-
-      <label htmlFor="catproduit">Employee Salary : </label>
-
-      <input type="text" name="catproduit" {...formik.getFieldProps("catproduit")} ></input>                  
-
-    </p>
-
-   
-    <button type="submit">Create</button>
-
-</form>
-   </div>
-  );
-
-              }
-export default Firststep
+export default Form
 /**
  *  const { setStep, userData, setUserData } = useContext(multiStepContext);
   const validerstepone = () => {

@@ -59,7 +59,7 @@ const {checked , setChecked}= useState(false)
     //setUserData({ ...userData, userid: userid });
     const obj = { userData, userid };
 
-    console.log(userData);
+    console.log(obj);
     try {
       response = await Axios.post("/leads", obj);
      
