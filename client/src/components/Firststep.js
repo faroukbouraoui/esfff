@@ -174,6 +174,8 @@ class Form extends Component {
 
       <div className="form-group">
       <ReactTagInput 
+      maxTags={10}
+      placeholder="taper et entrer votre produit"
       tags={this.state.tags} 
       onChange={(newtag)=>this.setState({tags:newtag})}
     />
@@ -195,7 +197,7 @@ class Form extends Component {
        className="form-control"
        type="text" 
        name="instagramLink"
-       placeholder="Mettez le lien de votre page facebook"
+       placeholder="Metter le lien de votre page facebook"
        value={this.state.instagramLink}
        onChange={this.handleUserInput}>
      </input>
@@ -206,7 +208,7 @@ class Form extends Component {
      className="form-control"
      type="text" 
      name="sitewebLink"
-     placeholder="Mettez le lien de votre page facebook"
+     placeholder="Metter le lien de votre page facebook"
      value={this.state.sitewebLink}
      onChange={this.handleUserInput}>
    </input>
