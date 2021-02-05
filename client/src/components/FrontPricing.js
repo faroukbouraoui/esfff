@@ -58,7 +58,7 @@ const FrontPricing = () => {
         <tr>
           <th scope="col" className="" style={{textAlign:"center"}}>Starter <br/><span style={{color:"rgb(39, 85, 142)"}}> 300Dt/M </span></th>
           <th scope="col" className=""  style={{textAlign:"center"}}>Market Growth <br/><span style={{color:"rgb(39, 85, 142)"}}>800Dt/M</span></th>
-          <th scope="col" className=""  style={{textAlign:"center"}}>Pionner <br/><span style={{color:"rgb(39, 85, 142)"}}>1500Dt/M</span></th>
+          <th scope="col" className=""  style={{textAlign:"center"}}>Pioneer <br/><span style={{color:"rgb(39, 85, 142)"}}>1500Dt/M</span></th>
           <th scope="col" className=""  style={{textAlign:"center"}}>Gold <br/><span style={{color:"rgb(39, 85, 142)"}}>2000Dt/M</span></th>
           
         </tr>
