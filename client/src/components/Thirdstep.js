@@ -8,6 +8,7 @@ import './thirdstep.css'
 import Axios from "axios";
 import {Modal, Button} from 'react-bootstrap'
 import { baseUrl } from "../api/config";
+import { Redirect } from "react-router-dom";
 
 
 
@@ -44,13 +45,16 @@ const {checked , setChecked}= useState(false)
   };*/
   const [show, setShow] = useState(false);
 
-  const HandleModal = () => setShow(!show);
+  const HandleModal = () => {
+    setShow(!show);
+    
+  }
   
   const validerstepthree = async (response) => {
 
       
     setLocalStorage("processValues", userData);
-
+    
     const user = await localStorage.getItem("user");
 
     const userObj = JSON.parse(user);
@@ -59,7 +63,7 @@ const {checked , setChecked}= useState(false)
     //setUserData({ ...userData, userid: userid });
     const obj = { userData, userid };
 
-    console.log(obj);
+    
     try {
       response = await Axios.post("/leads", obj);
      
@@ -192,9 +196,11 @@ const {checked , setChecked}= useState(false)
         Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures
       </Modal.Body>
       <Modal.Footer>
+      
       <button className="btn btn-hello" onClick={()=>{HandleModal()}}>
       close
       </button>
+   
       </Modal.Footer>
     </Modal>
       </div>
