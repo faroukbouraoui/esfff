@@ -45,7 +45,7 @@ function Pricing() {
         
           <div className="row">
           {offres.map((o)=>(
-            <div className="col-lg-12 col-md-3">
+            <div className="col-lg-6 col-md-12">
               <div className="card__offre price-table style-2 bg-contain bg-pos-r" data-bg-img="deco/images/pattern/01.png" style={{height:"387px",marginBottom:"15px"}}>
                 <div className="price-header d-md-flex justify-content-between">
                   <h3 className="price-title">{o.name}</h3>
