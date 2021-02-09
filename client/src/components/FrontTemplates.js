@@ -30,11 +30,11 @@ dispatch(getTemplates());
 </div>
 
 
-<div class="grid-container">
+<div class="cards">
 {templates.map((t)=>( 
 <div className="row">
 
-<div class="grid-item">
+<div class="cardd">
 <div className="portfolio-item">
 <img className="img-center w-100" src={baseUrl+`/upload/${t.fileName}`} alt />
 <div className="portfolio-title">
