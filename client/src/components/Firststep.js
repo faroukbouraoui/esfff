@@ -109,7 +109,7 @@ class Form extends Component {
   }
 
   render() {
-    const { setStep} = this.context
+    const { setStep } = this.context
     const validerstepone = () => {
       if(this.state.formValid){
        const raisonSocial = this.state.raisonSocial;

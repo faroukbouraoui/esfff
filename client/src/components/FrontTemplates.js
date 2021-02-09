@@ -28,14 +28,51 @@ dispatch(getTemplates());
     </div>
   </div>
 </div>
+
+
+<div class="grid-container">
+{templates.map((t)=>( 
+<div className="row">
+
+<div class="grid-item">
+<div className="portfolio-item">
+<img className="img-center w-100" src={baseUrl+`/upload/${t.fileName}`} alt />
+<div className="portfolio-title">
+  <h4>{t.title}</h4>
+</div>
+ <a className="popup-link" href={t.link}>View</a> 
+
+</div>
+</div>
+
+
+</div>
+))}
+</div>
+
+
+      </div>
+   
+   
     
-    <div className="row">
-      <div className="col-lg-12 col-md-3">
+
+</section>
+
       
+        </div>
+    )
+}
+
+export default FrontTemplates
+
+
+/**
+ *     {templates.map((t)=>( 
+      
+      
+      <div className= "col-lg-12 col-md-12">
+        <div className="grid columns-3 row no-gutters popup-gallery" style={{position:"relative",height:"605px"}}>
         
-      <div className="grid columns-4 row no-gutters popup-gallery">
-      {templates.map((t)=>(   
-        <Fragment>
       <div className="grid-sizer" />
 
           <div className="grid-item cat3">
@@ -47,21 +84,9 @@ dispatch(getTemplates());
                <a className="popup-link" href={t.link}>View</a> 
             </div>
           </div>
-          </Fragment> 
-          ))}
-        </div>
-        
-        
-      </div>
-     
-    </div>
-    
-  </div>
-</section>
-
-      
-        </div>
-    )
-}
-
-export default FrontTemplates
+         
+          </div>
+          </div>
+        ))}
+       
+ */

@@ -321,7 +321,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7810', end
  border-radius: 100%; text-align: center; display: inline-block; -webkit-transition: .15s ease-in-out; transition: .15s ease-in-out; -webkit-transition-property: color, background, border-color; transition-property: color, background, border-color; }
 .round-p-animation:after, .round-p-animation:before {content: ''; border: 10px solid; border-color: inherit; width: 270%; height: 270%; -webkit-border-radius: 100%; border-radius: 100%;
  position: absolute; left: -85%; top: -85%; opacity: 1; -webkit-animation: 2s videomodule-anim linear infinite; animation: 2s videomodule-anim linear infinite; }
-.round-p-animation:before {-webkit-animation-delay: .5s; animation-delay: .5s; }
+.round-p-animation:before{-webkit-animation-delay: .5s; animation-delay: .5s; }
 
 
 

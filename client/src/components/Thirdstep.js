@@ -52,11 +52,14 @@ const {checked , setChecked}= useState(false)
   
   const validerstepthree = async (response) => {
 
-      
+    const data = localStorage.getItem("data")  
     setLocalStorage("processValues", userData);
-    
+    const dataprocess = localStorage.getItem("processValues")
+    const obj3 = {...data , ...dataprocess}
+    const processData = JSON.parse(obj3)
+    setLocalStorage("processValues",processData)
     const user = await localStorage.getItem("user");
-
+    
     const userObj = JSON.parse(user);
     const userid = userObj._id;
     console.log(userid);

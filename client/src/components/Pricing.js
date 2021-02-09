@@ -42,10 +42,11 @@ function Pricing() {
             </div>
           </div>
         </div>
+        
           <div className="row">
           {offres.map((o)=>(
-            <div className="col-lg-6 col-md-12">
-              <div className="price-table style-2 bg-contain bg-pos-r" data-bg-img="deco/images/pattern/01.png" style={{height:"387px",marginBottom:"15px"}}>
+            <div className="col-lg-12 col-md-3">
+              <div className="card__offre price-table style-2 bg-contain bg-pos-r" data-bg-img="deco/images/pattern/01.png" style={{height:"387px",marginBottom:"15px"}}>
                 <div className="price-header d-md-flex justify-content-between">
                   <h3 className="price-title">{o.name}</h3>
                   <div className="price-value">
@@ -56,7 +57,7 @@ function Pricing() {
                   <p>{o.description}</p>
                 </div>
                 <Link to="/front-pricing">
-                <button className="btn btn-hello btn-sm"  style={{background:"#27558e!important",color:"#fff",position:"absolute",bottom:"8px",left:"62%",padding:"9px"}}>voir détails</button>
+                <button className="button__details btn btn-hello btn-sm"  style={{background:"#27558e!important",color:"#fff",position:"absolute",bottom:"8px",left:"62%",padding:"9px"}}>voir détails</button>
                 </Link>
                 {isAuthenticated() && isAuthenticated().role=== 0 ?(
                   <Link to="/process">
@@ -72,7 +73,7 @@ function Pricing() {
             </div>
        
           
-            ))}
+           ))}
           </div>
           
         </div>

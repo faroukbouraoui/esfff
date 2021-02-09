@@ -39,19 +39,23 @@ const FrontPricing = () => {
 </div>
 <div className="page-title-pattern"><img className="img-fluid" src="deco/images/bg/06.png" alt /></div>
 </section>
-      <div className="page-body" style={{marginTop:"0px"}}>
-      <div className="row">
-        <div className="col-12">
+      <div className="page-body" >
+      <div className="container">
+      <div className="row row-center">
+        
+        
           <div className="panel panel-default">
-    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div><h2 style={{marginLeft: "35%",paddingTop:"18px"}}>Choisissez votre plan</h2></div></div>
+    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div><h2 >Choisissez votre plan</h2></div></div>
     
             <div className="panel-body">
               
-    <table class="table table-striped table-bordered add-row-datatable" cellspacing="0" width="100%">
-      <colgroup><col />
+    <table className="table table-striped table-bordered add-row-datatable" cellspacing="0" width="100%">
+      <colgroup><colgroup
+      />
       </colgroup><colgroup span={2} />
       <colgroup span={2} />
-      <tbody><tr>
+      <tbody>
+      <tr>
           <td rowSpan={2} />
     
         </tr>
@@ -206,6 +210,7 @@ const FrontPricing = () => {
           </div>
         </div>
       </div>
+
       </div>
       <Footer/>
       </div>
