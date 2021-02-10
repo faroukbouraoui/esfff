@@ -2,7 +2,11 @@ import Axios from 'axios';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import {
+    FaFacebook,
+    FaInstagram,
+    
+  } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import isEmpty from 'validator/lib/isEmpty';
 import { baseUrl } from '../../../api/config';
@@ -84,10 +88,10 @@ const Footer=()=> {
                           <div className="social-icons social-border circle social-hover mt-5">
                               <h4 className="title">Follow Us</h4>
                               <ul className="list-inline">
-                                  <li className="social-facebook"><a href="https://www.facebook.com/eStoresFactory"><i className="fab fa-facebook-f"></i></a>
+                                  <li className="social-facebook"><a href="https://www.facebook.com/eStoresFactory"><FaFacebook /></a>
                                   </li>
                                 
-                                  <li className="social-gplus"><a href="https://www.instagram.com/estoresfactory/"><i className="fab fa-instagram"></i></a>
+                                  <li className="social-gplus"><a href="https://www.instagram.com/estoresfactory/"><FaInstagram /></a>
                                   </li>
                              
                               </ul>

@@ -30,7 +30,10 @@ dispatch(getCategories());
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-12 ml-auto mr-auto">
-           
+          <div className="section-title">
+     
+          <h2 className="title" style={{paddingTop:"20px"}}>Lancez votre e-commerce rapidement et profitez de nos services</h2> 
+        </div>
           </div>
         </div>
         <div className="row">

@@ -44,7 +44,7 @@ function NavbarAcceuil({history}) {
                   <div className="collapse navbar-collapse" id="navbarNavDropdown" >
                     <ul className="navbar-nav ml-auto mr-auto">
                       
-                      <li className="nav-item " data-toggle="hover" > <Link to="/" className="nav-link " style={{color:"white"}} >Home</Link>
+                      <li className="nav-item dropdown" data-toggle="hover" > <Link to="/" className="nav-link " style={{color:"white"}} >Home</Link>
                       </li>
                       <li className="nav-item " data-toggle="hover"> <Link to="/about" className="nav-link"  style={{color:"white"}}>Qui Sommes Nous</Link></li>
                       <li className="nav-item " data-toggle="hover"> <Link to="/services-single" className="nav-link"  style={{color:"white"}}>Services</Link>
@@ -59,21 +59,21 @@ function NavbarAcceuil({history}) {
                       <li className="nav-item " data-toggle="hover"> <Link to="/front-contact" className="nav-link"  style={{color:"white"}}>Contact</Link>
                        
                       </li>
-                   
+                    
                     </ul>
                   </div>
-<div className="right-nav align-items-center d-flex justify-content-end list-inline" style={{marginRight:"30px"}}>
-{ isAuthenticated() && isAuthenticated().role=== 0  ? (
- 
-<Link  to="/signin" onClick={handleLogout}>
-  <button className="btn btn-white btn-sm"><PowerSettingsNewSharpIcon /></button>
-  </Link>
-):(
-<Link  to="/signin">
-  <button className="btn btn-white btn-sm">Login</button>
-  </Link>
-)}
-    </div>
+                  <div className="right-nav align-items-center d-flex justify-content-end list-inline" >
+                  { isAuthenticated() && isAuthenticated().role=== 0  ? (
+                   
+                  <Link  to="/signin" onClick={handleLogout}>
+                    <button className="btn btn-white btn-sm"><PowerSettingsNewSharpIcon /></button>
+                    </Link>
+                  ):(
+                  <Link  to="/signin">
+                    <button className="btn btn-white btn-sm">Login</button>
+                    </Link>
+                  )}
+                      </div>
     <div>
    <Link to="" className="ht-nav-toggle"><span /></Link>
    </div>
@@ -85,7 +85,7 @@ function NavbarAcceuil({history}) {
           </div>
         </div>
      </header>
-     <nav id="ht-main-nav"> <a  className="ht-nav-toggle active"><span></span></a>
+     <nav id="ht-main-nav"> <a href="#" className="ht-nav-toggle active"><span></span></a>
         <div className="container">
             <div className="row">
             <div className="col-md-12">

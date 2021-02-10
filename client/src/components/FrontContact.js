@@ -77,7 +77,7 @@ function FrontContact() {
       formData.append('demande', demande);
 			
 		
-
+      console.log(contactData)
 			dispatch(createContact(formData));
 			setContactData({
 				nom: "",

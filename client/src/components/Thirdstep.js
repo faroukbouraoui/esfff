@@ -9,6 +9,7 @@ import Axios from "axios";
 import {Modal, Button} from 'react-bootstrap'
 import { baseUrl } from "../api/config";
 import { Redirect } from "react-router-dom";
+import { Fragment } from "react";
 
 
 
@@ -52,19 +53,23 @@ const {checked , setChecked}= useState(false)
   
   const validerstepthree = async (response) => {
 
-    const data = localStorage.getItem("data")  
+      
+    
+    
     setLocalStorage("processValues", userData);
-    const dataprocess = localStorage.getItem("processValues")
-    const obj3 = {...data , ...dataprocess}
-    const processData = JSON.parse(obj3)
-    setLocalStorage("processValues",processData)
     const user = await localStorage.getItem("user");
     
     const userObj = JSON.parse(user);
     const userid = userObj._id;
     console.log(userid);
     //setUserData({ ...userData, userid: userid });
-    const obj = { userData, userid };
+    const obj1 = userData.dataaa
+    const obj2 = userData.offre
+    const obj3 = userData.template
+    
+    const produit = userData.tagss
+    
+    const obj = { obj1,obj2,obj3,produit, userid };
 
     
     try {
@@ -75,8 +80,9 @@ const {checked , setChecked}= useState(false)
     }
     
   };
-  
-
+  const processData =localStorage.getItem("processValues")
+  const rs = userData.dataaa.raisonSocial
+  console.log(rs)
   return (
 
 
@@ -195,9 +201,21 @@ const {checked , setChecked}= useState(false)
       </div>
       <Modal show={show}>
       <Modal.Header><span style={{color:"#27558e"}}>Cher client </span></Modal.Header>
-      <Modal.Body>
+      
+              <Modal.Body>
         Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures
+      
+       your data : {userData.dataaa.raisonSocial}
+                    {userData.dataaa.catproduit}
+                    {userData.dataaa.adresse}
+                    {userData.dataaa.facebookLink}
+       
+       
+      
+       
       </Modal.Body>
+     
+
       <Modal.Footer>
       
       <button className="btn btn-hello" onClick={()=>{HandleModal()}}>

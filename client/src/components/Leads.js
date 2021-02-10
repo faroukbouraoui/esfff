@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getLeads } from '../redux/actions/leadActions';
 import Menu from './Menu'
@@ -30,14 +31,18 @@ const Leads = () => {
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nom Complet</th>
-      <th scope="col">Entreprise</th>
-      <th scope="col">Numéro téléphone</th>
-      <th scope="col">Adresse </th>
-      <th scope="col">Email </th>
+      <th scope="col">Raison social</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Catégorie du produit</th>
+      <th scope="col">produits </th>
+      <th scope="col">facebook Link </th>
+      <th scope="col">instagram Link </th>
+      <th scope="col">siteweb Link </th>
       <th scope="col">Offre </th>
       <th scope="col">Template </th>
-      
+      <th scope="col">username</th>
+      <th scope="col">email</th>
+      <th scope="col">numtel</th>
       
     </tr>
   </thead>
@@ -46,15 +51,20 @@ const Leads = () => {
   {leads.map((lead)=>(
     <tr>
       <th scope="row">#</th>
-      <td>{lead.NomComplet}</td>
-      <td>{lead.entreprise}</td>
-      <td>{lead.numtel}</td>
+      <td>{lead.raisonSocial}</td>
       <td>{lead.adresse}</td>
-      <td>{lead.email}</td>
+      <td>{lead.catproduit}</td>
+      <td>{lead.produit}</td>
+      <td>{lead.facebookLink}</td>
+      <td>{lead.instagramLink}</td>
+      <td>{lead.sitewebLink}</td>
       <td>{lead.refOffre}</td>
       <td>{lead.refTemplate}</td>
-  
-   
+    
+          <td>{lead.refuser.username}</td>
+          <td>{lead.refuser.email}</td>
+          <td>{lead.refuser.numtel}</td>
+      
     </tr>
   ))}
   </tbody>

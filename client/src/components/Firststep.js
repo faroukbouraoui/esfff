@@ -109,7 +109,7 @@ class Form extends Component {
   }
 
   render() {
-    const { setStep } = this.context
+    const { setStep,userData, setUserData } = this.context
     const validerstepone = () => {
       if(this.state.formValid){
        const raisonSocial = this.state.raisonSocial;
@@ -123,13 +123,17 @@ class Form extends Component {
         const data = {raisonSocial,adresse,catproduit,facebookLink,instagramLink,sitewebLink}
         const dataa= JSON.stringify(data)
         localStorage.setItem('data',dataa)  
-        localStorage.setItem('tagsdata',tagsdata)      
+        localStorage.setItem('tagsdata',tagsdata) 
+        const dataaa = JSON.parse(localStorage.getItem("data"))
+        const tagss = JSON.parse(localStorage.getItem("tagsdata"))
+    setUserData({...userData,dataaa,tagss})
+       
       setStep(3);
       }
      
     };
     return (
-      <form className="formone" >
+      <form className="formone">
         
 				
 				<div className="panel panel-default">
@@ -175,7 +179,7 @@ class Form extends Component {
       <div className="form-group">
       <ReactTagInput 
       maxTags={10}
-      placeholder="taper et entrer votre produit"
+      placeholder="Entez la liste de vos produits"
       tags={this.state.tags} 
       onChange={(newtag)=>this.setState({tags:newtag})}
     />
@@ -186,7 +190,7 @@ class Form extends Component {
        className="form-control"
        type="text" 
        name="facebookLink"
-       placeholder="Mettez le lien de votre page facebook"
+       placeholder=" lien de votre page facebook"
        value={this.state.facebookLink}
        onChange={this.handleUserInput}>
      </input>
@@ -197,7 +201,7 @@ class Form extends Component {
        className="form-control"
        type="text" 
        name="instagramLink"
-       placeholder="Metter le lien de votre page facebook"
+       placeholder=" lien de votre compte instagram"
        value={this.state.instagramLink}
        onChange={this.handleUserInput}>
      </input>
@@ -208,7 +212,7 @@ class Form extends Component {
      className="form-control"
      type="text" 
      name="sitewebLink"
-     placeholder="Metter le lien de votre page facebook"
+     placeholder="lien de votre site web"
      value={this.state.sitewebLink}
      onChange={this.handleUserInput}>
    </input>

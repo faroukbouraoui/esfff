@@ -5,16 +5,18 @@ exports.create = async (req, res) => {
     raisonSocial,
     
     catproduit,
-    produit,
+    
     adresse,
     facebookLink,
     instagramLink,
     sitewebLink,
-    offre,
-    template,
+    
     services
-  } = req.body.userData;
-
+  } = req.body.obj1;
+  const offre = req.body.obj2
+  const template= req.body.obj3
+    
+ const produit = req.body.produit
   try {
     console.log(req.body);
     console.log(req.body.userid);
