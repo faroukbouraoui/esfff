@@ -45,7 +45,7 @@ const FrontPricing = () => {
         
         
           <div className="panel panel-default">
-    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div><h2 >Choisissez votre plan</h2></div></div>
+    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div style={{marginLeft:"24%"}}><h2 >Choisissez votre plan</h2></div></div>
     
             <div className="panel-body">
               

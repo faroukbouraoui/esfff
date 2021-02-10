@@ -13,7 +13,7 @@ import { baseUrl } from '../../../api/config';
 import { showErrorMsg, showSuccessMsg } from '../../../helpers/message';
 import { clearMessages } from '../../../redux/actions/messageActions';
 import { createNewsletter } from '../../../redux/actions/newslettersActions';
-
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 
 const Footer=()=> {
@@ -72,7 +72,7 @@ const Footer=()=> {
 
   return (
     <div>
-    <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png" style={{marginTop:"111px"}}>
+    <footer className="footer white-bg pos-r o-hidden bg-contain" data-bg-img="deco/images/pattern/01.png" >
     <div className="round-p-animation"></div>
       <div className="primary-footer">
           <div className="container-fluid p-0">
@@ -84,7 +84,7 @@ const Footer=()=> {
                 <img className="img-center" src="deco/images/Logo-ESF.png" alt="" />
                 </Link>
                           </div>
-                          <p className="mb-3">eStores Factory est le centre Digital de services dédié à la démocratisation et à l'accélération des projets de boutiques en ligne. Nous mettons à la disposition des PMEs tous les outils et toutes les ressources nécessaires au lancement, à la réussite, et la pérennisation de leurs commerce en ligne. eStores Factory est votre "One Stop Shop" pour vos projet e-commerce.</p> <Link className="btn-simple" to="/about"><span>Read More <i className="fas fa-long-arrow-alt-right"></i></span></Link>
+                          <p className="mb-3">eStores Factory est le centre Digital de services dédié à la démocratisation et à l'accélération des projets de boutiques en ligne. Nous mettons à la disposition des PMEs tous les outils et toutes les ressources nécessaires au lancement, à la réussite, et la pérennisation de leurs commerce en ligne. eStores Factory est votre "One Stop Shop" pour vos projet e-commerce.</p> <Link className="btn-simple" to="/about"><span>Read More<ArrowRightAltIcon/></span></Link>
                           <div className="social-icons social-border circle social-hover mt-5">
                               <h4 className="title">Follow Us</h4>
                               <ul className="list-inline">
@@ -127,13 +127,13 @@ const Footer=()=> {
                               <h4 className="title">Contact</h4>
                               <ul className="media-icon list-unstyled">
                                   <li>
-                                      <p className="mb-0">Résidence El Badr, Avenue Hédi Nouira, Ariana 2037,Tunisie</p>
+                                      <p className="mb-0"><i className="flaticon-location" /> Résidence El Badr, Avenue Hédi Nouira, Ariana 2037,Tunisie</p>
                                   </li>
-                                  <li><a href="mailto:themeht23@gmail.com">hello@esftunisie.com</a>
+                                  <li><a href="mailto:themeht23@gmail.com"><i className="flaticon-email" /> hello@esftunisie.com</a>
                                   </li>
-                                  <li><a href="tel:+216202869660">+216 20 28 69 66</a>
+                                  <li><a href="tel:+216202869660"><i className="flaticon-call" /> +216 20 28 69 66</a>
                                   </li>
-                                  <li><a href="tel:+21654822291">+216 54 82 22 91</a>
+                                  <li><a href="tel:+21654822291"><i className="flaticon-call" /> +216 54 82 22 91</a>
                                   </li>
                               </ul>
                           </div>

@@ -8,7 +8,7 @@ function About() {
         <div>
         <NavbarAcceuil />
         <div className="page-content">
-        <section className="pos-r o-hidden">
+        <section className="pos-r o-hidden section__padding">
         <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
         <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
 
@@ -46,6 +46,8 @@ function About() {
 
 
       </section>
+
+
         <Footer />
         </div>
 </div>
@@ -53,3 +55,27 @@ function About() {
 }
 
 export default About
+
+
+/**
+ * <section>
+  <div className="container">
+    <div className="row">
+      <div className="col-md-12">
+        <div className="ht-clients d-flex flex-wrap align-items-center text-center">
+          <div className="clients-logo">
+            <img className="img-center" src="deco/images/client/idvey.png" alt />
+          </div>
+          <div className="clients-logo">
+            <img className="img-center" src="deco/images/client/droppex.png" alt />
+          </div>
+          <div className="clients-logo">
+            <img className="img-center" src="deco/images/client/flat.png" alt />
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ */

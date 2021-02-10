@@ -38,14 +38,16 @@
     grid-gap: 1rem;
     
   }
-
+.section__padding{
+    padding-bottom: 111px;
+}
 
 @media only screen and (max-width: 414px){
     .about__desc{
         width:345px
     }
     .card__offre{
-        height: 480px!important;
+        height: 440px!important;
     }
     .button__details{
         left:56%!important;

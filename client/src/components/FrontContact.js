@@ -96,7 +96,7 @@ function FrontContact() {
         <div>
            <NavbarAcceuil /> 
            <div onClick={handleMessages}>
-           <section className="o-hidden" >
+           <section className="o-hidden section__padding" >
            <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
            <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
            

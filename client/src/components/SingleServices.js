@@ -176,7 +176,7 @@ console.log(tab2)
     </div>
   </div>
 </section>
-<section className="o-hidden" >
+<section className="o-hidden section__padding" >
   <div className="container" style={{marginTop:"5%"}}>
     <div className="row align-items-center">
       <div className="col-lg-6 col-md-12">

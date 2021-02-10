@@ -199,18 +199,21 @@ const {checked , setChecked}= useState(false)
       </div>
       ))}
       </div>
-      <Modal show={show}>
+      <Modal show={show} >
       <Modal.Header><span style={{color:"#27558e"}}>Cher client </span></Modal.Header>
       
               <Modal.Body>
-        Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures
-      
-       your data : {userData.dataaa.raisonSocial}
-                    {userData.dataaa.catproduit}
-                    {userData.dataaa.adresse}
-                    {userData.dataaa.facebookLink}
-       
-       
+        Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures.<br/>
+      <hr/>
+      <span>Raison sociale:</span>  {userData.dataaa.raisonSocial}<br/>
+      <span>Adresse :</span>    {userData.dataaa.adresse}<br/>
+          <span>Catgorie des produits:</span>   {userData.dataaa.catproduit}<br/>
+   
+            <span>Lien de la page facebook:</span> {userData.dataaa.facebookLink}<br/>
+            <span>Lien de la compte instagram:</span> {userData.dataaa.instagramLink}<br/>
+            <span>lien de votre site web:</span>{userData.dataaa.sitewebLink}<br/>
+            <span>votre package:</span>{userData.offre}<br/>
+            <span>votre template:</span>{userData.template}
       
        
       </Modal.Body>
