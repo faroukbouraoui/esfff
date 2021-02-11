@@ -18,7 +18,7 @@ function NavbarAcceuil({history}) {
   }
   const handleLogout = (evt) => {
     logout(() => {
-        history.push('/signin');
+        history.push('/signup');
     });
 };
 
@@ -65,11 +65,11 @@ function NavbarAcceuil({history}) {
                   <div className="right-nav align-items-center d-flex justify-content-end list-inline" >
                   { isAuthenticated() && isAuthenticated().role=== 0  ? (
                    
-                  <Link  to="/signin" onClick={handleLogout}>
+                  <Link  to="/signup" onClick={handleLogout}>
                     <button className="btn btn-white btn-sm"><PowerSettingsNewSharpIcon /></button>
                     </Link>
                   ):(
-                  <Link  to="/signin">
+                  <Link  to="/signup">
                     <button className="btn btn-white btn-sm">Login</button>
                     </Link>
                   )}

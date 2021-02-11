@@ -35,7 +35,7 @@ function HeroSection() {
                   <button className="btn btn-white" onClick={redirected}>Démarer</button>
                 </Link>
               ):(
-                <Link to="/signin">
+                <Link to="/signup">
                 <button className="btn btn-white" onClick={redirected}>Démarer</button>
               </Link>
               )}
