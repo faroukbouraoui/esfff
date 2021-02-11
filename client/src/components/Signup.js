@@ -152,7 +152,7 @@ const Signup = () => {
           {/*body content start*/}
           <div className="page-content">
             {/*login start*/}
-            <section className="login">
+            <section className="login section__padding">
               <div className="container">
                 <div className="row">
                   <div className="col-lg-6 col-md-10 ml-auto mr-auto" style={{marginTop:"46px"}}>

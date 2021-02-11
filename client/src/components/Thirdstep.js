@@ -205,15 +205,15 @@ const {checked , setChecked}= useState(false)
               <Modal.Body>
         Merci pour votre confiance, vous serez contacté par notre service commercial dans 48 heures.<br/>
       <hr/>
-      <span>Raison sociale:</span>  {userData.dataaa.raisonSocial}<br/>
-      <span>Adresse :</span>    {userData.dataaa.adresse}<br/>
-          <span>Catgorie des produits:</span>   {userData.dataaa.catproduit}<br/>
+      <span><i className="flaticon-tick" />Raison sociale:</span>  {userData.dataaa.raisonSocial}<br/>
+      <span><i className="flaticon-tick" />Adresse :</span>    {userData.dataaa.adresse}<br/>
+          <span><i className="flaticon-tick" />Catgorie des produits:</span>   {userData.dataaa.catproduit}<br/>
    
-            <span>Lien de la page facebook:</span> {userData.dataaa.facebookLink}<br/>
-            <span>Lien de la compte instagram:</span> {userData.dataaa.instagramLink}<br/>
-            <span>lien de votre site web:</span>{userData.dataaa.sitewebLink}<br/>
-            <span>votre package:</span>{userData.offre}<br/>
-            <span>votre template:</span>{userData.template}
+            <span><i className="flaticon-tick" />Lien de la page facebook:</span> {userData.dataaa.facebookLink}<br/>
+            <span><i className="flaticon-tick" />Lien de la compte instagram:</span> {userData.dataaa.instagramLink}<br/>
+            <span><i className="flaticon-tick" />lien de votre site web:</span>{userData.dataaa.sitewebLink}<br/>
+            <span><i className="flaticon-tick" />votre package:</span>{userData.offre}<br/>
+            <span><i className="flaticon-tick" />votre template:</span>{userData.template}
       
        
       </Modal.Body>

@@ -100,7 +100,7 @@ const Signin = () => {
         <div >
             <NavbarAcceuil />
         <div>
-        <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
+        <section className="page-titlee o-hidden text-center "  style={{background:"#27558e",height:"30px"}}>
         <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
         
         <div className="container">
@@ -117,7 +117,7 @@ const Signin = () => {
           {/*body content start*/}
           <div className="page-content">
             {/*login start*/}
-            <section className="login">
+            <section className="login section__padding">
               <div className="container">
                 <div className="row">
                   <div className="col-lg-6 col-md-10 ml-auto mr-auto" style={{marginTop:"46px"}}>
