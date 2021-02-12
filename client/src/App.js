@@ -57,10 +57,10 @@ function App() {
 				<Switch>
 			
 					
-					<Route exact path='/signup' component={Signup} />
-					<Route exact path='/signin' component={Signin} />
-					<Route exact path="/signinAdmin" component={SigninAdmin}/>
-					<Route exact path ="/signupAdmin" component={SignupAdmin} />
+			²<Route exact path='/signup' component={Signup} />
+			<Route exact path='/signin' component={Signin} />
+			<Route exact path="/signinAdmin" component={SigninAdmin}/>
+			<Route exact path ="/signupAdmin" component={SignupAdmin} />
 				
           <AdminRoute  path="/services" component={Services} />
           <AdminRoute  path="/post-service" component={Addservice} />  

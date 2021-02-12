@@ -8,7 +8,7 @@ import './thirdstep.css'
 import Axios from "axios";
 import {Modal, Button} from 'react-bootstrap'
 import { baseUrl } from "../api/config";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 import { Fragment } from "react";
 
 
@@ -17,7 +17,8 @@ import { Fragment } from "react";
 export default function Thirdstep() {
   
   const { setStep, userData, setUserData } = useContext(multiStepContext);
-  
+ 
+  let history = useHistory();
 
 const {checked , setChecked}= useState(false)
   
@@ -50,11 +51,16 @@ const {checked , setChecked}= useState(false)
     setShow(!show);
     
   }
+  const HandleModalone = () => {
+    
+    history.push('/')
+  }
+ 
   
   const validerstepthree = async (response) => {
 
       
-    
+ 
     
     setLocalStorage("processValues", userData);
     const user = await localStorage.getItem("user");
@@ -209,11 +215,11 @@ const {checked , setChecked}= useState(false)
       <span><i className="flaticon-tick" />Adresse :</span>    {userData.dataaa.adresse}<br/>
           <span><i className="flaticon-tick" />Catgorie des produits:</span>   {userData.dataaa.catproduit}<br/>
    
-            <span><i className="flaticon-tick" />Lien de la page facebook:</span> {userData.dataaa.facebookLink}<br/>
-            <span><i className="flaticon-tick" />Lien de la compte instagram:</span> {userData.dataaa.instagramLink}<br/>
-            <span><i className="flaticon-tick" />lien de votre site web:</span>{userData.dataaa.sitewebLink}<br/>
-            <span><i className="flaticon-tick" />votre package:</span>{userData.offre}<br/>
-            <span><i className="flaticon-tick" />votre template:</span>{userData.template}
+            <span><i className="flaticon-tick" /> Lien de la page facebook:</span> {userData.dataaa.facebookLink}<br/>
+            <span><i className="flaticon-tick" /> Lien de la compte instagram:</span> {userData.dataaa.instagramLink}<br/>
+            <span><i className="flaticon-tick" /> Lien de votre site web:</span>{userData.dataaa.sitewebLink}<br/>
+            <span><i className="flaticon-tick" /> Votre package:</span>{userData.offre}<br/>
+            <span><i className="flaticon-tick" /> Votre template:</span>{userData.template}
       
        
       </Modal.Body>
@@ -221,10 +227,10 @@ const {checked , setChecked}= useState(false)
 
       <Modal.Footer>
       
-      <button className="btn btn-hello" onClick={()=>{HandleModal()}}>
+      <button className="btn btn-hello"  onClick={()=>{HandleModalone()}}>
       close
       </button>
-   
+     
       </Modal.Footer>
     </Modal>
       </div>
