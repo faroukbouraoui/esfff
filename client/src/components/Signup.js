@@ -64,6 +64,8 @@ const Signup = () => {
         });
     };
 
+   
+
     const handleSubmit = (evt) => {
         evt.preventDefault();
 
@@ -109,6 +111,10 @@ const Signup = () => {
                         loading: false,
                         successMsg: response.data.successMessage,
                     });
+                    setTimeout(() => {
+                      history.push('/signin')
+                    }, 3000);
+                    
                 })
                 .catch((err) => {
                     console.log('Axios signup error: ', err);

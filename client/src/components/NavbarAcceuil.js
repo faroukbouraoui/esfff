@@ -44,7 +44,7 @@ function NavbarAcceuil({history}) {
                   <div className="collapse navbar-collapse" id="navbarNavDropdown" >
                     <ul className="navbar-nav ml-auto mr-auto">
                       
-                      <li className="nav-item dropdown" data-toggle="hover" > <Link to="/" className="nav-link " style={{color:"white"}} >Home</Link>
+                      <li className="nav-item" data-toggle="hover" > <Link to="/" className="nav-link " style={{color:"white"}} >Home</Link>
                       </li>
                       <li className="nav-item " data-toggle="hover"> <Link to="/about" className="nav-link"  style={{color:"white"}}>Qui Sommes Nous</Link></li>
                       <li className="nav-item " data-toggle="hover"> <Link to="/services-single" className="nav-link"  style={{color:"white"}}>Services</Link>

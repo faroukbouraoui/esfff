@@ -16,6 +16,8 @@ dispatch(getTemplates());
   
 }, [dispatch])
 
+
+
     return (
         <div>
 <section className="o-hidden" data-bg-img="deco/images/pattern/01.png">

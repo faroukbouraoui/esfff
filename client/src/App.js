@@ -80,7 +80,7 @@ function App() {
 		  <Route path="/about" component={About} />
 		  <Route path="/front-pricing" component={FrontPricing} />
 		  <Route path="/services-single" component={SingleServices}/>
-	<Route exact path='/' component={UserDashboard} />
+			<Route exact path='/' component={UserDashboard} />
 
 	  <AdminRoute
 		  exact
