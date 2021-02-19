@@ -3,13 +3,15 @@ const nodemailer = require('nodemailer');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { jwtSecret, jwtExpire } = require('../config/keys');
-const { baseUrl } = require('../config/config');
+
 
 var transporter = nodemailer.createTransport({
-    host: 'mail.esftunisie.com',
+    host: 'smtp.esftunisie.com',
+    port:465,
+    secure: true,
     auth:{
-        user:'faroukbr050@gmail.com',
-        pass:'isamm@2020'
+        user:'test@esftunisie.com',
+        pass:'Vy20&tf4'
     }
 });
 
@@ -18,7 +20,7 @@ exports.signupController = async (req, res) => {
     var verify = Math.floor((Math.random() * 10000000) + 1);
 
     var mailOption = {
-        from :'faroukbr050@gmail.com', // sender this is your email here
+        from :'test@esftunisie.com', // sender this is your email here
         to : `${req.body.email}`, // receiver email2
         subject: "Account Verification",
         html:
@@ -29,7 +31,7 @@ exports.signupController = async (req, res) => {
             Veuillez cliquer sur le bouton ci-dessous pour activer votre adresse mail et finaliser votre requête.
             </p>
             
-            <a href="https://api.esftunisie.com/signin/?verify=${verify}" style="background: #27558e; text-decoration: none; color: white; padding: 10px 20px; margin: 10px 0; display: inline-block; left:38%;position:relative;">click to activate</a>
+            <a href="https://esftunisie.com/signin/?verify=${verify}" style="background: #27558e; text-decoration: none; color: white; padding: 10px 20px; margin: 10px 0; display: inline-block; left:38%;position:relative;">click to activate</a>
         
            
             </div>
