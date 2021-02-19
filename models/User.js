@@ -22,6 +22,13 @@ const UserSchema = new mongoose.Schema(
       type: Number,
       default: 0,
   },
+  verification:{
+    type:String,
+    
+  },
+  active:{
+    type:String,
+  }
   },
   { timestamps: true }
 );

@@ -10,7 +10,7 @@ import {Modal, Button} from 'react-bootstrap'
 import { baseUrl } from "../api/config";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import { Fragment } from "react";
-
+const nodemailer = require('nodemailer');
 
 
 
@@ -64,7 +64,8 @@ const {checked , setChecked}= useState(false)
     
     setLocalStorage("processValues", userData);
     const user = await localStorage.getItem("user");
-    
+    let userEmail= user.email;
+           console.log(userEmail)
     const userObj = JSON.parse(user);
     const userid = userObj._id;
     console.log(userid);
@@ -77,7 +78,6 @@ const {checked , setChecked}= useState(false)
     
     const obj = { obj1,obj2,obj3,produit, userid };
 
-    
     try {
       response = await Axios.post("/leads", obj);
      

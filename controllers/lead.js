@@ -1,4 +1,15 @@
 const Lead = require("../models/Lead");
+const nodemailer = require('nodemailer');
+const User = require ('../models/User')
+
+
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth:{
+        user:'faroukbr050@gmail.com',
+        pass:'isamm@2020'
+    }
+});
 
 exports.create = async (req, res) => {
   const {
@@ -18,8 +29,7 @@ exports.create = async (req, res) => {
     
  const produit = req.body.produit
   try {
-    console.log(req.body);
-    console.log(req.body.userid);
+    
     let lead = new Lead();
     lead.raionSocial = raisonSocial;
     lead.catproduit = catproduit;
@@ -33,18 +43,43 @@ exports.create = async (req, res) => {
     lead.refOffre = offre;
     lead.refTemplate = template;
     lead.refuser = req.body.userid;
-    console.log(lead);
-    await lead.save();
+    
+    
+  
+    const leads = await Lead.find({}).populate(
+			'refuser',	
+		);
+   const cds = leads.map((l)=>{
+     return l.refuser
+   })
+   
+    const fg = cds.map((f)=>{
+      const hd = f._id;
+      
+      if(hd === ( lead.refuser)){
+        return fg;
+      }
+        
+        
+     
+      
+    })
+  console.log(fg)
 
+    await lead.save();
+    
     res.json({
       successMessage: "done",
     });
+    
   } catch (err) {
     console.log(err);
     res.status(500).json({
       errorMessage: "Please try again later",
     });
   }
+
+
 };
 exports.readAll = async (req, res) => {
 	try {
@@ -55,7 +90,7 @@ exports.readAll = async (req, res) => {
 			
 			
 		);
-
+      console.log(leads)
 		res.json({ leads});
 	} catch (err) {
 		console.log(err, 'leadController.readAll error');
@@ -64,3 +99,4 @@ exports.readAll = async (req, res) => {
 		});
 	}
 };
+

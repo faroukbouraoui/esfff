@@ -96,11 +96,11 @@ const Signup = () => {
             const data = { username, email, numtel,password };
 
             setFormData({ ...formData, loading: true });
-            
+            console.log('data0', data);
             signup(data)
                 .then((response) => {
                     console.log('Axios signup success: ', response);
-                    console.log('data', data);
+                    console.log('data1', data);
                    
                     setFormData({
                         username: '',
@@ -113,7 +113,7 @@ const Signup = () => {
                     });
                     setTimeout(() => {
                       history.push('/signin')
-                    }, 3000);
+                    }, 2000);
                     
                 })
                 .catch((err) => {

@@ -7,7 +7,7 @@ import { logout } from '../helpers/auth';
 function Menu ({history})  {
   const handleLogout = (evt) => {
     logout(() => {
-        history.push('/signin');
+        history.push('/signinAdmin');
     });
 };
     
@@ -107,7 +107,7 @@ function Menu ({history})  {
                 </div>
                
                 <div className="menu-dropdown-footer text-right">
-                  <Link to='/signin' className="btn btn-outline btn-primary btn-pill btn-outline-2x font-12 btn-sm" onClick={handleLogout} >Logout</Link>
+                  <button  className="btn btn-outline btn-primary btn-pill btn-outline-2x font-12 btn-sm" onClick={handleLogout} >Logout</button>
                 </div>
               </div>
             </div>
