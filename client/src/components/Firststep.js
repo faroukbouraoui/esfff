@@ -6,6 +6,7 @@ import { Tag, X } from "react-feather";
 import { multiStepContext } from "../StepContext";
 import "@pathofdev/react-tag-input/build/index.css";
 import ReactTagInput from "@pathofdev/react-tag-input";
+import './FrontPricing.css'
 const FormErrors = ({formErrors}) =>
   <div className='formErrors'>
     {Object.keys(formErrors).map((fieldName, i) => {

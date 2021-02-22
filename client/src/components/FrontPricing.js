@@ -1,222 +1,163 @@
-import React from 'react'
-import Navbar from './Navbar'
-import './Pricing.css'
-import { Link } from 'react-router-dom';
-import Footer from './pages/Footer/Footer';
-import CheckIcon from '@material-ui/icons/Check';
-import { isAuthenticated } from '../helpers/auth';
-import NavbarAcceuil from './NavbarAcceuil';
-const FrontPricing = () => {
 
+import React from 'react';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import NavbarAcceuil from './NavbarAcceuil';
+import CheckIcon from '@material-ui/icons/Check';
+import Footer from './pages/Footer/Footer';
+import { isAuthenticated } from '../helpers/auth';
+import { Link, useHistory } from 'react-router-dom';
+
+const StyledTableCell = withStyles((theme) => ({
+  head: {
+    backgroundColor: theme.palette.common.gray,
+    color: theme.palette.common.black,
+  },
+  body: {
+    fontSize: 14,
+  },
+}))(TableCell);
+
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
+
+function createData(name, starter, market, pioneer, gold) {
+  return { name, starter, market, pioneer, gold };
+}
+
+
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 700,
+  },
+});
+
+export default function FrontPricing() {
+  const classes = useStyles();
+
+  let history = useHistory();
   const redirected= ()=>{
     localStorage.setItem('redirected','/process')
   }
+  
+  const lien =()=>{
+    
+    if (isAuthenticated() && isAuthenticated().role===0){
+      history.push('/process')
+      
+    }else{
+      history.push('/signup')
+    }
+  }
+  
+  const rows = [
+    createData('Nom de domaine et Hébergement + Adresses e-mail', <CheckIcon/>, <CheckIcon/>, <CheckIcon/>, <CheckIcon/>),
+    createData('Conception et mise en œuvre de la boutique en ligne', <CheckIcon/>, <CheckIcon/>,<CheckIcon/>, <CheckIcon/>),
+    createData('Gestion des commandes et des réclamations', <CheckIcon/>, <CheckIcon/>, <CheckIcon/>, <CheckIcon/>),
+    createData('Formation et Coaching mensuels', <CheckIcon/>, <CheckIcon/> ),
+    createData('Gestion des livraisons',  <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/> , <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}} />, <CheckIcon/>, <CheckIcon/>),
+    createData('Référencement SEO', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/> , <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/> ,<span>3 mots clés</span>, <span>10 mots clés + SMO</span>),
+    createData('Création et envoi de newsletters', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/> , <span>Semestriel</span>, <span>Trimestriel</span>, <span>Mensuel</span>),
+    createData('Community Management', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <CheckIcon />, <CheckIcon />),
+    createData('- Commentaires et messagerie', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>),
+    createData('- publications sur les réseaux sociaux', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <span>4 par semaine</span>, <span>10 par semaine</span>),
+    createData('Préparation et gestion des campagnes promotionnelles (1 produit ou une marque)', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <span>1 promo chaque semestre</span>, <span>1 promo chaque trimestre</span>, <span>1 promo chaque mois</span>),
+    createData('Mises à jour de la boutique', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <span>1 mise à jour semestrielle</span>, <span>1 mise à jour trimestrielle</span>, <span>1 mise à jour trimestrielle</span>),
+    createData('Assistance Technique', <span>Mail</span>,<span>Mail et téléphone</span> , <span>Mail et téléphone</span>,<span>Mail et téléphone</span>),
+    createData('' ,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>
+    )
+  ];
 
-   
-    return (
-      <div>
-      <NavbarAcceuil/>
-      <section className="o-hidden" >
-<section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
-<div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
-
-<div className="container">
-<div className="row align-items-center">
-<div class="col-md-12">
-
-
-</div>
-</div>
-</div>
-</section>
-<div className="container">
+  return (
+    <>
+    <div>
+    <NavbarAcceuil/>
+    <section className="o-hidden" >
+    <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
+    <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
+    
+    <div className="container">
+    <div className="row align-items-center">
+    <div class="col-md-12">
+    
+    
+    </div>
+    </div>
+    </div>
+    </section>
+    <div className="container">
   <div className="row align-items-center">
   <div class="col-md-12">
-<h1 style={{marginTop:"29px",marginBottom:"29px"}}>Nos Offres</h1>
+<h1 style={{marginTop:"29px",marginBottom:"29px"}}>Choisissez votre plan</h1>
 
 </div>
   </div>
 </div>
-<div className="page-title-pattern"><img className="img-fluid" src="deco/images/bg/06.png" alt /></div>
+
 </section>
-      <div className="page-body" >
-      <div className="container">
-      <div className="row row-center">
-        
-        
-          <div className="panel panel-default">
-    <div className="col-lg-8 col-md-12 ml-auto mr-auto"><div style={{marginLeft:"24%"}}><h2 >Choisissez votre plan</h2></div></div>
-    
-            <div className="panel-body">
+<div className="container">
+    <TableContainer component={Paper} style={{marginBottom:"70px"}}>
+      <Table className={classes.table} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell style={{fontSize:"30px"}}> Nos offres</StyledTableCell>
+            <StyledTableCell align="center">Starter<br/><span style={{color:"rgb(39, 85, 142)"}}>300Dt/M</span></StyledTableCell>
+            <StyledTableCell align="center">Market Growth <br/><span style={{color:"rgb(39, 85, 142)"}}>800Dt/M</span></StyledTableCell>
+            <StyledTableCell align="center">Pioneer<br/><span style={{color:"rgb(39, 85, 142)"}}>1500Dt/M</span></StyledTableCell>
+            <StyledTableCell align="center">Gold <br/><span style={{color:"rgb(39, 85, 142)"}}>2000Dt/M</span></StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell component="th" scope="row">
+                {row.name}
+              </StyledTableCell>
+              <StyledTableCell align="center">{row.starter}</StyledTableCell>
+              <StyledTableCell align="center">{row.market}</StyledTableCell>
+              <StyledTableCell align="center">{row.pioneer}</StyledTableCell>
+              <StyledTableCell align="center">{row.gold}</StyledTableCell>
               
-    <table className="table table-striped table-bordered add-row-datatable" cellspacing="0" width="100%">
-      <colgroup><colgroup
-      />
-      </colgroup><colgroup span={2} />
-      <colgroup span={2} />
-      <tbody>
-      <tr>
-          <td rowSpan={2} />
-    
-        </tr>
-        <tr>
-          <th scope="col" className="" style={{textAlign:"center"}}>Starter <br/><span style={{color:"rgb(39, 85, 142)"}}> 300Dt/M </span></th>
-          <th scope="col" className=""  style={{textAlign:"center"}}>Market Growth <br/><span style={{color:"rgb(39, 85, 142)"}}>800Dt/M</span></th>
-          <th scope="col" className=""  style={{textAlign:"center"}}>Pioneer <br/><span style={{color:"rgb(39, 85, 142)"}}>1500Dt/M</span></th>
-          <th scope="col" className=""  style={{textAlign:"center"}}>Gold <br/><span style={{color:"rgb(39, 85, 142)"}}>2000Dt/M</span></th>
-          
-        </tr>
-        <tr>
-          <th scope="row">Nom de domaine et Hébergement + Adresses e-mail
-          </th>
-          <td className=""><CheckIcon/></td>
-          <td className=""><CheckIcon/></td>
-          <td className=""><CheckIcon/></td>
-          <td className=""><CheckIcon/></td>      
-        </tr>
-        <tr>
-          <th scope="row">Conception et mise en œuvre de la boutique en ligne</th>
-          <td className=""><CheckIcon/></td>
-          <td className=""><CheckIcon/></td>
-          <td className=""><CheckIcon/></td>
-          <td className=""><CheckIcon/></td>
-          
-        </tr>
-        <tr>
-        <th scope="row">Gestion des commandes et des réclamations</th>
-        <td className=""><CheckIcon/></td>
-        <td className=""><CheckIcon/></td>
-        <td className=""><CheckIcon/></td>
-        <td className=""><CheckIcon/></td>
-      </tr>
-      <tr>
-      <th scope="row">Formation et Coaching mensuels</th>
-      <td className=""><CheckIcon/></td>
-      <td className=""><CheckIcon/></td>
-      <td className=""></td>
-      <td className=""></td>
-    </tr>
-      <tr>
-      <th scope="row">Gestion des livraisons</th>
-      <td className=""></td>
-      <td className=""></td>
-      <td className=""><CheckIcon/></td>
-      <td className=""><CheckIcon/></td>
-    </tr>
-    <tr>
-    <th scope="row">Référencement SEO</th>
-    <td className=""></td>
-    <td className=""></td>
-    <td className="">3 mot clé</td>
-    <td className="">10 mot clé + SMO</td>
-    </tr>
-    <tr>
-    <th scope="row">Création et envoi de newsletters</th>
-    <td className=""></td>
-    <td className="">Semestriel</td>
-    <td className="">Trimestriel</td>
-    <td className="">Mensuel</td>
-    </tr>
-    <tr>
-    <th scope="row">Community Management</th>
-    <td className=""></td>
-    <td className=""></td>
-    <td className=""><CheckIcon/></td>
-    <td className=""><CheckIcon/></td>
-    </tr>
-    <tr>
-    <th scope="row"><span style={{marginLeft:"30px"}}>- Commentaires et messagerie</span></th>
-    <td className=""></td>
-    <td className=""></td>
-    <td className=""></td>
-    <td className=""></td>
-    </tr>
-    <tr>
-    <th scope="row"><span style={{marginLeft:"30px"}}>- publications sur les réseaux sociaux</span></th>
-    <td className=""></td>
-    <td className=""></td>
-    <td className="">4 par semaine</td>
-    <td className="">10 par semaine</td>
-    </tr>
-    <tr>
-    <th scope="row">Préparation et gestion des campagnes promotionnelles (1 produit ou une marque)</th>
-    <td className=""></td>
-    <td className="">1 promo chaque semestre</td>
-    <td className="">1 promo chaque trimestre</td>
-    <td className="">1 promo chaque mois</td>
-    </tr>
-    <tr>
-    <th scope="row">Mises à jour de la boutique</th>
-    <td className=""></td>
-    <td className="">1 Mise à jour chaque semestre</td>
-    <td className="">1 Mise à jour chaque trimestre</td>
-    <td className="">1 Mise à jour chaque trimestre</td>
-    </tr>
-    <tr>
-    <th scope="row">Assistance Technique</th>
-    <td className="">Mail</td>
-    <td className="">Mail et téléphone</td>
-    <td className="">Mail et téléphone</td>
-    <td className="">Mail et téléphone</td>
-    </tr>
-   
-    
-      </tbody></table>
-     <div>
-     {isAuthenticated() && isAuthenticated().role=== 0 ?(
-      <Link to="/process">
-        <button className="btn btn-hello btn-sm" style={{marginLeft:"44%"}} onClick={redirected}>Démarer</button>
-      </Link>
-    ):(
-      <Link to="/signin">
-      <button className="btn btn-hello btn-sm" style={{marginLeft:"44%"}} onClick={redirected}>Démarer</button>
-    </Link>
-    )}
-      </div>
-      <div>
-      {isAuthenticated() && isAuthenticated().role=== 0 ?(
-       <Link to="/process">
-         <button className="btn btn-hello btn-sm" style={{marginLeft:"56%",marginTop:"-6%"}} onClick={redirected}>Démarer</button>
-       </Link>
-     ):(
-       <Link to="/signin">
-       <button className="btn btn-hello btn-sm"style={{marginLeft:"56%",marginTop:"-6%"}} onClick={redirected}>Démarer</button>
-     </Link>
-     )}
-       </div>
-       <div>
-       {isAuthenticated() && isAuthenticated().role=== 0 ?(
-        <Link to="/process">
-          <button className="btn btn-hello btn-sm" style={{marginLeft:"72%",marginTop:"-10%"}} onClick={redirected}>Démarer</button>
-        </Link>
-      ):(
-        <Link to="/signin">
-        <button className="btn btn-hello btn-sm" style={{marginLeft:"70%",marginTop:"-10%"}}  onClick={redirected}>Démarer</button>
-      </Link>
-      )}
-        </div>
-        <div>
-        {isAuthenticated() && isAuthenticated().role=== 0 ?(
-         <Link to="/process">
-           <button className="btn btn-hello btn-sm" style={{marginLeft:"87%",marginTop:"-14%"}}  onClick={redirected}>Démarer</button>
-         </Link>
-       ):(
-         <Link to="/signin">
-         <button className="btn btn-hello btn-sm" style={{marginLeft:"87%",marginTop:"-14%"}}  onClick={redirected}>Démarer</button>
-       </Link>
-       )}
-         </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      </div>
-      <Footer/>
-      </div>
-
-    )
-    
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+    </div>
+    <Footer/>
+    </div>
+    </>
+  );
 }
 
-export default FrontPricing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

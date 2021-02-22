@@ -4,20 +4,22 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { jwtSecret, jwtExpire } = require('../config/keys');
 
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 var transporter = nodemailer.createTransport({
-    host: 'smtp.esftunisie.com',
+    host: 'esftunisie.com',
     port:465,
-    secure: true,
+    secure:false,
     auth:{
-        user:'test@esftunisie.com',
+        user:' test@esftunisie.com',
         pass:'Vy20&tf4'
-    }
+    },
+    rejectUnauthorized: true,
+  
 });
 
 exports.signupController = async (req, res) => {
 
-    var verify = Math.floor((Math.random() * 10000000) + 1);
+   /* var verify = Math.floor((Math.random() * 10000000) + 1);
 
     var mailOption = {
         from :'test@esftunisie.com', // sender this is your email here
@@ -37,7 +39,7 @@ exports.signupController = async (req, res) => {
             </div>
         `
     }
-
+*/
 
     const { username, email,numtel,role, password,verification } = req.body;
 
@@ -59,7 +61,7 @@ exports.signupController = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         newUser.password = await bcrypt.hash(password, salt);
 
-        transporter.sendMail(mailOption,(error,info)=>{
+        /*transporter.sendMail(mailOption,(error,info)=>{
             if(error){
                 console.log(error)
             }else{
@@ -70,11 +72,11 @@ exports.signupController = async (req, res) => {
                 res.cookie("UserInfo",userdata);
                 res.send("Your Mail Send Successfully")
             }
-        })
+        })*/
 
 
 
-        await newUser.save();
+       await newUser.save();
        
         res.json({
             successMessage: 'votre inscription à été effectuée avec succès,merci de se connecter',
