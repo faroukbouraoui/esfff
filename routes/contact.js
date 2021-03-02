@@ -14,6 +14,6 @@ router.get('/readall', async(req,res)=>{
     }
 })
 
-router.post('/',authenticatateJWT,contactController.create);
+router.post('/',contactController.create);
 
 module.exports=router

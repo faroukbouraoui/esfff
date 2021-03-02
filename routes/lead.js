@@ -7,6 +7,6 @@ const { authenticatateJWT } = require("../middleware/authenticator");
 const { check, validationResult } = require("express-validator");
 
 router.post("/" ,leadController.create);
-router.get("/",authenticatateJWT ,leadController.readAll);
+router.get("/" ,leadController.readAll);
 
 module.exports = router;
