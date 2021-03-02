@@ -6,13 +6,14 @@ import {
 	SHOW_SUCCESS_MESSAGE,
 } from '../constants/messageConstants';
 import {  GET_LEADS } from '../constants/leadConstants';
+import { baseUrl } from '../../api/config';
 
 
 
 export const getLeads = () => async dispatch => {
 	try {
 		dispatch({ type: START_LOADING });
-		const response = await axios.get('/leads/');
+		const response = await axios.get(baseUrl + '/leads/');
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: GET_LEADS,

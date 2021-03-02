@@ -8,9 +8,8 @@ import './thirdstep.css'
 import Axios from "axios";
 import {Modal, Button} from 'react-bootstrap'
 import { baseUrl } from "../api/config";
-import { Link, Redirect, useHistory } from "react-router-dom";
-import { Fragment } from "react";
-const nodemailer = require('nodemailer');
+import { useHistory } from "react-router-dom";
+
 
 
 

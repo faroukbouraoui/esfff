@@ -49,22 +49,7 @@ exports.create = async (req, res) => {
     const leads = await Lead.find({}).populate(
 			'refuser',	
 		);
-   const cds = leads.map((l)=>{
-     return l.refuser
-   })
-   
-    const fg = cds.map((f)=>{
-      const hd = f._id;
-      
-      if(hd === ( lead.refuser)){
-        return fg;
-      }
-        
-        
-     
-      
-    })
-  console.log(fg)
+ 
 
     await lead.save();
     
