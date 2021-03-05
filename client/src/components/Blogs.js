@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import React, { Component, useEffect } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { baseUrl } from '../api/config'
@@ -8,9 +8,16 @@ import Menu from './Menu'
 
  const Blogs = () =>  {
 
-fetch('https://baitelmouna.com/98USQKJFN56RIVZV4ZX9FHHH1WA9T7AV')
-.then((res) => res.json())
-.then(console.log)
+  const [orders, setOrders] = useState([])
+
+  useEffect(async() => {
+    const response = await fetch("https://baitelmouna.com/api/orders?ws_key=FTJUNG6L3CLDXYLU9EIVWZHHSNV4JHGU&display=full&output_format=JSON")
+     const data = await response.json()
+     const item = data.orders;
+     setOrders(item)   
+  }, [])
+  
+console.log(orders)
         return (
 <div>
 <Menu />
