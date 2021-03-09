@@ -29,7 +29,7 @@ const Signup = () => {
         } else if (isAuthenticated() && isAuthenticated().role === 0) {
             history.push('/user/dashboard');
         }
-    }, [history]);
+    }, [history,window.scrollTo(0, 0)]);
 
     const [formData, setFormData] = useState({
         username: '',
