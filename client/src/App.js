@@ -31,7 +31,7 @@ import FrontContact from './components/FrontContact';
 import About from './components/About';
 import FrontPricing from './components/FrontPricing';
 import SingleServices from './components/SingleServices';
-import ScrollToTop from './components/ScrollToTop';
+
 
 
 
@@ -55,7 +55,7 @@ function App() {
   return (
 	
 		<BrowserRouter>
-		<ScrollToTop>
+		
 			<main>
 		
 				<Switch>
@@ -98,7 +98,7 @@ function App() {
 				</Switch>
 				
 			</main>
-			</ScrollToTop>
+			
 		</BrowserRouter>
 		
 	);
