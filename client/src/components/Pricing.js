@@ -7,8 +7,7 @@ import { getOffres } from '../redux/actions/offreActions';
 import { useDispatch, useSelector } from 'react-redux';
 
 
-import Navbar from './Navbar';
-import Footer from './pages/Footer/Footer';
+
 import { isAuthenticated } from '../helpers/auth';
 function Pricing() {
 

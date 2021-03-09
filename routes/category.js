@@ -5,6 +5,7 @@ const { authenticatateJWT } = require('../middleware/authenticator');
 const upload = require('../middleware/multer');
 
 router.post('/',upload.single('categoryImage'),categoryController.create);
+
 router.get('/', categoryController.readAll);
 
 module.exports = router;

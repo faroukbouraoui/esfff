@@ -63,12 +63,12 @@ useEffect(() => {
     <div className="panel panel-default" key={service._id}>
       <div className="panel-head">
         <div className="panel-title">
-          <i className=" panel-head-icon text-primary">
+       {  /* <i className=" panel-head-icon text-primary">
           <img
           src={baseUrl+`/upload/${service.fileName}`} 
           className="iconimg_service"
           alt="icon-pricing"
-        /></i>
+  /></i>*/}
           <span className="panel-title-text">{service.serviceName}</span>
         </div>
       </div>

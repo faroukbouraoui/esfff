@@ -1,7 +1,7 @@
 const Service = require('../models/Service');
 
 exports.create = async (req, res) => {
-/*	const  {filename}  = req.file;*/
+	const  {filename}  = req.file;
 	const {
 		serviceName,
 		
@@ -12,7 +12,7 @@ exports.create = async (req, res) => {
 		console.log(req.body)
 	try {
 		let service = new Service();
-	
+		service.fileName = filename;
 		service.serviceName = serviceName;
 		service.serviceDesc=serviceDesc;
 		service.serviceCategory = serviceCategory;

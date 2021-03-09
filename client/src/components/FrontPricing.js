@@ -12,7 +12,7 @@ import NavbarAcceuil from './NavbarAcceuil';
 import CheckIcon from '@material-ui/icons/Check';
 import Footer from './pages/Footer/Footer';
 import { isAuthenticated } from '../helpers/auth';
-import { Link, useHistory } from 'react-router-dom';
+import {  useHistory } from 'react-router-dom';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -77,9 +77,9 @@ export default function FrontPricing() {
     createData('Mises à jour de la boutique', <CheckIcon style={{color:"rgba(0, 0, 0, 0.00)"}}/>, <span>1 mise à jour semestrielle</span>, <span>1 mise à jour trimestrielle</span>, <span>1 mise à jour trimestrielle</span>),
     createData('Assistance Technique', <span>Mail</span>,<span>Mail et téléphone</span> , <span>Mail et téléphone</span>,<span>Mail et téléphone</span>),
     createData('' ,
-    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>,
-    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>,
-    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button> ,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button> ,
+    <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button> ,
     <button className="btn btn-hello btn-sm" onClick={redirected,lien}>Démarer</button>
     )
   ];
@@ -90,7 +90,7 @@ export default function FrontPricing() {
     <NavbarAcceuil/>
     <section className="o-hidden" >
     <section className="page-titlee o-hidden text-center"  style={{background:"#27558e",height:"30px"}}>
-    <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
+    <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" alt="" /></div>
     
     <div className="container">
     <div className="row align-items-center">

@@ -10,7 +10,7 @@ import Footer from "./pages/Footer/Footer";
 
 import ZeroStep from "./ZeroStep";
 function GlobalProcess() {
-  const { currentStep, finalData } = useContext(multiStepContext);
+  const { currentStep } = useContext(multiStepContext);
 
   function showStep(step) {
     switch (step) {

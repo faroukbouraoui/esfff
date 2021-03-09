@@ -57,7 +57,7 @@ exports.signupController = async (req, res) => {
         newUser.email = email;
         newUser.numtel=numtel;
         newUser.password=password;
-        newUser.verification=verify;
+        newUser.verification=verification;
         const salt = await bcrypt.genSalt(10);
         newUser.password = await bcrypt.hash(password, salt);
 

@@ -8,7 +8,7 @@ import { signin } from '../api/auth';
 
 
 
-import Navbar from './Navbar'
+
 import Footer from './pages/Footer/Footer';
 import NavbarAcceuil from './NavbarAcceuil';
 const Signin = () => {
@@ -29,7 +29,7 @@ const Signin = () => {
         loading: false,
     });
 
-    const { email, password, errorMsg, loading } = formData;
+    const { email, password, errorMsg } = formData;
 
     /****************************
      * EVENT HANDLERS
@@ -101,7 +101,7 @@ const Signin = () => {
             <NavbarAcceuil />
         <div>
         <section className="page-titlee o-hidden text-center "  style={{background:"#27558e",height:"30px"}}>
-        <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" /></div>
+        <div className="d-none d-md-block" style={{marginTop:"-154px"}}><img className="img-fluid" src="deco/images/bg/08.png" alt="" /></div>
         
         <div className="container">
         <div className="row align-items-center">

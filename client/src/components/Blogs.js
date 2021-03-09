@@ -1,9 +1,6 @@
-import Axios from 'axios'
-import React, { Component, useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { baseUrl } from '../api/config'
-import { getBlogs } from '../redux/actions/blogActions'
+
+import React, {  useEffect, useState } from 'react'
+
 import Menu from './Menu'
 
  const Blogs = () =>  {

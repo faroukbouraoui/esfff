@@ -31,6 +31,7 @@ import FrontContact from './components/FrontContact';
 import About from './components/About';
 import FrontPricing from './components/FrontPricing';
 import SingleServices from './components/SingleServices';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -41,23 +42,26 @@ import SingleServices from './components/SingleServices';
 function App() {
 
 	useEffect(() => {
+			window.scrollTo(0, 0);
 		const items = JSON.parse(localStorage.getItem('user'));
 		if (items) {
 		  console.log(items)
 		}else{
 			console.log('empty')
 		}
-	  }, []);
+		
+	  }, [window.scrollTo(0, 0)]);
 
   return (
+	
 		<BrowserRouter>
-		
+		<ScrollToTop>
 			<main>
 		
 				<Switch>
 			
 					
-			²<Route exact path='/signup' component={Signup} />
+			<Route exact path='/signup' component={Signup} />
 			<Route exact path='/signin' component={Signin} />
 			<Route exact path="/signinAdmin" component={SigninAdmin}/>
 			<Route exact path ="/signupAdmin" component={SignupAdmin} />
@@ -92,8 +96,11 @@ function App() {
       </StepContext>
 			
 				</Switch>
+				
 			</main>
+			</ScrollToTop>
 		</BrowserRouter>
+		
 	);
 }
 

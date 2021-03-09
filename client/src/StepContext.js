@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import GlobalProcess from './components/GlobalProcess'
 
 export const multiStepContext = React.createContext()
@@ -7,12 +7,14 @@ export const multiStepContext = React.createContext()
      const [userData, setUserData] = useState([])
      const [finalData, setFinalData] = useState([])
 
-     function submitData(){
-
-     }
+     useEffect(() => {
+        window.scrollTo(0, 0);
+        
+         
+     }, [window.scrollTo(0, 0)])
     return (
         <div>
-            <multiStepContext.Provider value={{currentStep, setStep, userData, setUserData, finalData, setFinalData, submitData}}>
+            <multiStepContext.Provider value={{currentStep, setStep, userData, setUserData, finalData, setFinalData}}>
                 <GlobalProcess />
             </multiStepContext.Provider>
         </div>
