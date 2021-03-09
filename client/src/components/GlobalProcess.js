@@ -7,8 +7,9 @@ import { multiStepContext } from "../StepContext";
 import "./GlobalProcess.css";
 import Navbar from "./Navbar";
 import Footer from "./pages/Footer/Footer";
-
 import ZeroStep from "./ZeroStep";
+import { Fragment } from "react";
+import NavbarAcceuil from "./NavbarAcceuil";
 function GlobalProcess() {
   const { currentStep } = useContext(multiStepContext);
 
@@ -28,7 +29,7 @@ function GlobalProcess() {
     }
   }
   return (
-    <>
+    <Fragment>
       <Navbar />
       <div className="grey-bg pos-r text-center">
       <div className="process__section">
@@ -62,8 +63,10 @@ function GlobalProcess() {
       </div>
       </div>
       <Footer />
-    </>
-  );
-}
+      </Fragment>
 
-export default GlobalProcess;
+  )
+}
+export default GlobalProcess
+
+

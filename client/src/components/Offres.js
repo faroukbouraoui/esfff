@@ -1,5 +1,4 @@
-import Axios from 'axios'
-import React, { Component, useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getOffres } from '../redux/actions/offreActions'

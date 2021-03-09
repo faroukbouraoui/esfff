@@ -1,11 +1,6 @@
-import React, { Component, useEffect } from "react";
-
-
-
-
+import React, {  useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../redux/actions/categoryActions";
-import { Link } from "react-router-dom";
 import { baseUrl } from "../api/config";
 
 const FrontServices = ()=> {

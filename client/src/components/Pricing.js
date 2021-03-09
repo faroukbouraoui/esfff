@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-
 import './Pricing.css';
-
 import { Link } from 'react-router-dom';
 import { getOffres } from '../redux/actions/offreActions';
 import { useDispatch, useSelector } from 'react-redux';

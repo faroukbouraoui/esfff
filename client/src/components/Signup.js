@@ -1,16 +1,14 @@
-import React, { useState, useEffect,useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import isEmpty from 'validator/lib/isEmpty';
 import isEmail from 'validator/lib/isEmail';
 import equals from 'validator/lib/equals';
 import { showErrorMsg, showSuccessMsg } from '../helpers/message';
-import { showLoading } from '../helpers/loading';
 import { isAuthenticated } from '../helpers/auth';
 import { Link, useHistory } from 'react-router-dom';
 import { signup } from '../api/auth';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
-import "mdbreact/dist/css/mdb.css";
+
 import './Signin.css'
-import Navbar from './Navbar';
+
 import Footer from './pages/Footer/Footer';
 import NavbarAcceuil from './NavbarAcceuil';
 

@@ -1,7 +1,5 @@
 import React, {  useEffect }  from 'react'
-import { Fragment } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
 import { baseUrl } from '../api/config';
 import { getTemplates } from "../redux/actions/templateActions";
 const FrontTemplates = () => {

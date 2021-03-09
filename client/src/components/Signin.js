@@ -15,12 +15,13 @@ const Signin = () => {
     let history = useHistory();
 
     useEffect(() => {
+        
         if (isAuthenticated() && isAuthenticated().role === 1) {
             history.push('/admin');
         } else if (isAuthenticated() && isAuthenticated().role === 0) {
             history.push('/');
         }
-    }, [history]);
+    }, [history,window.scrollTo(0, 0)]);
 
     const [formData, setFormData] = useState({
         email: '',
@@ -138,7 +139,7 @@ const Signin = () => {
                         
                         </div> <button  className="btn btn-white btn-sm" type="submit">Login</button>
                         <p className='text-center' style={{color:"#000"}}>
-                            j'ai un compte ?<Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
+                            j'ai pas un compte ?<Link to='/signup' style={{color:"#07516E"}}> Sign Up</Link>
                         </p>
                       </form>
                      

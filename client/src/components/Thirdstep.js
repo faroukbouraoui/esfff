@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTemplates } from "../redux/actions/templateActions";
 import './thirdstep.css'
 import Axios from "axios";
-import {Modal, Button} from 'react-bootstrap'
+import {Modal} from 'react-bootstrap'
 import { baseUrl } from "../api/config";
 import { useHistory } from "react-router-dom";
 
@@ -19,7 +19,7 @@ export default function Thirdstep() {
  
   let history = useHistory();
 
-const {checked , setChecked}= useState(false)
+
   
   const dispatch = useDispatch ();
   const {templates} =useSelector(state => state.templates)

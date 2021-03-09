@@ -1,9 +1,4 @@
 import React from 'react'
-
-
-
-
- 
 import {Link, withRouter} from 'react-router-dom'
 import {isAuthenticated} from '../helpers/auth'
 import { logout } from '../helpers/auth';

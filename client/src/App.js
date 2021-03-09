@@ -43,12 +43,8 @@ function App() {
 
 	useEffect(() => {
 			window.scrollTo(0, 0);
-		const items = JSON.parse(localStorage.getItem('user'));
-		if (items) {
-		  console.log(items)
-		}else{
-			console.log('empty')
-		}
+		
+	
 		
 	  }, [window.scrollTo(0, 0)]);
 

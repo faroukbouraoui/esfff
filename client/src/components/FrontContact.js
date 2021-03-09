@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import isEmpty from 'validator/lib/isEmpty';
 import { showErrorMsg, showSuccessMsg } from '../helpers/message';
-import { showLoading } from '../helpers/loading';
-import Navbar from './Navbar'
 import Footer from './pages/Footer/Footer'
 import {createContact} from '../redux/actions/contactActions'
 import { clearMessages } from '../redux/actions/messageActions';

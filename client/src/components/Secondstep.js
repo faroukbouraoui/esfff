@@ -1,29 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import { setLocalStorage } from "../helpers/localStorage";
 import { multiStepContext } from "../StepContext";
-import { baseUrl } from '../api/config'
-import { Link } from "react-router-dom";
-import { Button } from "./Button";
-import { getOffres } from "../redux/actions/offreActions";
-import { useDispatch, useSelector } from "react-redux";
-
-import Footer from './pages/Footer/Footer';
 import CheckIcon from '@material-ui/icons/Check';
-import { isAuthenticated } from '../helpers/auth';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import './Secondstep.css'
 export default function Secondstep () {
-  const { setStep, userData, setUserData, submitData } = useContext(
+  const { setStep, userData, setUserData } = useContext(
     multiStepContext
   );
 
-  const dispatch = useDispatch ();
-  const {offres} =useSelector(state => state.offres)
-
-  useEffect(() => {
-    
-    dispatch (getOffres())
-  }, [dispatch])
+  
 
 
   const validerstepTwo = (name) => {

@@ -6,9 +6,9 @@ import { isAuthenticated } from '../helpers/auth';
 
 function HeroSection() {
 
- const redirected= ()=>{
-  localStorage.setItem('redirected','/process')
-}
+  const redirected= ()=>{
+    localStorage.setItem('redirected','/process')
+  }
 
 
 
