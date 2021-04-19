@@ -29,7 +29,7 @@ function NavbarAcceuil({history}) {
                 
                 <nav className="navbarr navbar-expand-lg" >
                 <Link to="/" class="navbar-brand logo">
-                    <img id="logo-white-img" className="img-center" src="deco/images/shifti-logo-icon.png" alt="" />
+                    <img id="logo-white-img" className="img-center" src="deco/images/shifti-logo.png" alt="" />
                     <img id="logo-img" className="img-center sticky-logo" src="deco/images/shifti-logo-icon.png" alt="" />
                 </Link>
                   <button className="navbar-toggler" style={{backgroundColor:"#000"}} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span></span>

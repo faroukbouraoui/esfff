@@ -81,7 +81,7 @@ const Footer=()=> {
                       <div className="ht-theme-info bg-contain bg-pos-r h-100 dark-bg text-white" data-bg-img="deco/images/bg/02.png">
                           <div className="footer-logo">
                               <Link to="/">
-                <img className="img-center" src="deco/images/shifti-logo-icon.png" alt="" />
+                <img className="img-center" src="deco/images/shifti-logo.png" alt="" />
                 </Link>
                           </div>
                           <p className="mb-3">Shifti est le centre Digital de services dédié à la démocratisation et à l'accélération des projets de boutiques en ligne. Nous mettons à la disposition des PMEs tous les outils et toutes les ressources nécessaires au lancement, à la réussite, et la pérennisation de leurs commerce en ligne. Shifti est votre "One Stop Shop" pour vos projet e-commerce.</p> <Link className="btn-simple" to="/about"><span>Read More<ArrowRightAltIcon/></span></Link>
