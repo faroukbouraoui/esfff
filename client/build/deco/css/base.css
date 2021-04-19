@@ -208,7 +208,7 @@ a, i, .btn, button, img, span, .animatedBackground, .navbar-nav .nav-link:before
 .header {position: absolute; top: 0; width: 100%; z-index: 1200;}
 #header-wrap {padding: 15px 0;}
 #header-wrap.fixed-header {position: fixed; top:0; left:0; width: 100%; z-index: 999 !important; background: #ffffff !important;}
-.logo img {height: 85px;}
+.logo img {height: 100px;}
 #header-wrap.fixed-header .logo img {height: 85px;}
 
 
