@@ -27,7 +27,7 @@ function HeroSection() {
               </div>
             </div>
             <div className="col-lg-6 col-md-12 order-lg-1 md-mt-5">
-              <h1 className="mb-4 text-white font-w-5 animated bounceInLeft delay-2 duration-3">Démarez votre commerce en ligne avec <span className="text-" style={{color:"#FF9C1E"}}>Estores Factory</span> </h1>
+              <h1 className="mb-4 text-white font-w-5 animated bounceInLeft delay-2 duration-3">Démarez votre commerce en ligne avec <span className="text-" style={{color:"#FF9C1E"}}>Shifti</span> </h1>
               <p className="lead text-white animated fadeInUp delay-3 duration-3">Un centre de services mutualisés et une plateforme unifiée de création et de gestion de votre Ecommerce</p>
               <div className="animated fadeInUp delay-3 duration-3">
               {isAuthenticated() && isAuthenticated().role=== 0 ?(

@@ -162,7 +162,7 @@ console.log(tab2)
       <div className="col-lg-6 col-md-12 md-mt-5">
         <div className="section-title mb-4">
           <h2 className="title">Gestion des livraisons et des paiements  </h2> 
-          <p className="mb-0 text-black">La Tunisie présente de nombreux défis propres concernant l’infrastructure de livraison et de paiement. Les entreprises font confiance à eStores Factory pour ses solutions adaptées au contexte régional et international.</p>
+          <p className="mb-0 text-black">La Tunisie présente de nombreux défis propres concernant l’infrastructure de livraison et de paiement. Les entreprises font confiance à shifti pour ses solutions adaptées au contexte régional et international.</p>
         </div>
        
         
@@ -187,7 +187,7 @@ console.log(tab2)
       <div className="col-lg-6 col-md-12 md-mt-5">
         <div className="section-title mb-4">
           <h2 className="title">Solutions de service client </h2> 
-          <p className="mb-0 text-black">eStores Factory dispose d'une équipe de service client dédiée et expérimentée prête à aider les acheteurs à tout moment. Des solutions d'appel aux chats en direct, notre équipe vous fournira une assistance dans en Arabe, Français ou en Anglais. </p>
+          <p className="mb-0 text-black">Shifti dispose d'une équipe de service client dédiée et expérimentée prête à aider les acheteurs à tout moment. Des solutions d'appel aux chats en direct, notre équipe vous fournira une assistance dans en Arabe, Français ou en Anglais. </p>
         </div>
        
 

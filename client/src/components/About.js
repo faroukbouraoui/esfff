@@ -31,9 +31,9 @@ function About() {
           
           <h3 className="" style={{paddingTop:"27px"}}>Nous sommes votre <span style={{color:"#ff7810"}}>One Stop Shop</span><br/> de vos projets<span style={{color:"#ff7810"}}> E-commerce</span></h3> 
         </div>
-       <p className="about__desc">eStores Factory est une plateforme de gestion de commerce électronique unifiée qui est le partenaire en ligne de choix aux marques qui opèrent en Tunisie et en Afrique. 
+       <p className="about__desc">Shifti est une plateforme de gestion de commerce électronique unifiée qui est le partenaire en ligne de choix aux marques qui opèrent en Tunisie et en Afrique. 
        Nous aidons les marques à gérer tous les aspects de leur commerce électronique à travers nos capacités de vente omnicanal et notre gestion des canaux. 
-       Véritable pôle de compétences et laboratoire d’idées, constitué de collaborateurs éprouvés aux métiers du e-commerce et du digital, eStores Factory dispose des expertises et des outils propres à lui assurer une intervention adéquate et efficace auprès de ses clients.
+       Véritable pôle de compétences et laboratoire d’idées, constitué de collaborateurs éprouvés aux métiers du e-commerce et du digital, shifti dispose des expertises et des outils propres à lui assurer une intervention adéquate et efficace auprès de ses clients.
        Notre mission est de permettre aux marques et aux détaillants de se connecter, de s'engager et de traiter avec leurs clients partout, à tout moment et de quelque manière que ce soit.
        Nous proposons des services de conseil, de marketing numérique, de développement informatique et d'exploitation des magasins, de service à la clientèle, de traitement et de livraison.</p>
       </div>

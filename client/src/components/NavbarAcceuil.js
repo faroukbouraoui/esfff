@@ -29,8 +29,8 @@ function NavbarAcceuil({history}) {
                 
                 <nav className="navbarr navbar-expand-lg" >
                 <Link to="/" class="navbar-brand logo">
-                    <img id="logo-white-img" className="img-center" src="deco/images/Logo-ESF.png" alt="" />
-                    <img id="logo-img" className="img-center sticky-logo" src="deco/images/Logo-ESF.png" alt="" />
+                    <img id="logo-white-img" className="img-center" src="deco/images/shifti-logo-icon.png" alt="" />
+                    <img id="logo-img" className="img-center sticky-logo" src="deco/images/shifti-logo-icon.png" alt="" />
                 </Link>
                   <button className="navbar-toggler" style={{backgroundColor:"#000"}} type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span></span>
                     <span></span>
@@ -84,7 +84,7 @@ function NavbarAcceuil({history}) {
         <div className="container">
             <div className="row">
             <div className="col-md-12">
-                <img className="img-fluid side-logo mb-3" src="deco/images/logo-ESF.png" alt="" />
+                <img className="img-fluid side-logo mb-3" src="deco/images/shifti-logo-icons.png" alt="" />
                 <p className="mb-5">E-stores Factory best way to achive your trading goals .</p>
                 <div className="form-info">
                 <h4 className="title">Contact info</h4>
